@@ -1,9 +1,14 @@
-#' Air Temperature
+#' Air temperature
 #'
-#' Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 (N = 100) with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
+#' Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
 #'
 #'
-#' @format A data frame with 4 variables: \code{Unit}, \code{DayNo}, \code{Mercury}, \code{Thermistor}.
+#' @format A data frame with 100 rows and 4 variables:
+#' \describe{
+#'   \item{Unit}{A unit number.}
+#'   \item{DayNo}{Day number.}
+#'   \item{Mercury, Thermistor}{Temperature (°C) measured by a standard glass mercury thermometer and new electronic thermometer.}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "airtemp"
 
@@ -12,16 +17,28 @@
 #'
 #' An ecological survey was done to investigate the co-occurrence of various insect predator and prey species. Here, we consider a subset of the data relating to one aphid species, the pea aphid, Acyrthosiphon pisum. In each of three fields, 15 randomly chosen triplets of adjacent bean plants were inspected and the number of pea aphids present on the three plants was recorded.
 #'
-#' @format A data frame with 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
+#' @format A data frame with 45 rows and 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
+#' \describe{
+#'   \item{ID}{An ID number.}
+#'   \item{Field}{The field number.}
+#'   \item{Sample}{The sample number.}
+#'   \item{AphidCount}{The count of aphids.}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "aphids"
 
 #' Beetles
 #'
-#' An experiment was conducted to investigate the viability of interspecies mating in leaf beetles by examination of the results when females from two species of willow beetle (the brassy willow beetle, Phratora vitellinae, and the blue willow beetle, Phratora vulgatissima) were mated with males from either their own species (intraspecies mating) or the other species (interspecies mating), i.e. there were four treatments (t = 4) in total (for further details, see Peacock et al., 2004). The experiment was carried out as a CRD (completely randomized design) with 10 replicates of each treatment (n = 10).
+#' An experiment was conducted to investigate the viability of interspecies mating in leaf beetles by examination of the results when females from two species of willow beetle (the brassy willow beetle, Phratora vitellinae, and the blue willow beetle, Phratora vulgatissima) were mated with males from either their own species (intraspecies mating) or the other species (interspecies mating), i.e. there were four treatments in total (for further details, see Peacock et al., 2004). The experiment was carried out as a CRD (completely randomized design) with 10 replicates of each treatment.
 #'
 #' @format A data frame with 5 variables: \code{DFemale}, \code{Treatment}, \code{Species}, \code{MateType}, \code{Eggs}.
-#' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+#' \describe{
+#'   \item{DFemale}{An ID number.}
+#'   \item{Treatment}{The treatment level.}
+#'   \item{Species}{Species.}
+#'   \item{MateType}{Mating type: intraspecies or interspecies mating.}
+#'   \item{Eggs}{The number of eggs.}
+#' }#' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "beetles"
 
 #' Measuring soil microbial biomass
@@ -64,9 +81,9 @@
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calibrate"
 
-#' Competition
+#' Weed competition experiment
 #'
-#' Description.
+#' A field experiment to investigate the effect of weed competitors on yield of winter wheat was set up as a RCBD with three blocks of 18 plots. Three weed species were used: chickweed (CW), black-grass (BG) and cleavers (CL). Target weed densities were 0, 40, 80, 160, 320 and 640 plants per m2 for CW and BG, and 0, 3, 6, 12, 24 and 48 plants per m2 for CL. However, the weed densities achieved were lower and differed among species.
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Block}, \code{WholePlot}, \code{Subplot}, \code{Irrigation}, \code{Species}, \code{Grain}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}

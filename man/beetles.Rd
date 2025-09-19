@@ -6,14 +6,18 @@
 \title{Beetles}
 \format{
 A data frame with 5 variables: \code{DFemale}, \code{Treatment}, \code{Species}, \code{MateType}, \code{Eggs}.
-}
-\source{
-Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+\describe{
+  \item{DFemale}{An ID number.}
+  \item{Treatment}{The treatment level.}
+  \item{Species}{Species.}
+  \item{MateType}{Mating type: intraspecies or interspecies mating.}
+  \item{Eggs}{The number of eggs.}
+}#' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 }
 \usage{
 beetles
 }
 \description{
-An experiment was conducted to investigate the viability of interspecies mating in leaf beetles by examination of the results when females from two species of willow beetle (the brassy willow beetle, Phratora vitellinae, and the blue willow beetle, Phratora vulgatissima) were mated with males from either their own species (intraspecies mating) or the other species (interspecies mating), i.e. there were four treatments (t = 4) in total (for further details, see Peacock et al., 2004). The experiment was carried out as a CRD (completely randomized design) with 10 replicates of each treatment (n = 10).
+An experiment was conducted to investigate the viability of interspecies mating in leaf beetles by examination of the results when females from two species of willow beetle (the brassy willow beetle, Phratora vitellinae, and the blue willow beetle, Phratora vulgatissima) were mated with males from either their own species (intraspecies mating) or the other species (interspecies mating), i.e. there were four treatments in total (for further details, see Peacock et al., 2004). The experiment was carried out as a CRD (completely randomized design) with 10 replicates of each treatment.
 }
 \keyword{datasets}

@@ -3,9 +3,14 @@
 \docType{data}
 \name{airtemp}
 \alias{airtemp}
-\title{Air Temperature}
+\title{Air temperature}
 \format{
-A data frame with 4 variables: \code{Unit}, \code{DayNo}, \code{Mercury}, \code{Thermistor}.
+A data frame with 100 rows and 4 variables:
+\describe{
+  \item{Unit}{A unit number.}
+  \item{DayNo}{Day number.}
+  \item{Mercury, Thermistor}{Temperature (°C) measured by a standard glass mercury thermometer and new electronic thermometer.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +19,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 airtemp
 }
 \description{
-Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 (N = 100) with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
+Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
 }
 \keyword{datasets}

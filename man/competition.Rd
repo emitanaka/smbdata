@@ -3,7 +3,7 @@
 \docType{data}
 \name{competition}
 \alias{competition}
-\title{Competition}
+\title{Weed competition experiment}
 \format{
 A data frame with 7 variables: \code{ID}, \code{Block}, \code{WholePlot}, \code{Subplot}, \code{Irrigation}, \code{Species}, \code{Grain}.
 }
@@ -14,7 +14,7 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 competition
 }
 \description{
-Description.
+A field experiment to investigate the effect of weed competitors on yield of winter wheat was set up as a RCBD with three blocks of 18 plots. Three weed species were used: chickweed (CW), black-grass (BG) and cleavers (CL). Target weed densities were 0, 40, 80, 160, 320 and 640 plants per m2 for CW and BG, and 0, 3, 6, 12, 24 and 48 plants per m2 for CL. However, the weed densities achieved were lower and differed among species.
 }
 \examples{
 library(desplot)

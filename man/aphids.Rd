@@ -5,7 +5,13 @@
 \alias{aphids}
 \title{Aphids}
 \format{
-A data frame with 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
+A data frame with 45 rows and 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
+\describe{
+  \item{ID}{An ID number.}
+  \item{Field}{The field number.}
+  \item{Sample}{The sample number.}
+  \item{AphidCount}{The count of aphids.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
