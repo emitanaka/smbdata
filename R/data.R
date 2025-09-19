@@ -1,6 +1,7 @@
-#' Air Temperature.
+#' Air Temperature
 #'
-#' Description.
+#' Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 (N = 100) with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
+#'
 #'
 #' @format A data frame with 4 variables: \code{Unit}, \code{DayNo}, \code{Mercury}, \code{Thermistor}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -9,7 +10,7 @@
 
 #' Aphids
 #'
-#' Description.
+#' An ecological survey was done to investigate the co-occurrence of various insect predator and prey species. Here, we consider a subset of the data relating to one aphid species, the pea aphid, Acyrthosiphon pisum. In each of three fields, 15 randomly chosen triplets of adjacent bean plants were inspected and the number of pea aphids present on the three plants was recorded.
 #'
 #' @format A data frame with 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -17,47 +18,47 @@
 
 #' Beetles
 #'
-#' Description.
+#' An experiment was conducted to investigate the viability of interspecies mating in leaf beetles by examination of the results when females from two species of willow beetle (the brassy willow beetle, Phratora vitellinae, and the blue willow beetle, Phratora vulgatissima) were mated with males from either their own species (intraspecies mating) or the other species (interspecies mating), i.e. there were four treatments (t = 4) in total (for further details, see Peacock et al., 2004). The experiment was carried out as a CRD (completely randomized design) with 10 replicates of each treatment (n = 10).
 #'
 #' @format A data frame with 5 variables: \code{DFemale}, \code{Treatment}, \code{Species}, \code{MateType}, \code{Eggs}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "beetles"
 
-#' Biomassc
+#' Measuring soil microbial biomass
 #'
-#' Description.
+#' An experiment was done to investigate the effects of changing the procedure for processing samples to obtain measurements of carbon in soil microbial biomass (as mg C per kg soil). The protocol under examination used 200 g soil samples passed over a 2.5 mm sieve and shaken for 60 min. The experiment tested the effects of a larger sieve, two smaller sample weights and a reduced shaking time, giving a 2 × 3 × 2 factorial structure. Each of the 12 treatment combinations was replicated four times in a CRD. The aim of analysis is to quantify the effects of the individual modifications, whether they interact, and to evaluate whether any of the modified procedures obtain results within 10% of the standard protocol
 #'
 #' @format A data frame with 5 variables: \code{DSample}, \code{Size}, \code{Weight}, \code{Time}, \code{C}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "biomassc"
 
-#' Brassica
+#' Sreening for pathogenicity
 #'
-#' Description.
+#' An experiment was done to screen a set of fungal isolates for pathogenicity on seedlings of oilseed rape. The isolates were collected from two different species of Brassica, labelled as A and B in factor Species, with several different isolates from each species being tested (nine in group A and four in group B), labelled by factor Isolate (with nine levels). The experiment was run in three replicates across time (factor Rep), with a tray of 22 (replicate 2) or 23 seedlings (replicates 1 and 3) being tested against each isolate in each run (factor Tray, with 13 levels). The number of seedlings tested was stored in variate Seedlings. The number of resistant seedlings, i.e. those showing no signs of infection (variate Resistant), was recorded five days after the isolates were applied.
 #'
 #' @format A data frame with 9 variables: \code{ID}, \code{Rep}, \code{Tray}, \code{Species}, \code{Isolate}, \code{TypeA}, \code{TypeB}, \code{Seedlings}, \code{Resistant}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "brassica"
 
-#' Calcium
+#' Calcium pot trial
 #'
-#' Description.
+#' An experiment devised to evaluate the effect of four relative concentrations (levels) of calcium (A = 1, B = 5, C = 10, D = 20) on root growth. Each treatment was applied to five individual plants growing in pots. The experiment used a CRD, as shown in Table 3.2, and measurements of total root length (cm) were made on pots 1–20 (in order) at the end of the experiment.
 #'
 #' @format A data frame with 3 variables: \code{Pot}, \code{Calcium}, \code{Length}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calcium"
 
-#' Calcium 2
+#' Another calcium pot trial
 #'
-#' Description.
+#' Consider the pot trial data of Examples 3.4 and 4.1. Four relative concentrations of calcium (A = 1, B = 5, C = 10, D = 20) were each applied to five individual plants growing in pots arranged as a CRD. At the end of the experiment, the total root length (cm) in each of the 20 pots was measured.
 #'
 #' @format A data frame with 7 variables: \code{Pot}, \code{Calcium}, \code{Length}, \code{d1}, \code{d2}, \code{d3}, \code{d4}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calcium2"
 
-#' Calibrate
+#' ELISA calibration
 #'
-#' Description.
+#' A calibration experiment was done to establish a suitable protocol for an experimental procedure. Three methods of preparation (factor Prep) were tested in combination with four different initial concentrations (factor Conc), with two replicates of each combination. The solutions were applied in randomized order to an ELISA plate and processed.
 #'
 #' @format A data frame with 4 variables: \code{Unit}, \code{Prep}, \code{Conc}, \code{Absorbance}.
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}

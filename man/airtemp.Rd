@@ -3,7 +3,7 @@
 \docType{data}
 \name{airtemp}
 \alias{airtemp}
-\title{Air Temperature.}
+\title{Air Temperature}
 \format{
 A data frame with 4 variables: \code{Unit}, \code{DayNo}, \code{Mercury}, \code{Thermistor}.
 }
@@ -14,6 +14,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 airtemp
 }
 \description{
-Description.
+Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 (N = 100) with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
 }
 \keyword{datasets}

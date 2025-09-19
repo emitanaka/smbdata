@@ -3,7 +3,7 @@
 \docType{data}
 \name{calibrate}
 \alias{calibrate}
-\title{Calibrate}
+\title{ELISA calibration}
 \format{
 A data frame with 4 variables: \code{Unit}, \code{Prep}, \code{Conc}, \code{Absorbance}.
 }
@@ -14,6 +14,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 calibrate
 }
 \description{
-Description.
+A calibration experiment was done to establish a suitable protocol for an experimental procedure. Three methods of preparation (factor Prep) were tested in combination with four different initial concentrations (factor Conc), with two replicates of each combination. The solutions were applied in randomized order to an ELISA plate and processed.
 }
 \keyword{datasets}

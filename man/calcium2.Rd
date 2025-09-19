@@ -3,7 +3,7 @@
 \docType{data}
 \name{calcium2}
 \alias{calcium2}
-\title{Calcium 2}
+\title{Another calcium pot trial}
 \format{
 A data frame with 7 variables: \code{Pot}, \code{Calcium}, \code{Length}, \code{d1}, \code{d2}, \code{d3}, \code{d4}.
 }
@@ -14,6 +14,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 calcium2
 }
 \description{
-Description.
+Consider the pot trial data of Examples 3.4 and 4.1. Four relative concentrations of calcium (A = 1, B = 5, C = 10, D = 20) were each applied to five individual plants growing in pots arranged as a CRD. At the end of the experiment, the total root length (cm) in each of the 20 pots was measured.
 }
 \keyword{datasets}
