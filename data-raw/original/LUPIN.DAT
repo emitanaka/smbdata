@@ -1,0 +1,17 @@
+  ID     Row  Column Treatment   Water    Soil  Height
+   1       1       1        CH       H       C    19.6
+   2       1       2        SL       L       S    23.5
+   3       1       3        CL       L       C    21.7
+   4       1       4        SH       H       S    19.0
+   5       2       1        CL       L       C    15.5
+   6       2       2        SH       H       S    22.4
+   7       2       3        CH       H       C    23.2
+   8       2       4        SL       L       S    19.3
+   9       3       1        SH       H       S    18.5
+  10       3       2        CH       H       C    23.5
+  11       3       3        SL       L       S    26.4
+  12       3       4        CL       L       C    19.0
+  13       4       1        SL       L       S    19.8
+  14       4       2        CL       L       C    19.8
+  15       4       3        SH       H       S    23.9
+  16       4       4        CH       H       C    20.8

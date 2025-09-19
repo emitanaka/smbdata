@@ -1,0 +1,61 @@
+ID     Row    Dish         Sex        Prey     Eaten     Total
+ 1       1       1      Female       Aphid         5         6
+ 2       1       2        Male       Aphid         2         6
+ 3       1       3      Female    Lacewing         3         6
+ 4       1       4        Male    Lacewing         0         6
+ 5       2       1      Female       Aphid         5         6
+ 6       2       2        Male       Aphid         2         6
+ 7       2       3      Female    Lacewing         1         6
+ 8       2       4        Male    Lacewing         1         6
+ 9       3       1      Female       Aphid         3         6
+10       3       2      Female    Lacewing         0         6
+11       3       3        Male       Aphid         0         6
+12       3       4        Male    Lacewing         0         6
+13       4       1        Male    Lacewing         1         6
+14       4       2        Male       Aphid         1         6
+15       4       3      Female       Aphid         4         6
+16       4       4      Female    Lacewing         2         6
+17       5       1        Male       Aphid         2         6
+18       5       2      Female       Aphid         1         6
+19       5       3        Male    Lacewing         0         6
+20       5       4      Female    Lacewing         4         6
+21       6       1        Male    Lacewing         1         6
+22       6       2      Female    Lacewing         4         6
+23       6       3      Female       Aphid         0         6
+24       6       4        Male       Aphid         0         6
+25       7       1        Male       Aphid         0         6
+26       7       2        Male    Lacewing         2         6
+27       7       3      Female    Lacewing         2         6
+28       7       4      Female       Aphid         4         6
+29       8       1        Male       Aphid         3         6
+30       8       2        Male    Lacewing         2         6
+31       8       3      Female    Lacewing         5         6
+32       8       4      Female       Aphid         3         6
+33       9       1      Female    Lacewing         1         6
+34       9       2        Male    Lacewing         0         6
+35       9       3      Female       Aphid         0         6
+36       9       4        Male       Aphid         1         6
+37      10       1      Female       Aphid         4         6
+38      10       2        Male       Aphid         0         6
+39      10       3      Female    Lacewing         0         6
+40      10       4        Male    Lacewing         0         6
+41      11       1        Male    Lacewing         0         6
+42      11       2        Male       Aphid         0         6
+43      11       3      Female    Lacewing         2         6
+44      11       4      Female       Aphid         2         6
+45      12       1        Male       Aphid         2         6
+46      12       2      Female    Lacewing         0         6
+47      12       3        Male    Lacewing         1         6
+48      12       4      Female       Aphid         4         6
+49      13       1        Male       Aphid         0         6
+50      13       2        Male    Lacewing         0         6
+51      13       3      Female       Aphid         2         6
+52      13       4      Female    Lacewing         0         6
+53      14       1        Male    Lacewing         2         6
+54      14       2      Female    Lacewing         3         6
+55      14       3      Female       Aphid         2         6
+56      14       4        Male       Aphid         1         6
+57      15       1      Female       Aphid         2         6
+58      15       2      Female    Lacewing         1         6
+59      15       3        Male       Aphid         0         6
+60      15       4        Male    Lacewing         0         6
