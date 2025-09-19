@@ -3,7 +3,7 @@
 \docType{data}
 \name{cotton}
 \alias{cotton}
-\title{Cotton}
+\title{Cotton response to herbicide and insecticide}
 \format{
 A data frame with 4 variables: \code{ID}, \code{H}, \code{I}, \code{Weight}.
 }
@@ -14,6 +14,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 cotton
 }
 \description{
-Description.
+An experiment was done to evaluate the combined effects of five different doses of herbicide (0, 20, 40, 60 and 80 lb/acre) and five different doses of insecticide (0.0, 0.5, 1.0, 1.5 and 2.0 lb/acre) on the root growth of cotton plants in containers within a glasshouse. Four replicates of each treatment combination were arranged in a CRD. After three weeks, the dry root biomass (g/plant) was measured for each container.
 }
 \keyword{datasets}
