@@ -9,7 +9,7 @@
 
 This package provides the data to the book by Welham et al. (2015)
 “Statistical Methods in Biology” added with acknowledgement and
-permission from Sue Welham.
+permission from the authors.
 
 ## Installation
 
