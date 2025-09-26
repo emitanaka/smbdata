@@ -12,9 +12,8 @@ Authors@R: c(person(
     role = "ctb",
     email = "stats4biol@gmail.com"
   ), person(
-    "Sue", "Welham",
-    role = "ctb",
-    email = "stats4biol@gmail.com"
+    "Salvador", "Gezan",
+    role = "ctb"
   ), person(
     "Suzanne", "Clark",
     role = "ctb"
