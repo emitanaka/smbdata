@@ -1,6 +1,6 @@
 Package: smbdata
 Type: Package
-Title: Data from the Welham et al (2015) Statistical Methods in Biology 
+Title: Data from "Statistical Methods in Biology"
 Version: 0.1.0
 Authors@R: c(person(
     "Emi", "Tanaka",
@@ -21,9 +21,8 @@ Authors@R: c(person(
     "Andrew", "Mead",
     role = "ctb"
   ))
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: CC BY 4.0
+Description: All data in the book "Statistical Methods in Biology" by Welham and co-authors.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
