@@ -1,17 +1,20 @@
 # Conidial release experiment
 
-An experiment was set up with the primary aim of measuring aphid
-infection rates in response to differing doses of fungus. Aphids in
-inoculation chambers were subjected to conidia showers from sporulating
-cadavers from one of two different sources (a clone or a standard
-source) for one of eight time periods ranging from 0 to 80 min.
-Estimates of the conidial doses received by the aphids were obtained as
-counts of spores on slides placed in the chambers. Here, we investigate
-the relationship between the achieved dose (variate Conidia) and
-infection time (variate Time) for the two types of source (factor
-Source). Each time period and source combination was tested in each of
-two experimental runs (factor Run). Separate sources were used for each
-replicate of each time period.
+This experiment was designed to measure aphid infection rates in
+response to varying fungal conidia doses, as delivered by sporulating
+cadavers of two different sources: a clone or a standard source (factor
+Source). Inoculation chambers containing aphids were exposed to conidial
+showers for one of eight time periods, ranging from 0 to 80 minutes
+(variate Time). The actual conidial dose received in each treatment was
+estimated by counting spores deposited on slides (variate Conidia)
+placed in the chambers. Each combination of time period and source was
+replicated across two experimental runs (factor Run), with separate
+sources used for each replicate. The time zero category served as a
+negative control and, as no conidia should be present at this time,
+resulting zero counts confirm the absence of slide contamination; this
+category is excluded from analysis. The resulting dataset supports
+investigation of the relationship between exposure time, conidial dose,
+and source type under replicated experimental conditions.
 
 ## Usage
 
@@ -23,6 +26,39 @@ conidia
 
 A data frame with 7 variables: `ID`, `Run`, `DUnit`, `Source`, `Time`,
 `Period`, `Conidia`.
+
+- ID:
+
+  Integer. Unique identifier for each observation.
+
+- Run:
+
+  Integer. Experimental run indicator (each time period and source
+  combination is repeated in two separate runs).
+
+- DUnit:
+
+  Integer. Identifier for each experimental unit within a run.
+
+- Source:
+
+  Character. Source of sporulating cadaver ("Clone" or "Standard")
+  providing the fungal conidia.
+
+- Time:
+
+  Integer. Duration of exposure (in minutes) to the conidia shower
+  (excluding zero-time controls).
+
+- Period:
+
+  Integer. Index for the time period (e.g., 1 for the first non-zero
+  time, 2 for the second, etc.).
+
+- Conidia:
+
+  Integer. Number of conidia (spores) counted on slides for the
+  corresponding experimental unit.
 
 ## Source
 

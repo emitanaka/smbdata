@@ -15,7 +15,7 @@
 - [`calcium`](http://emitanaka.org/smbdata/reference/calcium.md) :
   Calcium pot trial
 - [`calcium2`](http://emitanaka.org/smbdata/reference/calcium2.md) :
-  Another calcium pot trial
+  Calcium pot trial with alternative representation
 - [`calibrate`](http://emitanaka.org/smbdata/reference/calibrate.md) :
   ELISA calibration
 - [`competition`](http://emitanaka.org/smbdata/reference/competition.md)
