@@ -6,6 +6,17 @@
 \title{Sreening for pathogenicity}
 \format{
 A data frame with 9 variables: \code{ID}, \code{Rep}, \code{Tray}, \code{Species}, \code{Isolate}, \code{TypeA}, \code{TypeB}, \code{Seedlings}, \code{Resistant}.
+\describe{
+  \item{ID}{Integer. Unique identifier for each observation (row) in the dataset.}
+  \item{Rep}{Integer. Replicate/run number in the experiment (1–3), representing separate experimental runs across time.}
+  \item{Tray}{Integer. Tray identifier for the batch of seedlings tested in each replicate (13 levels).}
+  \item{Species}{Character. Brassica species from which the fungal isolate was collected ("A" or "B").}
+  \item{Isolate}{Integer. Identifier for the fungal isolate tested (nine levels across groups; unique within each Species).}
+  \item{TypeA}{Integer. Isolate identifier re-coded for group A isolates (repeats the "Isolate" value for group A, NA or other coding for group B).}
+  \item{TypeB}{Integer. Isolate identifier re-coded for group B isolates (repeats the "Isolate" value for group B, NA or other coding for group A).}
+  \item{Seedlings}{Integer. Number of seedlings tested per tray (22 or 23).}
+  \item{Resistant}{Integer. Number of seedlings in the tray showing no signs of infection (i.e., counted as resistant) five days after inoculation.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +25,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 brassica
 }
 \description{
-An experiment was done to screen a set of fungal isolates for pathogenicity on seedlings of oilseed rape. The isolates were collected from two different species of Brassica, labelled as A and B in factor Species, with several different isolates from each species being tested (nine in group A and four in group B), labelled by factor Isolate (with nine levels). The experiment was run in three replicates across time (factor Rep), with a tray of 22 (replicate 2) or 23 seedlings (replicates 1 and 3) being tested against each isolate in each run (factor Tray, with 13 levels). The number of seedlings tested was stored in variate Seedlings. The number of resistant seedlings, i.e. those showing no signs of infection (variate Resistant), was recorded five days after the isolates were applied.
+An experiment was conducted to assess the pathogenicity of various fungal isolates on oilseed rape seedlings. Fungal isolates were obtained from two Brassica species, labeled as A and B (factor: Species), and included nine isolates from group A and four from group B (factor: Isolate). The experimental design involved three replicate runs across time (factor: Rep), with each replicate using trays of seedlings—either 22 or 23 seedlings per tray (factor: Tray, with 13 levels; variate: Seedlings)—exposed toeach isolate. Five days after inoculation, the number of resistant seedlings showing no signs of infection (variate: Resistant) was recorded for each tray, and the percentage of resistant seedlings was used as the response variable for analysis. This design allows for evaluation of differences in pathogenicity among isolates, considering variability due to species, replicates, and tray sizes.
 }
 \keyword{datasets}
