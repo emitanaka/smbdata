@@ -1,14 +1,14 @@
-# Beetles
+# Beetle mating
 
-An experiment was conducted to investigate the viability of interspecies
-mating in leaf beetles by examination of the results when females from
-two species of willow beetle (the brassy willow beetle, Phratora
-vitellinae, and the blue willow beetle, Phratora vulgatissima) were
-mated with males from either their own species (intraspecies mating) or
-the other species (interspecies mating), i.e. there were four treatments
-in total (for further details, see Peacock et al., 2004). The experiment
-was carried out as a CRD (completely randomized design) with 10
-replicates of each treatment.
+The dataset comes from a completely randomized experiment investigating
+the viability of interspecies and intraspecies mating in two willow
+beetle species (Phratora vitellinae and Phratora vulgatissima). Females
+from each species were mated with males of either the same or the other
+species, giving four treatments with 10 replicates per treatment. The
+dataset includes the factor Treatment, identifying the mating
+combination, and the response variable Eggs, which records the number of
+eggs laid by each female, and is used to compare reproductive outcomes
+across mating types.
 
 ## Usage
 
@@ -41,6 +41,14 @@ A data frame with 5 variables: `DFemale`, `Treatment`, `Species`,
 
   The number of eggs.
 
-\#' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A.
-(2015) *Statistical Methods in Biology: Design and analysis of
-experiments and regression*
+## Source
+
+Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
+*Statistical Methods in Biology: Design and analysis of experiments and
+regression*
+
+Peacock, L., Batley, J., Dungait, J. A. J., Barker, J. H. A., Powers, S.
+J. & Karp, A. (2004). *A comparative study of interspecies mating of
+Phratora vulgatissima and P. vitellinae using behavioural tests and
+molecular markers*. Entomologia Experimentalis et Applicata, 110(3),
+231–241.

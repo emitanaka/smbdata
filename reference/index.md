@@ -4,9 +4,10 @@
 
 - [`airtemp`](http://emitanaka.org/smbdata/reference/airtemp.md) : Air
   temperature
-- [`aphids`](http://emitanaka.org/smbdata/reference/aphids.md) : Aphids
+- [`aphids`](http://emitanaka.org/smbdata/reference/aphids.md) : Pea
+  aphids survey
 - [`beetles`](http://emitanaka.org/smbdata/reference/beetles.md) :
-  Beetles
+  Beetle mating
 - [`biomassc`](http://emitanaka.org/smbdata/reference/biomassc.md) :
   Measuring soil microbial biomass
 - [`brassica`](http://emitanaka.org/smbdata/reference/brassica.md) :
