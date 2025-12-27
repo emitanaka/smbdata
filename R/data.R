@@ -79,45 +79,80 @@
 
 #' Calcium pot trial
 #'
-#' An experiment devised to evaluate the effect of four relative concentrations (levels) of calcium (A = 1, B = 5, C = 10, D = 20) on root growth. Each treatment was applied to five individual plants growing in pots. The experiment used a CRD, as shown in Table 3.2, and measurements of total root length (cm) were made on pots 1–20 (in order) at the end of the experiment.
+#' An experiment was conducted to assess the impact of four different calcium concentrations (levels A = 1, B = 5, C = 10, D = 20) on the root growth of plants. The study followed a completely randomized design  (CRD), with each treatment assigned to five individual plants growing in separate pots, for a total of 20  pots. At the end of the experiment, the total root length (in cm) was measured for each pot. The dataset  contains three columns: Pot, a unique identifier for each pot; Calcium, a factor indicating the assigned  calcium treatment level; and Length, the measured total root length for each pot. This structure allows for comparison of root growth across the different calcium concentration treatments.
 #'
 #' @format A data frame with 3 variables: \code{Pot}, \code{Calcium}, \code{Length}.
+#' #' @format A data frame with the following variables:
+#' \describe{
+#'   \item{Pot}{Integer. Unique identifier for each pot/experimental unit.}
+#'   \item{Calcium}{Character. Treatment group indicating the relative concentration of calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" = 20).}
+#'   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calcium"
 
-#' Another calcium pot trial
+#' Calcium pot trial with alternative representation
 #'
-#' Consider the pot trial data of Examples 3.4 and 4.1. Four relative concentrations of calcium (A = 1, B = 5, C = 10, D = 20) were each applied to five individual plants growing in pots arranged as a CRD. At the end of the experiment, the total root length (cm) in each of the 20 pots was measured.
+#' In this experiment, four relative concentrations of calcium (A = 1, B = 5, C = 10, D = 20) were each applied to five individual plants, with treatments assigned in a completely randomized design (CRD) across 20 pots. After the experimental period, the total root length (in centimeters) of each plant was measured. The resulting dataset includes both the root length measurements and a set of dummy variables representing the levels of the Calcium treatment factor. This structure facilitates statistical analysis of the effects of different calcium concentrations on plant root growth.
 #'
 #' @format A data frame with 7 variables: \code{Pot}, \code{Calcium}, \code{Length}, \code{d1}, \code{d2}, \code{d3}, \code{d4}.
+#' \describe{
+#'   \item{Pot}{Integer. Unique identifier for each pot (experimental unit).}
+#'   \item{Calcium}{Factor. Calcium treatment group for each pot, with levels "A" = 1, "B" = 5, "C" = 10, "D" = 20.}
+#'   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
+#'   \item{d1}{Integer. Dummy variable indicating membership in calcium level "A" (1 if Calcium = "A", 0 otherwise).}
+#'   \item{d2}{Integer. Dummy variable indicating membership in calcium level "B" (1 if Calcium = "B", 0 otherwise).}
+#'   \item{d3}{Integer. Dummy variable indicating membership in calcium level "C" (1 if Calcium = "C", 0 otherwise).}
+#'   \item{d4}{Integer. Dummy variable indicating membership in calcium level "D" (1 if Calcium = "D", 0 otherwise).}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calcium2"
 
 #' ELISA calibration
 #'
-#' A calibration experiment was done to establish a suitable protocol for an experimental procedure. Three methods of preparation (factor Prep) were tested in combination with four different initial concentrations (factor Conc), with two replicates of each combination. The solutions were applied in randomized order to an ELISA plate and processed.
+#' A calibration experiment was conducted to develop an appropriate protocol for an experimental procedure. The study tested three preparation methods (factor Prep) and four initial concentrations (factor Conc), combined in a completely randomized design with two replicates per combination. Absorbance values were measured for each solution after application to an ELISA plate and are recorded in the dataset. The data comprise the measured absorbances (Absorbance), the preparation method, and the initial concentration for each unit. One observation (unit 9) was excluded from analysis due to suspected contamination and was marked as missing.
 #'
 #' @format A data frame with 4 variables: \code{Unit}, \code{Prep}, \code{Conc}, \code{Absorbance}.
+#' \describe{
+#'   \item{Unit}{Integer. Unique identifier for each observation or experimental unit.}
+#'   \item{Prep}{Integer. Preparation method applied to the sample (factor with three levels).}
+#'   \item{Conc}{Integer. Initial concentration applied to the sample (factor with four levels).}
+#'   \item{Absorbance}{Numeric. Measured absorbance value for each sample unit (may contain missing values for invalid readings).}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calibrate"
 
 #' Weed competition experiment
 #'
-#' A field experiment to investigate the effect of weed competitors on yield of winter wheat was set up as a RCBD with three blocks of 18 plots. Three weed species were used: chickweed (CW), black-grass (BG) and cleavers (CL). Target weed densities were 0, 40, 80, 160, 320 and 640 plants per m2 for CW and BG, and 0, 3, 6, 12, 24 and 48 plants per m2 for CL. However, the weed densities achieved were lower and differed among species.
+#' This dataset arises from a split-plot experiment designed to assess the competitive effects of different weed species and the impact of irrigation on the grain yield of winter wheat. The experimental design included four blocks (Block), with each block containing two whole plots assigned to either irrigation or no irrigation (Irrigation, WholePlot). Each whole plot was further divided into four subplots (Subplot), where different weed species treatments (none, Am, Ga, Sm; Species) were applied. The measured outcome was grain yield (Grain) in each subplot. The hierarchical, nested structure of the experiment (Block/WholePlot/Subplot) allows for analysis of main effects and interactions of weed species and irrigation, while accounting for variation between blocks and plots.
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Block}, \code{WholePlot}, \code{Subplot}, \code{Irrigation}, \code{Species}, \code{Grain}.
+#' \describe{
+#'   \item{ID}{Integer. Unique identifier for each subplot (observation).}
+#'   \item{Block}{Integer. Block number in the experiment (four blocks in total).}
+#'   \item{WholePlot}{Integer. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).}
+#'   \item{Subplot}{Integer. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).}
+#'   \item{Irrigation}{Character. Irrigation treatment applied to the whole plot ("yes" or "no").}
+#'   \item{Species}{Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
+#'   \item{Grain}{Numeric. Grain yield (in appropriate units) measured for each subplot of winter wheat.}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
-#' @examples
-#' library(desplot)
-#' desplot(Irrigation ~ WholePlot + Subplot | Block, data=competition, col=Species, cex=2)
-#' summary(aov(Grain ~ Species*Irrigation + Error(Block/WholePlot/Subplot), data=competition))
 "competition"
 
 #' Conidial release experiment
 #'
-#' An experiment was set up with the primary aim of measuring aphid infection rates in response to differing doses of fungus. Aphids in inoculation chambers were subjected to conidia showers from sporulating cadavers from one of two different sources (a clone or a standard source) for one of eight time periods ranging from 0 to 80 min. Estimates of the conidial doses received by the aphids were obtained as counts of spores on slides placed in the chambers. Here, we investigate the relationship between the achieved dose (variate Conidia) and infection time (variate Time) for the two types of source (factor Source). Each time period and source combination was tested in each of two experimental runs (factor Run). Separate sources were used for each replicate of each time period.
+#' This experiment was designed to measure aphid infection rates in response to varying fungal conidia doses, as delivered by sporulating cadavers of two different sources: a clone or a standard source (factor Source). Inoculation chambers containing aphids were exposed to conidial showers for one of eight time periods, ranging from 0 to 80 minutes (variate Time). The actual conidial dose received in each treatment was estimated by counting spores deposited on slides (variate Conidia) placed in the chambers. Each combination of time period and source was replicated across two experimental runs (factor Run), with separate sources used for each replicate. The time zero category served as a negative control and, as no conidia should be present at this time, resulting zero counts confirm the absence of slide contamination; this category is excluded from analysis. The resulting dataset supports investigation of the relationship between exposure time, conidial dose, and source type under replicated experimental conditions.
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Run}, \code{DUnit}, \code{Source}, \code{Time}, \code{Period}, \code{Conidia}.
+#' \describe{
+#'   \item{ID}{Integer. Unique identifier for each observation.}
+#'   \item{Run}{Integer. Experimental run indicator (each time period and source combination is repeated in two separate runs).}
+#'   \item{DUnit}{Integer. Identifier for each experimental unit within a run.}
+#'   \item{Source}{Character. Source of sporulating cadaver ("Clone" or "Standard") providing the fungal conidia.}
+#'   \item{Time}{Integer. Duration of exposure (in minutes) to the conidia shower (excluding zero-time controls).}
+#'   \item{Period}{Integer. Index for the time period (e.g., 1 for the first non-zero time, 2 for the second, etc.).}
+#'   \item{Conidia}{Integer. Number of conidia (spores) counted on slides for the corresponding experimental unit.}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "conidia"
 

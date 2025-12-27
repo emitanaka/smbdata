@@ -6,6 +6,15 @@
 \title{Weed competition experiment}
 \format{
 A data frame with 7 variables: \code{ID}, \code{Block}, \code{WholePlot}, \code{Subplot}, \code{Irrigation}, \code{Species}, \code{Grain}.
+\describe{
+  \item{ID}{Integer. Unique identifier for each subplot (observation).}
+  \item{Block}{Integer. Block number in the experiment (four blocks in total).}
+  \item{WholePlot}{Integer. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).}
+  \item{Subplot}{Integer. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).}
+  \item{Irrigation}{Character. Irrigation treatment applied to the whole plot ("yes" or "no").}
+  \item{Species}{Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
+  \item{Grain}{Numeric. Grain yield (in appropriate units) measured for each subplot of winter wheat.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,11 +23,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 competition
 }
 \description{
-A field experiment to investigate the effect of weed competitors on yield of winter wheat was set up as a RCBD with three blocks of 18 plots. Three weed species were used: chickweed (CW), black-grass (BG) and cleavers (CL). Target weed densities were 0, 40, 80, 160, 320 and 640 plants per m2 for CW and BG, and 0, 3, 6, 12, 24 and 48 plants per m2 for CL. However, the weed densities achieved were lower and differed among species.
-}
-\examples{
-library(desplot)
-desplot(Irrigation ~ WholePlot + Subplot | Block, data=competition, col=Species, cex=2)
-summary(aov(Grain ~ Species*Irrigation + Error(Block/WholePlot/Subplot), data=competition))
+This dataset arises from a split-plot experiment designed to assess the competitive effects of different weed species and the impact of irrigation on the grain yield of winter wheat. The experimental design included four blocks (Block), with each block containing two whole plots assigned to either irrigation or no irrigation (Irrigation, WholePlot). Each whole plot was further divided into four subplots (Subplot), where different weed species treatments (none, Am, Ga, Sm; Species) were applied. The measured outcome was grain yield (Grain) in each subplot. The hierarchical, nested structure of the experiment (Block/WholePlot/Subplot) allows for analysis of main effects and interactions of weed species and irrigation, while accounting for variation between blocks and plots.
 }
 \keyword{datasets}
