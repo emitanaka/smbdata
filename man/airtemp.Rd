@@ -19,6 +19,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 airtemp
 }
 \description{
-Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
+Air temperature measurements (°C) recorded at approximately 9 a.m. on 100 days during 2006 using two instruments: a standard glass mercury dry-bulb thermometer and a new electronic dry-bulb thermistor probe. For each day, the dataset includes the day number and paired temperature readings from both devices, enabling direct comparison between the established and new measurement methods.
 }
 \keyword{datasets}

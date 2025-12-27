@@ -1,6 +1,6 @@
 #' Air temperature
 #'
-#' Measurements of air temperature (°C) were made at approximately 9 a.m. on 100 days during 2006 with a standard glass mercury dry bulb thermometer and a new electronic dry bulb thermistor probe.
+#' Air temperature measurements (°C) recorded at approximately 9 a.m. on 100 days during 2006 using two instruments: a standard glass mercury dry-bulb thermometer and a new electronic dry-bulb thermistor probe. For each day, the dataset includes the day number and paired temperature readings from both devices, enabling direct comparison between the established and new measurement methods.
 #'
 #'
 #' @format A data frame with 100 rows and 4 variables:
@@ -13,9 +13,9 @@
 "airtemp"
 
 
-#' Aphids
+#' Pea aphids survey
 #'
-#' An ecological survey was done to investigate the co-occurrence of various insect predator and prey species. Here, we consider a subset of the data relating to one aphid species, the pea aphid, Acyrthosiphon pisum. In each of three fields, 15 randomly chosen triplets of adjacent bean plants were inspected and the number of pea aphids present on the three plants was recorded.
+#' The dataset comes from an ecological survey of the pea aphid (Acyrthosiphon pisum). In three fields, 15 randomly selected triplets of adjacent bean plants were inspected, and the total number of pea aphids on each triplet was recorded. The dataset includes the explanatory factor Field (three levels), a Sample identifier for the 15 sampling locations within each field, and the response variable AphidCount, representing the total aphid count per sample, and is used to assess whether aphid infestation differs among fields.
 #'
 #' @format A data frame with 45 rows and 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
 #' \describe{
@@ -27,9 +27,9 @@
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "aphids"
 
-#' Beetles
+#' Beetle mating
 #'
-#' An experiment was conducted to investigate the viability of interspecies mating in leaf beetles by examination of the results when females from two species of willow beetle (the brassy willow beetle, Phratora vitellinae, and the blue willow beetle, Phratora vulgatissima) were mated with males from either their own species (intraspecies mating) or the other species (interspecies mating), i.e. there were four treatments in total (for further details, see Peacock et al., 2004). The experiment was carried out as a CRD (completely randomized design) with 10 replicates of each treatment.
+#' The dataset comes from a completely randomized experiment investigating the viability of interspecies and intraspecies mating in two willow beetle species (Phratora vitellinae and Phratora vulgatissima). Females from each species were mated with males of either the same or the other species, giving four treatments with 10 replicates per treatment. The dataset includes the factor Treatment, identifying the mating combination, and the response variable Eggs, which records the number of eggs laid by each female, and is used to compare reproductive outcomes across mating types.
 #'
 #' @format A data frame with 5 variables: \code{DFemale}, \code{Treatment}, \code{Species}, \code{MateType}, \code{Eggs}.
 #' \describe{
@@ -38,7 +38,9 @@
 #'   \item{Species}{Species.}
 #'   \item{MateType}{Mating type: intraspecies or interspecies mating.}
 #'   \item{Eggs}{The number of eggs.}
-#' }#' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+#' }
+#' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+#' @source Peacock, L., Batley, J., Dungait, J. A. J., Barker, J. H. A., Powers, S. J. & Karp, A. (2004). \emph{A comparative study of interspecies mating of Phratora vulgatissima and P. vitellinae using behavioural tests and molecular markers}. Entomologia Experimentalis et Applicata, 110(3), 231–241.
 "beetles"
 
 #' Measuring soil microbial biomass

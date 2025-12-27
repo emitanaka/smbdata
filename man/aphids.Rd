@@ -3,7 +3,7 @@
 \docType{data}
 \name{aphids}
 \alias{aphids}
-\title{Aphids}
+\title{Pea aphids survey}
 \format{
 A data frame with 45 rows and 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
 \describe{
@@ -20,6 +20,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 aphids
 }
 \description{
-An ecological survey was done to investigate the co-occurrence of various insect predator and prey species. Here, we consider a subset of the data relating to one aphid species, the pea aphid, Acyrthosiphon pisum. In each of three fields, 15 randomly chosen triplets of adjacent bean plants were inspected and the number of pea aphids present on the three plants was recorded.
+The dataset comes from an ecological survey of the pea aphid (Acyrthosiphon pisum). In three fields, 15 randomly selected triplets of adjacent bean plants were inspected, and the total number of pea aphids on each triplet was recorded. The dataset includes the explanatory factor Field (three levels), a Sample identifier for the 15 sampling locations within each field, and the response variable AphidCount, representing the total aphid count per sample, and is used to assess whether aphid infestation differs among fields.
 }
 \keyword{datasets}
