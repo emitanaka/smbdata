@@ -606,6 +606,7 @@
 #'   \item{Length}{Numeric. Total body length of the beetle (in millimeters, mm).}
 #'   \item{Width}{Numeric. Maximum body width of the beetle (in millimeters, mm).}
 #' }
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "willow"
 
