@@ -6,6 +6,14 @@
 \title{Effect of type and size of cutting on willow yield}
 \format{
 A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Type}, \code{Size}, \code{Yield}.
+\describe{
+  \item{ID}{Integer. Unique identifier for each plot/observation.}
+  \item{Block}{Integer. Block number in the randomized complete block design.}
+  \item{Plot}{Integer. Plot number within each block.}
+  \item{Type}{Character. Cutting type (A, B, C, D, E) planted in each plot.}
+  \item{Size}{Character. Cutting size category: S (small), M (medium), or L (large).}
+  \item{Yield}{Numeric. Willow yield measured at the end of the first year (units as recorded, e.g., g/plot or kg/plot).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +22,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 cuttings
 }
 \description{
-A field experiment was designed to investigate whether the type of cutting planted affects the subsequent growth of willows. Cuttings of five different types (A–E, factor Type) were to be planted, and growth parameters would be measured over the following seasons, including yield at the end of the first year. At planting time, it was realized that the cuttings to be planted varied greatly in size, and that this might also have an effect on subsequent growth. Two options were considered here. Cutting size could be confounded with blocks, so that each block contained cuttings of the one size only. Alternatively, cutting size could be investigated as an extraneous factor, in addition to type. The second option was taken, and cuttings were classified as small (S), medium (M) or large (L, factor Size). Not all of the type × size combinations were available, and the total number of plots was fixed at 25. The design was based on a five-block RCBD with respect to cutting type, and the different sizes were allocated in as balanced a way as possible across blocks (factor Block) and cutting types. The yield (variate Yield) with allocation of size and type combinations to the five blocks.
+This field experiment was conducted to assess whether the type of cutting planted influences the growth and yield of willows, while also considering the effect of initial cutting size. Five different cutting types (Type: A–E) and three cutting sizes (Size: S, M, L) were included, though not all type × size combinations were available. The study employed a randomized complete block design with five blocks (Block) based on cutting type, and the 25 plots were arranged to balance cutting sizes as much as possible across blocks and types. The yield (Yield) measured at the end of the first year served as the response variable, enabling analysis of both main and combined effects of cutting type and size on willow growth.
 }
 \keyword{datasets}

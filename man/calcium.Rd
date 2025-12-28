@@ -20,6 +20,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 calcium
 }
 \description{
-An experiment was conducted to assess the impact of four different calcium concentrations (levels A = 1, B = 5, C = 10, D = 20) on the root growth of plants. The study followed a completely randomized design  (CRD), with each treatment assigned to five individual plants growing in separate pots, for a total of 20  pots. At the end of the experiment, the total root length (in cm) was measured for each pot. The dataset  contains three columns: Pot, a unique identifier for each pot; Calcium, a factor indicating the assigned  calcium treatment level; and Length, the measured total root length for each pot. This structure allows for comparison of root growth across the different calcium concentration treatments.
+An experiment was conducted to assess the impact of four different calcium concentrations (levels A = 1, B = 5, C = 10, D = 20) on the root growth of plants. The study followed a completely randomized design, with each treatment assigned to five individual plants growing in separate pots, for a total of 20  pots. At the end of the experiment, the total root length (in cm) was measured for each pot. The dataset  contains three columns: Pot, a unique identifier for each pot; Calcium, a factor indicating the assigned  calcium treatment level; and Length, the measured total root length for each pot. This structure allows for comparison of root growth across the different calcium concentration treatments.
 }
 \keyword{datasets}

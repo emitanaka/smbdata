@@ -3,9 +3,17 @@
 \docType{data}
 \name{potato}
 \alias{potato}
-\title{Potato}
+\title{Potato yields}
 \format{
 A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Type}, \code{Fungicide}, \code{Yield}.
+\describe{
+  \item{ID}{Integer. Unique identifier for each plot (experimental unit).}
+  \item{Block}{Integer. Block number in the randomized complete block design.}
+  \item{Plot}{Integer. Plot number within each block (1–5).}
+  \item{Type}{Character. Indicates if the plot is a "Control" or "Treated" (with fungicide).}
+  \item{Fungicide}{Character. Fungicide treatment applied in the plot ("Control", "F1", "F2", "F3", or "F4").}
+  \item{Yield}{Integer. Potato yield for the plot (units as recorded, e.g., kg/plot).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +22,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 potato
 }
 \description{
-Description.
+A field experiment was conducted using a randomized complete block design to evaluate the effects of four different fungicides (F1–F4) on potato yield, compared with untreated control plots. The trial consisted of four blocks, each containing five plots, resulting in a total of 20 experimental units. Treatments (control and four fungicides) were randomly assigned to plots within each block. For each plot, yield was measured and recorded. The dataset includes the blocking factors Block (four levels) and Plot (five levels within each block), the treatment factor Fungicide (five levels: control, F1, F2, F3, F4), and the response variable Yield, allowing for the comparison of fungicide efficacy under controlled field conditions.
 }
 \keyword{datasets}

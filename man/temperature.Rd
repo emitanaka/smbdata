@@ -3,9 +3,14 @@
 \docType{data}
 \name{temperature}
 \alias{temperature}
-\title{Temperature}
+\title{Rothamsted monthly mean temperature}
 \format{
 A data frame with 3 variables: \code{MonthName}, \code{Month}, \code{Temperature}.
+\describe{
+  \item{MonthName}{Character. Name of the month (e.g., "January", "February").}
+  \item{Month}{Integer. Numeric code for the month (1 = January, ..., 12 = December).}
+  \item{Temperature}{Numeric. Mean temperature for the month (in degrees Celsius).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +19,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 temperature
 }
 \description{
-Description.
+This dataset contains the monthly mean temperatures recorded at Rothamsted Experimental Station from 1891 to 1990. Each observation represents the mean temperature (variate Temperature) for a specific month and year within this 100-year period. The data are suitable for time series analysis and are expected to exhibit an annual cyclic pattern, making them appropriate for modeling using trigonometric regression methods.
 }
 \keyword{datasets}

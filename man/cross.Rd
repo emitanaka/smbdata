@@ -6,6 +6,12 @@
 \title{Genetics of root growth}
 \format{
 A data frame with 4 variables: \code{Seed}, \code{Female}, \code{Male}, \code{Root}.
+\describe{
+  \item{Seed}{Integer. Unique identifier for each individual seed/planted observation.}
+  \item{Female}{Character. Code for the female parent in the cross (levels: "F1" to "F5").}
+  \item{Male}{Character. Code for the male parent in the cross (levels: "M1", "M2").}
+  \item{Root}{Integer. Maximum root length (in millimeters) measured for each seedling three weeks after planting.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +20,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 cross
 }
 \description{
-An experiment was conducted to investigate the genetic component of root growth in manipulated lines. Two male parents (factor Male, levels M1 and M2) were crossed with five female parents (factor Female, levels F1–F5) and eight seeds were to be grown from each cross in a CRD. Root growth (maximum length) was measured (mm) after three weeks (variate Root). Unfortunately, many of the seeds were not viable because of genetic incompatibilities, leading to reduced replication of some treatments with only 30 observations in total.
+This experiment aimed to investigate the genetic basis of root growth in manipulated lines by crossing two male parents (Male: M1, M2) with five female parents (Female: F1–F5), resulting in ten cross combinations. Up to eight seeds per cross were to be grown in a completely randomized design, and the maximum root length (in mm) was measured for each plant three weeks after sowing (Root). However, due to genetic incompatibilities affecting seed viability, several treatment combinations failed to produce the intended number of replicates, resulting in a total of only 30 observations. The dataset enables analysis of genetic effects on root growth while accounting for variable replication.
 }
 \keyword{datasets}

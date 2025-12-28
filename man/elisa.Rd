@@ -3,9 +3,14 @@
 \docType{data}
 \name{elisa}
 \alias{elisa}
-\title{Elisa}
+\title{Elisa absorbance readings}
 \format{
 A data frame with 3 variables: \code{DUnit}, \code{Concentration}, \code{Absorbance}.
+\describe{
+  \item{DUnit}{Integer. Unique identifier for each ELISA reading.}
+  \item{Concentration}{Numeric. Substrate concentration used for each reading.}
+  \item{Absorbance}{Numeric. ELISA absorbance value measured at the given substrate concentration.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +19,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 elisa
 }
 \description{
-Description.
+A dataset was collected consisting of eight ELISA absorbance readings, each corresponding to a different, increasing concentration of a substrate. The primary focus of the analysis is to characterize the relationship between substrate concentration and measured absorbance, facilitating calibration or interpretation of ELISA response as a function of substrate level.
 }
 \keyword{datasets}

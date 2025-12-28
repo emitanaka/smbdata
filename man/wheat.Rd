@@ -3,9 +3,14 @@
 \docType{data}
 \name{wheat}
 \alias{wheat}
-\title{Wheat}
+\title{Wheat yields}
 \format{
 A data frame with 3 variables: \code{DPlot}, \code{Variety}, \code{Yield}.
+\describe{
+  \item{DPlot}{Integer. Unique identifier for each plot in the field trial.}
+  \item{Variety}{Character. Wheat variety grown in each plot ("Commercial" or "Improved").}
+  \item{Yield}{Numeric. Grain yield from the plot, measured in tonnes per hectare (t/ha).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +19,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 wheat
 }
 \description{
-Description.
+In this field trial, the yields of a standard commercial wheat variety and a new ‘improved’ variety were compared to assess differences in average performance. Seven small plots were planted with each variety, resulting in yield measurements from a total of 14 plots. Yields were determined for each plot and standardized to tonnes per hectare (t/ha). The primary objective of the study was to evaluate whether the new variety offers a significant advantage in yield over the standard commercial type.
 }
 \keyword{datasets}

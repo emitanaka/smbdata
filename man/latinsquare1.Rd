@@ -3,9 +3,15 @@
 \docType{data}
 \name{latinsquare1}
 \alias{latinsquare1}
-\title{Latinsquare 1}
+\title{Independent Latin squares}
 \format{
 A data frame with 4 variables: \code{Field}, \code{Row}, \code{Column}, \code{Treatment}.
+\describe{
+  \item{Field}{Integer. Identifier for each experimental field, corresponding to replicates of the Latin Square design.}
+  \item{Row}{Integer. Row position within the Latin Square in each field.}
+  \item{Column}{Integer. Column position within the Latin Square in each field.}
+  \item{Treatment}{Integer. Shade of petal colour assigned to the plot (five levels in total, coded as 1–5).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +20,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 latinsquare1
 }
 \description{
-Description.
+An experiment was designed to study the effect of petal colour on the influx of pollen beetles into oilseed rape crops. Five distinct shades of petal colour were tested using a Latin Square (LS) design to control for migration direction within the field. Due to high spatial variability in beetle counts observed in previous research, the LS experiment was replicated in two independent adjacent fields to improve the precision of treatment comparisons. The two squares had the same orientation, but row and column effects were considered independent between replicates, ensuring that comparisons reflected only the treatment and spatial trends within each field.
 }
 \keyword{datasets}

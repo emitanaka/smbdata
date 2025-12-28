@@ -3,17 +3,28 @@
 \docType{data}
 \name{lupin}
 \alias{lupin}
-\title{Lupin}
+\title{Lupin trial}
 \format{
 A data frame with 7 variables: \code{ID}, \code{Row}, \code{Column}, \code{Treatment}, \code{Water}, \code{Soil}, \code{Height}.
+\describe{
+  \item{ID}{Integer. Unique identifier for each pot (experimental unit).}
+  \item{Row}{Integer. Row position of the pot in the Latin Square grid.}
+  \item{Column}{Integer. Column position of the pot in the Latin Square grid.}
+  \item{Treatment}{Character. Combined treatment label for soil type and water supply (e.g., "CH", "CL", "SH", "SL").}
+  \item{Water}{Character. Water supply level applied to the pot: "L" (low) or "H" (high).}
+  \item{Soil}{Character. Soil type: "C" (clay) or "S" (sand).}
+  \item{Height}{Numeric. Height (in centimeters) of the lupin plant at the end of the experiment.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+
+I. Shield, Rothamsted Research.
 }
 \usage{
 lupin
 }
 \description{
-Description.
+An experiment was conducted to examine the effects of soil type and water availability on the growth of lupin plants grown individually in pots. To control for possible gradients due to temperature and light, the pots were arranged in a square grid and a Latin square design was used, treating rows and columnsas crossed blocking factors. Treatments followed a 2 × 2 factorial structure, combining two soil types (Soil: clay [C] or sand [S]) and two water supply levels (Water: low [L] or high [H]). Each treatment combination was applied to a group of pots. Plant height (cm) was recorded for each pot at the end of the experiment, allowing assessment of both main and interaction effects of soil type and water availability on lupin growth.
 }
 \keyword{datasets}

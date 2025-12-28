@@ -3,9 +3,17 @@
 \docType{data}
 \name{triticum}
 \alias{triticum}
-\title{Triticum}
+\title{Diploid wheat}
 \format{
 A data frame with 6 variables: \code{DSeed}, \code{Weight}, \code{Length}, \code{Diameter}, \code{Moisture}, \code{Hardness}.
+\describe{
+  \item{DSeed}{Integer. Unique identifier for each seed.}
+  \item{Weight}{Numeric. Weight of the seed (in milligrams, mg).}
+  \item{Length}{Numeric. Length of the seed (in millimeters, mm).}
+  \item{Diameter}{Numeric. Diameter of the seed (in millimeters, mm).}
+  \item{Moisture}{Numeric. Moisture content of the seed (as a percentage).}
+  \item{Hardness}{Numeric. Endosperm hardness, measured as a single-kernel characterization system index value.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +22,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 triticum
 }
 \description{
-Description.
+A dataset was collected to investigate morphological characteristics associated with seed weight in a line of diploid wheat (Triticum monococcum). Measurements were taken on 190 randomly selected seeds, recording five traits for each seed: weight (mg), diameter (mm), length (mm), moisture content (percentage), and endosperm hardness (index value from a single-kernel characterization system). Each seed is uniquely identified by the variable DSeed. The primary aim of the study is to identify which variables, particularly seed length, contribute to variation in seed weight. This dataset enables the analysis of relationships among seed traits within a genetically uniform wheat line.
 }
 \keyword{datasets}

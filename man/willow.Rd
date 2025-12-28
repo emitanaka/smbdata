@@ -3,9 +3,14 @@
 \docType{data}
 \name{willow}
 \alias{willow}
-\title{Willow}
+\title{Willow beetle measurements}
 \format{
 A data frame with 3 variables: \code{DBeetle}, \code{Length}, \code{Width}.
+\describe{
+  \item{DBeetle}{Integer. Unique identifier for each beetle in the sample.}
+  \item{Length}{Numeric. Total body length of the beetle (in millimeters, mm).}
+  \item{Width}{Numeric. Maximum body width of the beetle (in millimeters, mm).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +19,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 willow
 }
 \description{
-Description.
+A sample of 50 willow beetles (\emph{Phratora vulgatissima}) was collected from a willow crop near Bristol, UK, to investigate morphological variation within the population. For each beetle, measurements were taken of total body length and width, among other characteristics. This dataset enables analysis of size variation and potential relationships between morphological traits in willow beetles from this location.
 }
 \keyword{datasets}

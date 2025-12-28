@@ -6,14 +6,22 @@
 \title{Cotton response to herbicide and insecticide}
 \format{
 A data frame with 4 variables: \code{ID}, \code{H}, \code{I}, \code{Weight}.
+\describe{
+  \item{ID}{Integer. Unique identifier for each container or experimental unit.}
+  \item{H}{Numeric. Herbicide dose applied (lb/acre; one of 0.0, 0.5, 1.0, 1.5, 2.0).}
+  \item{I}{Integer. Insecticide dose applied (lb/acre; one of 0, 20, 40, 60, 80).}
+  \item{Weight}{Numeric. Dry root biomass of cotton plants (grams per plant) measured after three weeks.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+
+Kuehl, R.O. 2000. Design of Experiments: Statistical Principles of Research Design and Analysis (2nd edition). Thomson Learning (Duxbury Press), Pacific Grove, California. 666 pp.
 }
 \usage{
 cotton
 }
 \description{
-An experiment was done to evaluate the combined effects of five different doses of herbicide (0, 20, 40, 60 and 80 lb/acre) and five different doses of insecticide (0.0, 0.5, 1.0, 1.5 and 2.0 lb/acre) on the root growth of cotton plants in containers within a glasshouse. Four replicates of each treatment combination were arranged in a CRD. After three weeks, the dry root biomass (g/plant) was measured for each container.
+This experiment investigated the combined effects of five herbicide doses (0.0, 0.5, 1.0, 1.5, and 2.0 lb/acre) and five insecticide doses (0, 20, 40, 60, and 80 lb/acre) on the root growth of cotton plants grown in containers in a glasshouse. The study employed a completely randomized design with four replicates for each of the 25 possible treatment combinations. Three weeks after treatment, the dry root biomass (grams per plant) was measured for each container. The dataset allows for the assessment of the main and interactive effects of herbicide and insecticide doses on cotton root growth.
 }
 \keyword{datasets}

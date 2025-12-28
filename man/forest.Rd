@@ -3,17 +3,25 @@
 \docType{data}
 \name{forest}
 \alias{forest}
-\title{Forest}
+\title{Stand density of mixed nothofagus forest plots}
 \format{
 A data frame with 4 variables: \code{DPlot}, \code{Type}, \code{SD}, \code{QD}.
+\describe{
+  \item{DPlot}{Integer. Unique identifier for each forest plot.}
+  \item{Type}{Character. Forest stand type classified by dominant Nothofagus species in the plot: "Coigue", "Rauli", or "Roble".}
+  \item{SD}{Integer. Stand density, recorded as the number of trees per hectare in each plot.}
+  \item{QD}{Numeric. Mean quadratic diameter (in centimeters) of trees in the plot.}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+
+Dra. Alicia Ortega Z., Universidad Austral de Chile
 }
 \usage{
 forest
 }
 \description{
-Description.
+A survey was conducted on 41 plots of pure or mixed Nothofagus forest located at the foot of the Andes. Each plot was classified into one of three stand types based on the dominant tree species: Coigue (type 1, 13 plots), Rauli (type 2, 9 plots), or Roble (type 3, 19 plots). For each plot, stand density (number of trees per hectare, SD) and mean quadratic diameter (in cm, QD) were recorded. The primary aim of the study was to model how stand density relates to quadratic diameter and to compare this relationship across the three forest stand types.
 }
 \keyword{datasets}

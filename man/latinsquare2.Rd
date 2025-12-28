@@ -3,9 +3,15 @@
 \docType{data}
 \name{latinsquare2}
 \alias{latinsquare2}
-\title{Latinsquare 2}
+\title{Linked Latin squares}
 \format{
 A data frame with 4 variables: \code{Rep}, \code{Stack}, \code{Position}, \code{Treatment}.
+\describe{
+  \item{Rep}{Integer. Replicate indicator for each Latin Square (two replicates in total).}
+  \item{Stack}{Integer. Stack identifier (1–5), indicating the location of each vertical stack on the shelf within each replicate.}
+  \item{Position}{Integer. Position of the dish within the stack (1–5, from bottom to top or as defined in the experiment).}
+  \item{Treatment}{Integer. Fungus strain assigned to the dish (coded as 1–5, corresponding to the five fungal strains).}
+}
 }
 \source{
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -14,6 +20,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 latinsquare2
 }
 \description{
-Description.
+An experiment was conducted to assess the growth of five different strains of fungus on a novel substrate. Each strain was inoculated onto 10 dishes, which were arranged in vertical stacks of five within a controlled environment (CE) cabinet. The experimental design comprised two replicates of a 5 × 5 Latin Square (LS), with both replicates placed on the same shelf. This design allowed the investigator to control for potential effects of dish position within each stack (Position) and stack location on the shelf (Stack), both considered independent sources of variation in the study.
 }
 \keyword{datasets}
