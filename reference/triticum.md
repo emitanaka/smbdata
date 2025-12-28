@@ -52,3 +52,17 @@ A data frame with 6 variables: `DSeed`, `Weight`, `Length`, `Diameter`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(Weight ~ Length, data = triticum)
+#> 
+#> Call:
+#> lm(formula = Weight ~ Length, data = triticum)
+#> 
+#> Coefficients:
+#> (Intercept)       Length  
+#>      -27.93        17.17  
+#> 
+```

@@ -61,3 +61,21 @@ A data frame with 7 variables: `DPlot`, `Type`, `SD`, `QD`, `d1`, `d2`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+anova(lm(log(SD) ~ log(QD) * (d2 + d3), data = forest2))
+#> Analysis of Variance Table
+#> 
+#> Response: log(SD)
+#>            Df Sum Sq Mean Sq F value    Pr(>F)    
+#> log(QD)     1 4.5833  4.5833 78.5621 1.804e-10 ***
+#> d2          1 0.0061  0.0061  0.1037   0.74933    
+#> d3          1 1.9342  1.9342 33.1542 1.610e-06 ***
+#> log(QD):d2  1 0.2011  0.2011  3.4465   0.07182 .  
+#> log(QD):d3  1 0.0001  0.0001  0.0013   0.97173    
+#> Residuals  35 2.0419  0.0583                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

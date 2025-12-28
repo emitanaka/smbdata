@@ -37,3 +37,17 @@ A data frame with 3 variables: `DPlot`, `Variety`, `Yield`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(Yield ~ Variety, data = wheat)
+#> 
+#> Call:
+#> lm(formula = Yield ~ Variety, data = wheat)
+#> 
+#> Coefficients:
+#>     (Intercept)  VarietyImproved  
+#>           7.571            2.714  
+#> 
+```

@@ -54,3 +54,19 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Type`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(Yield ~ Block + Fungicide, data = potato)
+#> 
+#> Call:
+#> lm(formula = Yield ~ Block + Fungicide, data = potato)
+#> 
+#> Coefficients:
+#> (Intercept)       Block2       Block3       Block4  FungicideF1  FungicideF2  
+#>       402.1         13.6         35.6        -39.6        163.0        208.0  
+#> FungicideF3  FungicideF4  
+#>       224.5        196.0  
+#> 
+```

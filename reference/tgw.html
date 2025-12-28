@@ -69,6 +69,31 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Damage</span> <span class="op">~</span> <span class="va">Trt</span>, data <span class="op">=</span> <span class="va">tgw</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> lm(formula = Damage ~ Trt, data = tgw)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)        Trt-N        Trt+B        Trt+N  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       28.33        -5.00        -5.00        20.00  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">TGW</span> <span class="op">~</span> <span class="va">Damage</span> <span class="op">*</span> <span class="va">Trt</span>, data <span class="op">=</span> <span class="va">tgw</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> lm(formula = TGW ~ Damage * Trt, data = tgw)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  (Intercept)        Damage         Trt-N         Trt+B         Trt+N  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3.16160       0.00702       1.60555       0.61957       1.91623  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Damage:Trt-N  Damage:Trt+B  Damage:Trt+N  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     -0.02839      -0.01986      -0.03648  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

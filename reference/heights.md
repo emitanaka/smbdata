@@ -34,7 +34,7 @@ A data frame with 5 variables: `Pot`, `Row`, `Column`, `Dose`, `Height`.
 
 - Dose:
 
-  Integer. Applied dose of the growth regulator.
+  Factor. Applied dose of the growth regulator.
 
 - Height:
 
@@ -46,3 +46,18 @@ A data frame with 5 variables: `Pot`, `Row`, `Column`, `Dose`, `Height`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+anova(lm(Height ~ Column + Dose, data = heights))
+#> Analysis of Variance Table
+#> 
+#> Response: Height
+#>           Df Sum Sq Mean Sq F value    Pr(>F)    
+#> Column     5 618.85 123.771  33.485 5.526e-07 ***
+#> Dose       5 348.05  69.610  18.833 1.523e-05 ***
+#> Residuals 13  48.05   3.696                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

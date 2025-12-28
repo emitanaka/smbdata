@@ -73,6 +73,22 @@
 <p>I. Shield, Rothamsted Research.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Height</span> <span class="op">~</span> <span class="va">Row</span> <span class="op">+</span> <span class="va">Column</span> <span class="op">+</span> <span class="va">Treatment</span>, data <span class="op">=</span> <span class="va">lupin</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Analysis of Variance Table</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Response: Height</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Row        3  6.162  2.0540   3.165 0.1068420    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Column     3 74.912 24.9706  38.478 0.0002589 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Treatment  3 24.662  8.2206  12.667 0.0052542 ** </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals  6  3.894  0.6490                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

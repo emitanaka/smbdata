@@ -61,3 +61,19 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 regression*
 
 I. Shield, Rothamsted Research.
+
+## Examples
+
+``` r
+anova(lm(Height ~ Row + Column + Treatment, data = lupin))
+#> Analysis of Variance Table
+#> 
+#> Response: Height
+#>           Df Sum Sq Mean Sq F value    Pr(>F)    
+#> Row        3  6.162  2.0540   3.165 0.1068420    
+#> Column     3 74.912 24.9706  38.478 0.0002589 ***
+#> Treatment  3 24.662  8.2206  12.667 0.0052542 ** 
+#> Residuals  6  3.894  0.6490                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

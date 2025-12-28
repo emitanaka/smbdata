@@ -35,3 +35,19 @@ A data frame with 3 variables: `MonthName`, `Month`, `Temperature`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(Temperature ~ sin(2 * pi * Month / 12) + cos(2 * pi * Month / 12),
+   data = temperature)
+#> 
+#> Call:
+#> lm(formula = Temperature ~ sin(2 * pi * Month/12) + cos(2 * pi * 
+#>     Month/12), data = temperature)
+#> 
+#> Coefficients:
+#>            (Intercept)  sin(2 * pi * Month/12)  cos(2 * pi * Month/12)  
+#>                  9.125                  -4.087                  -5.129  
+#> 
+```

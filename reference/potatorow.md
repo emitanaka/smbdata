@@ -55,3 +55,24 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Row`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+summary(aov(RowYield ~ Fungicide + Error(Block/Plot/Row), data = potatorow))
+#> 
+#> Error: Block
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Residuals  3  59949   19983               
+#> 
+#> Error: Block:Plot
+#>           Df Sum Sq Mean Sq F value  Pr(>F)   
+#> Fungicide  4 533677  133419   9.576 0.00103 **
+#> Residuals 12 167187   13932                   
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#> 
+#> Error: Block:Plot:Row
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Residuals 60 186848    3114               
+```

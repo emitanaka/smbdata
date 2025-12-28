@@ -45,3 +45,18 @@ A data frame with 4 variables: `DPlant`, `Distance`, `fDist`, `Count`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+anova(lm(log10(Count) ~ Distance + fDist, data = transect))
+#> Analysis of Variance Table
+#> 
+#> Response: log10(Count)
+#>           Df  Sum Sq Mean Sq F value    Pr(>F)    
+#> Distance   1 0.35623 0.35623 22.0733 0.0001791 ***
+#> fDist      4 0.27891 0.06973  4.3206 0.0126623 *  
+#> Residuals 18 0.29049 0.01614                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

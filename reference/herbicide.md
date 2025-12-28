@@ -34,7 +34,7 @@ A data frame with 7 variables: `ID`, `Rep`, `DPot`, `Population`,
 
 - DPot:
 
-  Integer. Dummy variable indicating the pot number within each block.
+  Factor. Dummy variable indicating the pot number within each block.
 
 - Population:
 
@@ -61,3 +61,34 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 regression*
 
 R. Hull, Rothamsted Research.
+
+## Examples
+
+``` r
+aov(sqrt(Fwt) ~ Herbicide * Population + Error(Rep/DPot), data = herbicide)
+#> 
+#> Call:
+#> aov(formula = sqrt(Fwt) ~ Herbicide * Population + Error(Rep/DPot), 
+#>     data = herbicide)
+#> 
+#> Grand Mean: 1.653736
+#> 
+#> Stratum 1: Rep
+#> 
+#> Terms:
+#>                 Residuals
+#> Sum of Squares   1.311058
+#> Deg. of Freedom         4
+#> 
+#> Residual standard error: 0.5725072
+#> 
+#> Stratum 2: Rep:DPot
+#> 
+#> Terms:
+#>                 Herbicide Population Herbicide:Population Residuals
+#> Sum of Squares   15.72075    3.50803             13.94369  12.76256
+#> Deg. of Freedom         2          8                   16       104
+#> 
+#> Residual standard error: 0.3503098
+#> Estimated effects may be unbalanced
+```

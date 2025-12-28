@@ -51,7 +51,7 @@
 <dd><p>Factor. Block number in the randomized complete block design corresponding to replicate (1–5).</p></dd>
 
   <dt>DPot</dt>
-<dd><p>Integer. Dummy variable indicating the pot number within each block.</p></dd>
+<dd><p>Factor. Dummy variable indicating the pot number within each block.</p></dd>
 
   <dt>Population</dt>
 <dd><p>Factor. Identifier for the black-grass population (e.g., "P1"–"P9").</p></dd>
@@ -73,6 +73,37 @@
 <p>R. Hull, Rothamsted Research.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">Fwt</span><span class="op">)</span> <span class="op">~</span> <span class="va">Herbicide</span> <span class="op">*</span> <span class="va">Population</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">Rep</span><span class="op">/</span><span class="va">DPot</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">herbicide</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> aov(formula = sqrt(Fwt) ~ Herbicide * Population + Error(Rep/DPot), </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     data = herbicide)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Grand Mean: 1.653736</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stratum 1: Rep</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Terms:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 Residuals</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sum of Squares   1.311058</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deg. of Freedom         4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual standard error: 0.5725072</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stratum 2: Rep:DPot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Terms:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 Herbicide Population Herbicide:Population Residuals</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sum of Squares   15.72075    3.50803             13.94369  12.76256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deg. of Freedom         2          8                   16       104</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual standard error: 0.3503098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Estimated effects may be unbalanced</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

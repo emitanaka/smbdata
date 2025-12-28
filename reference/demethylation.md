@@ -45,3 +45,37 @@ A data frame with 4 variables: `DTray`, `Dose`, `Total`, `Normal`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+glm(cbind(Normal, Total - Normal) ~ Dose,
+    family = binomial(),
+    data = demethylation)
+#> 
+#> Call:  glm(formula = cbind(Normal, Total - Normal) ~ Dose, family = binomial(), 
+#>     data = demethylation)
+#> 
+#> Coefficients:
+#> (Intercept)         Dose  
+#>       2.793       -7.623  
+#> 
+#> Degrees of Freedom: 23 Total (i.e. Null);  22 Residual
+#> Null Deviance:       1901 
+#> Residual Deviance: 160.6     AIC: 235.6
+
+glm(cbind(Normal, Total - Normal) ~ log(Dose + 0.1),
+    family = binomial(),
+    data = demethylation)
+#> 
+#> Call:  glm(formula = cbind(Normal, Total - Normal) ~ log(Dose + 0.1), 
+#>     family = binomial(), data = demethylation)
+#> 
+#> Coefficients:
+#>     (Intercept)  log(Dose + 0.1)  
+#>          -3.188           -3.148  
+#> 
+#> Degrees of Freedom: 23 Total (i.e. Null);  22 Residual
+#> Null Deviance:       1901 
+#> Residual Deviance: 26.62     AIC: 101.6
+```

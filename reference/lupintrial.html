@@ -69,6 +69,36 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">OilYield</span> <span class="op">~</span> <span class="va">Line</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">Block</span><span class="op">/</span><span class="va">Plot</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">lupintrial</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> aov(formula = OilYield ~ Line + Error(Block/Plot), data = lupintrial)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Grand Mean: 0.3359524</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stratum 1: Block</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Terms:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   Residuals</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sum of Squares  0.006347619</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deg. of Freedom           2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual standard error: 0.05633657</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Stratum 2: Block:Plot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Terms:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      Line Residuals</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sum of Squares  0.3570119 0.1008524</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deg. of Freedom        13        26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual standard error: 0.06228112</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Estimated effects may be unbalanced</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

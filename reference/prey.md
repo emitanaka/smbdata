@@ -61,3 +61,30 @@ A data frame with 7 variables: `ID`, `Row`, `Dish`, `Sex`, `Prey`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+glm(cbind(Eaten, Total) ~ Row + Sex * Prey, family = binomial(), data = prey)
+#> 
+#> Call:  glm(formula = cbind(Eaten, Total) ~ Row + Sex * Prey, family = binomial(), 
+#>     data = prey)
+#> 
+#> Coefficients:
+#>          (Intercept)                  Row2                  Row3  
+#>             -0.30284              -0.07943              -1.23394  
+#>                 Row4                  Row5                  Row6  
+#>             -0.20371              -0.29386              -0.62670  
+#>                 Row7                  Row8                  Row9  
+#>             -0.19660               0.36441              -1.55313  
+#>                Row10                 Row11                 Row12  
+#>             -0.96105              -0.92139              -0.31748  
+#>                Row13                 Row14                 Row15  
+#>             -1.62318              -0.14130              -1.21291  
+#>              SexMale          PreyLacewing  SexMale:PreyLacewing  
+#>             -1.13843              -0.42833               0.09693  
+#> 
+#> Degrees of Freedom: 59 Total (i.e. Null);  42 Residual
+#> Null Deviance:       87.3 
+#> Residual Deviance: 46.48     AIC: 173.7
+```

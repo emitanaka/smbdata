@@ -45,3 +45,19 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 regression*
 
 Dra. Alicia Ortega Z., Universidad Austral de Chile
+
+## Examples
+
+``` r
+lm(log(SD) ~ log(QD) * Type, data = forest)
+#> 
+#> Call:
+#> lm(formula = log(SD) ~ log(QD) * Type, data = forest)
+#> 
+#> Coefficients:
+#>       (Intercept)            log(QD)          TypeRauli          TypeRoble  
+#>          12.53440           -1.62812           -3.03691           -0.58580  
+#> log(QD):TypeRauli  log(QD):TypeRoble  
+#>           0.97836            0.01119  
+#> 
+```

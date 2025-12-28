@@ -59,3 +59,28 @@ A data frame with 6 variables: `Plot`, `GR`, `Variety`, `Trt`, `Damage`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(Damage ~ Trt, data = tgw)
+#> 
+#> Call:
+#> lm(formula = Damage ~ Trt, data = tgw)
+#> 
+#> Coefficients:
+#> (Intercept)        Trt-N        Trt+B        Trt+N  
+#>       28.33        -5.00        -5.00        20.00  
+#> 
+lm(TGW ~ Damage * Trt, data = tgw)
+#> 
+#> Call:
+#> lm(formula = TGW ~ Damage * Trt, data = tgw)
+#> 
+#> Coefficients:
+#>  (Intercept)        Damage         Trt-N         Trt+B         Trt+N  
+#>      3.16160       0.00702       1.60555       0.61957       1.91623  
+#> Damage:Trt-N  Damage:Trt+B  Damage:Trt+N  
+#>     -0.02839      -0.01986      -0.03648  
+#> 
+```

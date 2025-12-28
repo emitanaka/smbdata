@@ -54,7 +54,7 @@
 <dd><p>Factor. Column position of the pot in the grid layout on the bench.</p></dd>
 
   <dt>Dose</dt>
-<dd><p>Integer. Applied dose of the growth regulator.</p></dd>
+<dd><p>Factor. Applied dose of the growth regulator.</p></dd>
 
   <dt>Height</dt>
 <dd><p>Numeric. Plant height (in centimeters) measured six weeks after treatment.</p></dd>
@@ -66,6 +66,21 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Height</span> <span class="op">~</span> <span class="va">Column</span> <span class="op">+</span> <span class="va">Dose</span>, data <span class="op">=</span> <span class="va">heights</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Analysis of Variance Table</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Response: Height</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Column     5 618.85 123.771  33.485 5.526e-07 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dose       5 348.05  69.610  18.833 1.523e-05 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals 13  48.05   3.696                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

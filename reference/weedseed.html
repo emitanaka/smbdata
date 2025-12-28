@@ -66,6 +66,24 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="va">TotalSeed</span><span class="op">)</span> <span class="op">~</span> <span class="va">Site</span> <span class="op">*</span> <span class="op">(</span><span class="va">HLength</span> <span class="op">+</span> <span class="va">Spikelets</span><span class="op">)</span> , data <span class="op">=</span> <span class="va">weedseed</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Analysis of Variance Table</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Response: log10(TotalSeed)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                Df  Sum Sq Mean Sq  F value  Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Site            3 13.2175  4.4058 108.2169 &lt; 2e-16 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> HLength         1  0.2905  0.2905   7.1363 0.00926 ** </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Spikelets       1  0.1554  0.1554   3.8170 0.05446 .  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Site:HLength    3  0.2092  0.0697   1.7127 0.17162    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Site:Spikelets  3  0.0797  0.0266   0.6524 0.58392    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals      75  3.0535  0.0407                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

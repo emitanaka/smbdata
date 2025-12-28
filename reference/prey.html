@@ -72,6 +72,33 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">Eaten</span>, <span class="va">Total</span><span class="op">)</span> <span class="op">~</span> <span class="va">Row</span> <span class="op">+</span> <span class="va">Sex</span> <span class="op">*</span> <span class="va">Prey</span>, family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html" class="external-link">binomial</a></span><span class="op">(</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">prey</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Call:  glm(formula = cbind(Eaten, Total) ~ Row + Sex * Prey, family = binomial(), </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     data = prey)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          (Intercept)                  Row2                  Row3  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             -0.30284              -0.07943              -1.23394  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 Row4                  Row5                  Row6  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             -0.20371              -0.29386              -0.62670  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 Row7                  Row8                  Row9  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             -0.19660               0.36441              -1.55313  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                Row10                 Row11                 Row12  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             -0.96105              -0.92139              -0.31748  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                Row13                 Row14                 Row15  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             -1.62318              -0.14130              -1.21291  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              SexMale          PreyLacewing  SexMale:PreyLacewing  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             -1.13843              -0.42833               0.09693  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Degrees of Freedom: 59 Total (i.e. Null);  42 Residual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Null Deviance:	    87.3 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual Deviance: 46.48 	AIC: 173.7</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

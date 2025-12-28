@@ -38,3 +38,17 @@ A data frame with 3 variables: `DPlot`, `OlsenP`, `Yield`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(Yield ~ log10(OlsenP), data = phosphorus)
+#> 
+#> Call:
+#> lm(formula = Yield ~ log10(OlsenP), data = phosphorus)
+#> 
+#> Coefficients:
+#>   (Intercept)  log10(OlsenP)  
+#>         1.674          2.644  
+#> 
+```

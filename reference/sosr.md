@@ -73,3 +73,30 @@ A data frame with 8 variables: `ID`, `Farm`, `Field`, `DHalf`, `Year`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+summary(aov(log10(Weeds) ~ Year * Treatment + Error(Farm/Field/DHalf),
+            data = sosr |>
+               transform(Year = factor(Year))))
+#> Warning: Error() model is singular
+#> 
+#> Error: Farm
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Year       2  0.503  0.2515   0.593  0.558
+#> Residuals 34 14.419  0.4241               
+#> 
+#> Error: Farm:Field
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Year       2  0.253  0.1263    0.57  0.575
+#> Residuals 20  4.434  0.2217               
+#> 
+#> Error: Farm:Field:DHalf
+#>                Df Sum Sq Mean Sq F value Pr(>F)  
+#> Treatment       1  0.617  0.6166   5.415 0.0236 *
+#> Year:Treatment  2  0.011  0.0055   0.048 0.9531  
+#> Residuals      56  6.376  0.1139                 
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

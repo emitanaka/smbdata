@@ -48,3 +48,20 @@ A data frame with 5 variables: `ID`, `Block`, `Plot`, `N`, `Yield`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+summary(aov(Yield ~ factor(N) + Error(Block/Plot), data = forage))
+#> 
+#> Error: Block
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Residuals  2  2.838   1.419               
+#> 
+#> Error: Block:Plot
+#>           Df Sum Sq Mean Sq F value Pr(>F)  
+#> factor(N)  3  6.143  2.0478   6.347 0.0272 *
+#> Residuals  6  1.936  0.3227                 
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

@@ -53,3 +53,33 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Line`, `NPlant`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+aov(OilYield ~ Line + Error(Block/Plot), data = lupintrial)
+#> 
+#> Call:
+#> aov(formula = OilYield ~ Line + Error(Block/Plot), data = lupintrial)
+#> 
+#> Grand Mean: 0.3359524
+#> 
+#> Stratum 1: Block
+#> 
+#> Terms:
+#>                   Residuals
+#> Sum of Squares  0.006347619
+#> Deg. of Freedom           2
+#> 
+#> Residual standard error: 0.05633657
+#> 
+#> Stratum 2: Block:Plot
+#> 
+#> Terms:
+#>                      Line Residuals
+#> Sum of Squares  0.3570119 0.1008524
+#> Deg. of Freedom        13        26
+#> 
+#> Residual standard error: 0.06228112
+#> Estimated effects may be unbalanced
+```

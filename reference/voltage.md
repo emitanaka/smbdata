@@ -51,3 +51,17 @@ A data frame with 5 variables: `ID`, `Rep`, `DUnit`, `Voltage`, `Km`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+lm(log(Km) ~ Rep + Voltage, data = voltage)
+#> 
+#> Call:
+#> lm(formula = log(Km) ~ Rep + Voltage, data = voltage)
+#> 
+#> Coefficients:
+#> (Intercept)         Rep2      Voltage  
+#>   -0.334739    -0.197888     0.006777  
+#> 
+```

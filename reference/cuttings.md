@@ -53,3 +53,20 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Type`, `Size`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+anova(lm(Yield ~ Block + Size * Type, data = cuttings))
+#> Analysis of Variance Table
+#> 
+#> Response: Yield
+#>           Df  Sum Sq Mean Sq F value   Pr(>F)   
+#> Block      4 186.430  46.607  7.3849 0.008555 **
+#> Size       2  49.018  24.509  3.8834 0.066280 . 
+#> Type       4  96.916  24.229  3.8390 0.049963 * 
+#> Size:Type  6  21.079   3.513  0.5567 0.754374   
+#> Residuals  8  50.490   6.311                    
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
