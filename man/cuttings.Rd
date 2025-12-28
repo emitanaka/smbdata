@@ -8,10 +8,10 @@
 A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Type}, \code{Size}, \code{Yield}.
 \describe{
   \item{ID}{Integer. Unique identifier for each plot/observation.}
-  \item{Block}{Integer. Block number in the randomized complete block design.}
-  \item{Plot}{Integer. Plot number within each block.}
-  \item{Type}{Character. Cutting type (A, B, C, D, E) planted in each plot.}
-  \item{Size}{Character. Cutting size category: S (small), M (medium), or L (large).}
+  \item{Block}{Factor. Block number in the randomized complete block design.}
+  \item{Plot}{Factor. Plot number within each block.}
+  \item{Type}{Factor. Cutting type (A, B, C, D, E) planted in each plot.}
+  \item{Size}{Factor. Cutting size category: S (small), M (medium), or L (large).}
   \item{Yield}{Numeric. Willow yield measured at the end of the first year (units as recorded, e.g., g/plot or kg/plot).}
 }
 }

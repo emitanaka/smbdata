@@ -7,10 +7,10 @@
 \format{
 A data frame with 7 variables: \code{ID}, \code{Run}, \code{DUnit}, \code{Source}, \code{Time}, \code{Period}, \code{Conidia}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each observation.}
-  \item{Run}{Integer. Experimental run indicator (each time period and source combination is repeated in two separate runs).}
-  \item{DUnit}{Integer. Identifier for each experimental unit within a run.}
-  \item{Source}{Character. Source of sporulating cadaver ("Clone" or "Standard") providing the fungal conidia.}
+  \item{ID}{Factor. Unique identifier for each observation.}
+  \item{Run}{Factor. Experimental run indicator (each time period and source combination is repeated in two separate runs).}
+  \item{DUnit}{Factor. Identifier for each experimental unit within a run.}
+  \item{Source}{Factor. Source of sporulating cadaver ("Clone" or "Standard") providing the fungal conidia.}
   \item{Time}{Integer. Duration of exposure (in minutes) to the conidia shower (excluding zero-time controls).}
   \item{Period}{Integer. Index for the time period (e.g., 1 for the first non-zero time, 2 for the second, etc.).}
   \item{Conidia}{Integer. Number of conidia (spores) counted on slides for the corresponding experimental unit.}

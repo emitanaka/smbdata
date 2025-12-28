@@ -7,8 +7,8 @@
 \format{
 A data frame with 5 variables: \code{DSample}, \code{Size}, \code{Weight}, \code{Time}, \code{C}.
 \describe{
-  \item{DSample}{Integer. Experimental unit identifier, representing the replicate number.}
-  \item{Size}{Character. Sieve size used for processing soil samples ("Small" or "Large").}
+  \item{DSample}{Factor. Experimental unit identifier, representing the replicate number.}
+  \item{Size}{Factor. Sieve size used for processing soil samples ("Small" or "Large").}
   \item{Weight}{Integer. Sample weight used in the protocol.}
   \item{Time}{Integer. Duration in minutes of shaking during sample processing.}
   \item{C}{Integer. Microbial biomass carbon in soil, measured as mg C per kg soil.}

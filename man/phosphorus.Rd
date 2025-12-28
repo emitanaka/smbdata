@@ -7,7 +7,7 @@
 \format{
 A data frame with 3 variables: \code{DPlot}, \code{OlsenP}, \code{Yield}.
 \describe{
-  \item{DPlot}{Integer. Unique identifier for each field plot.}
+  \item{DPlot}{Factor. Unique identifier for each field plot.}
   \item{OlsenP}{Numeric. Available soil phosphorus content measured as Olsen P (mg/kg or ppm).}
   \item{Yield}{Numeric. Yield of spring barley from each plot (typically in tonnes per hectare, t/ha).}
 }

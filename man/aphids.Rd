@@ -7,10 +7,10 @@
 \format{
 A data frame with 45 rows and 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
 \describe{
-  \item{ID}{An ID number.}
-  \item{Field}{The field number.}
-  \item{Sample}{The sample number.}
-  \item{AphidCount}{The count of aphids.}
+  \item{ID}{Factor. Unique identifier for each observation.}
+  \item{Field}{Factor. Identifier for the field in which the sample was collected.}
+  \item{Sample}{Factor. Sample point number within each field.}
+  \item{AphidCount}{Integer. Number of aphids counted in the sample.}
 }
 }
 \source{
@@ -23,9 +23,7 @@ aphids
 The dataset comes from an ecological survey of the pea aphid (Acyrthosiphon pisum). In three fields, 15 randomly selected triplets of adjacent bean plants were inspected, and the total number of pea aphids on each triplet was recorded. The dataset includes the explanatory factor Field (three levels), a Sample identifier for the 15 sampling locations within each field, and the response variable AphidCount, representing the total aphid count per sample, and is used to assess whether aphid infestation differs among fields.
 }
 \examples{
-fit <- glm(AphidCount ~ Field, family = poisson(),
-           data = aphids |>
-             transform(Field = factor(Field)))
+fit <- glm(AphidCount ~ Field, family = poisson(), data = aphids)
 
 }
 \keyword{datasets}

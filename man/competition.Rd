@@ -7,12 +7,12 @@
 \format{
 A data frame with 7 variables: \code{ID}, \code{Block}, \code{WholePlot}, \code{Subplot}, \code{Irrigation}, \code{Species}, \code{Grain}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each subplot (observation).}
-  \item{Block}{Integer. Block number in the experiment (four blocks in total).}
-  \item{WholePlot}{Integer. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).}
-  \item{Subplot}{Integer. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).}
-  \item{Irrigation}{Character. Irrigation treatment applied to the whole plot ("yes" or "no").}
-  \item{Species}{Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
+  \item{ID}{Factor. Unique identifier for each subplot (observation).}
+  \item{Block}{Factor. Block number in the experiment (four blocks in total).}
+  \item{WholePlot}{Factor. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).}
+  \item{Subplot}{Factor. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).}
+  \item{Irrigation}{Factor. Irrigation treatment applied to the whole plot ("yes" or "no").}
+  \item{Species}{Factor. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
   \item{Grain}{Numeric. Grain yield (in appropriate units) measured for each subplot of winter wheat.}
 }
 }
@@ -27,10 +27,7 @@ This dataset arises from a split-plot experiment designed to assess the competit
 }
 \examples{
 fit <- aov(Grain ~ Irrigation * Species + Error(Block/WholePlot/Subplot),
-           data = competition |>
-             transform(Block = factor(Block),
-                       WholePlot = factor(WholePlot),
-                       Subplot = factor(Subplot)))
+           data = competition)
 summary(fit)
 }
 \keyword{datasets}

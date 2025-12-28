@@ -7,8 +7,8 @@
 \format{
 A data frame with 7 variables: \code{Pot}, \code{Calcium}, \code{Length}, \code{d1}, \code{d2}, \code{d3}, \code{d4}.
 \describe{
-  \item{Pot}{Integer. Unique identifier for each pot (experimental unit).}
-  \item{Calcium}{Character. Calcium treatment group for each pot, with levels "A" = 1, "B" = 5, "C" = 10, "D" = 20.}
+  \item{Pot}{Factor. Unique identifier for each pot (experimental unit).}
+  \item{Calcium}{Factor. Calcium treatment group for each pot, with levels "A" = 1, "B" = 5, "C" = 10, "D" = 20.}
   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
   \item{d1}{Integer. Dummy variable indicating membership in calcium level "A" (1 if Calcium = "A", 0 otherwise).}
   \item{d2}{Integer. Dummy variable indicating membership in calcium level "B" (1 if Calcium = "B", 0 otherwise).}

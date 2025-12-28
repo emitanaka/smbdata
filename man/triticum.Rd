@@ -7,7 +7,7 @@
 \format{
 A data frame with 6 variables: \code{DSeed}, \code{Weight}, \code{Length}, \code{Diameter}, \code{Moisture}, \code{Hardness}.
 \describe{
-  \item{DSeed}{Integer. Unique identifier for each seed.}
+  \item{DSeed}{Factor. Unique identifier for each seed.}
   \item{Weight}{Numeric. Weight of the seed (in milligrams, mg).}
   \item{Length}{Numeric. Length of the seed (in millimeters, mm).}
   \item{Diameter}{Numeric. Diameter of the seed (in millimeters, mm).}

@@ -7,9 +7,9 @@
 \format{
 A data frame with 4 variables: \code{DPlant}, \code{Distance}, \code{fDist}, \code{Count}.
 \describe{
-  \item{DPlant}{Integer. Unique identifier for each sampled plant.}
+  \item{DPlant}{Factor. Unique identifier for each sampled plant.}
   \item{Distance}{Integer. Distance (in meters) from the edge of the field along the transect where the plant was sampled.}
-  \item{fDist}{Integer. Factor-level code for distance group along the transect (e.g., 1 for edge, 2 for 2 m, etc.).}
+  \item{fDist}{Factor. Factor-level code for distance group along the transect.}
   \item{Count}{Integer. Number of beetles counted on the sampled plant.}
 }
 }

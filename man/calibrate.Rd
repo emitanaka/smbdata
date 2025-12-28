@@ -7,9 +7,9 @@
 \format{
 A data frame with 4 variables: \code{Unit}, \code{Prep}, \code{Conc}, \code{Absorbance}.
 \describe{
-  \item{Unit}{Integer. Unique identifier for each observation or experimental unit.}
-  \item{Prep}{Integer. Preparation method applied to the sample.}
-  \item{Conc}{Integer. Initial concentration applied to the sample.}
+  \item{Unit}{Factor. Unique identifier for each observation or experimental unit.}
+  \item{Prep}{Factor. Preparation method applied to the sample.}
+  \item{Conc}{Factor. Initial concentration applied to the sample.}
   \item{Absorbance}{Numeric. Measured absorbance value for each sample unit (may contain missing values for invalid readings).}
 }
 }
@@ -25,9 +25,7 @@ A calibration experiment was conducted to develop an appropriate protocol for an
 \examples{
 fit <- lm(log(Absorbance) ~ Prep * Conc,
           data = calibrate |>
-             subset(!is.na(Absorbance)) |>
-             transform(Prep = factor(Prep),
-                       Conc = factor(Conc)))
+             subset(!is.na(Absorbance)))
 anova(fit)
 
 }

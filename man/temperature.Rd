@@ -7,7 +7,7 @@
 \format{
 A data frame with 3 variables: \code{MonthName}, \code{Month}, \code{Temperature}.
 \describe{
-  \item{MonthName}{Character. Name of the month (e.g., "January", "February").}
+  \item{MonthName}{Factor. Name of the month (e.g., "January", "February").}
   \item{Month}{Integer. Numeric code for the month (1 = January, ..., 12 = December).}
   \item{Temperature}{Numeric. Mean temperature for the month (in degrees Celsius).}
 }

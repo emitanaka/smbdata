@@ -7,8 +7,8 @@
 \format{
 A data frame with 5 variables: \code{Sample}, \code{Site}, \code{HLength}, \code{Spikelets}, \code{TotalSeed}.
 \describe{
-  \item{Sample}{Integer. Unique identifier for each sample point.}
-  \item{Site}{Character. Study site where the sample was collected (levels: "C", "L", "P", "W").}
+  \item{Sample}{Factor. Unique identifier for each sample point.}
+  \item{Site}{Factor. Study site where the sample was collected (levels: "C", "L", "P", "W").}
   \item{HLength}{Numeric. Average head length of rye-grass plants at the sampling point (in millimeters, mm).}
   \item{Spikelets}{Numeric. Average number of spikelets per head at the sampling point.}
   \item{TotalSeed}{Integer. Total number of seeds per square meter at the sampling point.}

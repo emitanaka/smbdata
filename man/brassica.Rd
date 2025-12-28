@@ -7,11 +7,11 @@
 \format{
 A data frame with 9 variables: \code{ID}, \code{Rep}, \code{Tray}, \code{Species}, \code{Isolate}, \code{TypeA}, \code{TypeB}, \code{Seedlings}, \code{Resistant}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each observation (row) in the dataset.}
-  \item{Rep}{Integer. Replicate/run number in the experiment (1–3), representing separate experimental runs across time.}
-  \item{Tray}{Integer. Tray identifier for the batch of seedlings tested in each replicate (13 levels).}
-  \item{Species}{Character. Brassica species from which the fungal isolate was collected ("A" or "B").}
-  \item{Isolate}{Integer. Identifier for the fungal isolate tested (nine levels across groups; unique within each Species).}
+  \item{ID}{Factor. Unique identifier for each observation (row) in the dataset.}
+  \item{Rep}{Factor. Replicate/run number in the experiment (1–3), representing separate experimental runs across time.}
+  \item{Tray}{Factor. Tray identifier for the batch of seedlings tested in each replicate (13 levels).}
+  \item{Species}{Factor. Brassica species from which the fungal isolate was collected ("A" or "B").}
+  \item{Isolate}{Factor. Identifier for the fungal isolate tested (nine levels across groups; unique within each Species).}
   \item{TypeA}{Integer. Isolate identifier re-coded for group A isolates (repeats the "Isolate" value for group A, NA or other coding for group B).}
   \item{TypeB}{Integer. Isolate identifier re-coded for group B isolates (repeats the "Isolate" value for group B, NA or other coding for group A).}
   \item{Seedlings}{Integer. Number of seedlings tested per tray (22 or 23).}
@@ -30,10 +30,7 @@ An experiment was conducted to assess the pathogenicity of various fungal isolat
 \examples{
 fit <- aov(log(P / (100 - P)) ~ Species / Isolate + Error(Rep / Tray),
            data = brassica |>
-             transform(P = 100 * (Resistant + 1) / (Seedlings + 2),
-                       Isolate = factor(Isolate),
-                       Rep = factor(Rep),
-                       Tray = factor(Tray)))
+             transform(P = 100 * (Resistant + 1) / (Seedlings + 2)))
 summary(fit)
 
 }

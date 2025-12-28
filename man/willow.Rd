@@ -7,7 +7,7 @@
 \format{
 A data frame with 3 variables: \code{DBeetle}, \code{Length}, \code{Width}.
 \describe{
-  \item{DBeetle}{Integer. Unique identifier for each beetle in the sample.}
+  \item{DBeetle}{Factor. Unique identifier for each beetle in the sample.}
   \item{Length}{Numeric. Total body length of the beetle (in millimeters, mm).}
   \item{Width}{Numeric. Maximum body width of the beetle (in millimeters, mm).}
 }

@@ -7,7 +7,7 @@
 \format{
 A data frame with 4 variables: \code{ID}, \code{H}, \code{I}, \code{Weight}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each container or experimental unit.}
+  \item{ID}{Factor. Unique identifier for each container or experimental unit.}
   \item{H}{Numeric. Herbicide dose applied (lb/acre; one of 0.0, 0.5, 1.0, 1.5, 2.0).}
   \item{I}{Integer. Insecticide dose applied (lb/acre; one of 0, 20, 40, 60, 80).}
   \item{Weight}{Numeric. Dry root biomass of cotton plants (grams per plant) measured after three weeks.}

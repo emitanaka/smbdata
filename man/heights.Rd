@@ -7,9 +7,9 @@
 \format{
 A data frame with 5 variables: \code{Pot}, \code{Row}, \code{Column}, \code{Dose}, \code{Height}.
 \describe{
-  \item{Pot}{Integer. Unique identifier for each pot (experimental unit).}
-  \item{Row}{Integer. Row position of the pot in the grid layout on the bench.}
-  \item{Column}{Integer. Column position of the pot in the grid layout on the bench.}
+  \item{Pot}{Factor. Unique identifier for each pot (experimental unit).}
+  \item{Row}{Factor. Row position of the pot in the grid layout on the bench.}
+  \item{Column}{Factor. Column position of the pot in the grid layout on the bench.}
   \item{Dose}{Integer. Applied dose of the growth regulator.}
   \item{Height}{Numeric. Plant height (in centimeters) measured six weeks after treatment.}
 }

@@ -7,11 +7,11 @@
 \format{
 A data frame with 7 variables: \code{ID}, \code{Row}, \code{Dish}, \code{Sex}, \code{Prey}, \code{Eaten}, \code{Total}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each observation (Petri dish).}
-  \item{Row}{Integer. Block or replicate identifier (1 to 15), combining experimental occasions and spatial replicates.}
-  \item{Dish}{Integer. Dish number within each row/block (1 to 4, one for each treatment combination).}
-  \item{Sex}{Character. Sex of the Harlequin ladybird ("Female" or "Male") in the dish.}
-  \item{Prey}{Character. Prey type offered: "Aphid" or "Lacewing".}
+  \item{ID}{Factor. Unique identifier for each observation (Petri dish).}
+  \item{Row}{Factor. Block or replicate identifier (1 to 15), combining experimental occasions and spatial replicates.}
+  \item{Dish}{Factor. Dish number within each row/block (1 to 4, one for each treatment combination).}
+  \item{Sex}{Factor. Sex of the Harlequin ladybird ("Female" or "Male") in the dish.}
+  \item{Prey}{Factor. Prey type offered: "Aphid" or "Lacewing".}
   \item{Eaten}{Integer. Number of prey consumed by the ladybird in 60 minutes.}
   \item{Total}{Integer. Total number of prey items offered in the dish (always 6).}
 }

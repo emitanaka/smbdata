@@ -7,12 +7,12 @@
 \format{
 A data frame with 7 variables: \code{ID}, \code{Rep}, \code{DPot}, \code{Population}, \code{Type}, \code{Herbicide}, \code{Fwt}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each pot (experimental unit).}
-  \item{Rep}{Integer. Block number in the randomized complete block design corresponding to replicate (1–5).}
+  \item{ID}{Factor. Unique identifier for each pot (experimental unit).}
+  \item{Rep}{Factor. Block number in the randomized complete block design corresponding to replicate (1–5).}
   \item{DPot}{Integer. Dummy variable indicating the pot number within each block.}
-  \item{Population}{Character. Identifier for the black-grass population (e.g., "P1"–"P9").}
-  \item{Type}{Integer. Chemical group of the applied herbicide (1: group for Herbicides A and C, 2: group for Herbicide B).}
-  \item{Herbicide}{Character. Applied herbicide treatment ("A", "B", or "C").}
+  \item{Population}{Factor. Identifier for the black-grass population (e.g., "P1"–"P9").}
+  \item{Type}{Factor. Chemical group of the applied herbicide (1: group for Herbicides A and C, 2: group for Herbicide B).}
+  \item{Herbicide}{Factor. Applied herbicide treatment ("A", "B", or "C").}
   \item{Fwt}{Numeric. Total fresh weight (in grams) of six black-grass plants grown in the pot.}
 }
 }

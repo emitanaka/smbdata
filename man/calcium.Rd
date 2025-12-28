@@ -8,8 +8,8 @@
 A data frame with 3 variables: \code{Pot}, \code{Calcium}, \code{Length}.
 #' @format A data frame with the following variables:
 \describe{
-  \item{Pot}{Integer. Unique identifier for each pot/experimental unit.}
-  \item{Calcium}{Character. Treatment group indicating the relative concentration of calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" = 20).}
+  \item{Pot}{Factor. Unique identifier for each pot/experimental unit.}
+  \item{Calcium}{Factor. Treatment group indicating the relative concentration of calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" = 20).}
   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
 }
 }

@@ -7,7 +7,7 @@
 \format{
 A data frame with 3 variables: \code{DUnit}, \code{Concentration}, \code{Absorbance}.
 \describe{
-  \item{DUnit}{Integer. Unique identifier for each ELISA reading.}
+  \item{DUnit}{Factor. Unique identifier for each ELISA reading.}
   \item{Concentration}{Numeric. Substrate concentration used for each reading.}
   \item{Absorbance}{Numeric. ELISA absorbance value measured at the given substrate concentration.}
 }

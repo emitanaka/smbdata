@@ -7,9 +7,10 @@
 \format{
 A data frame with 100 rows and 4 variables:
 \describe{
-  \item{Unit}{A unit number.}
-  \item{DayNo}{Day number.}
-  \item{Mercury, Thermistor}{Temperature (°C) measured by a standard glass mercury thermometer and new electronic thermometer.}
+  \item{Unit}{Factor. Unique identifier for each observation.}
+  \item{DayNo}{Integer. Day number on which the measurement was taken.}
+  \item{Mercury}{Numeric. Temperature (in degrees Celsius) measured using a mercury thermometer.}
+  \item{Thermistor}{Numeric. Temperature (in degrees Celsius) measured using a thermistor thermometer.}
 }
 }
 \source{

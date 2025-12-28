@@ -5,9 +5,10 @@
 #'
 #' @format A data frame with 100 rows and 4 variables:
 #' \describe{
-#'   \item{Unit}{A unit number.}
-#'   \item{DayNo}{Day number.}
-#'   \item{Mercury, Thermistor}{Temperature (°C) measured by a standard glass mercury thermometer and new electronic thermometer.}
+#'   \item{Unit}{Factor. Unique identifier for each observation.}
+#'   \item{DayNo}{Integer. Day number on which the measurement was taken.}
+#'   \item{Mercury}{Numeric. Temperature (in degrees Celsius) measured using a mercury thermometer.}
+#'   \item{Thermistor}{Numeric. Temperature (in degrees Celsius) measured using a thermistor thermometer.}
 #' }
 #' @examples
 #' # a simple linear regression
@@ -29,15 +30,13 @@
 #'
 #' @format A data frame with 45 rows and 4 variables: \code{ID}, \code{Field}, \code{Sample}, \code{AphidCount}.
 #' \describe{
-#'   \item{ID}{An ID number.}
-#'   \item{Field}{The field number.}
-#'   \item{Sample}{The sample number.}
-#'   \item{AphidCount}{The count of aphids.}
+#'   \item{ID}{Factor. Unique identifier for each observation.}
+#'   \item{Field}{Factor. Identifier for the field in which the sample was collected.}
+#'   \item{Sample}{Factor. Sample point number within each field.}
+#'   \item{AphidCount}{Integer. Number of aphids counted in the sample.}
 #' }
 #' @examples
-#' fit <- glm(AphidCount ~ Field, family = poisson(),
-#'            data = aphids |>
-#'              transform(Field = factor(Field)))
+#' fit <- glm(AphidCount ~ Field, family = poisson(), data = aphids)
 #'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "aphids"
@@ -48,11 +47,11 @@
 #'
 #' @format A data frame with 5 variables: \code{DFemale}, \code{Treatment}, \code{Species}, \code{MateType}, \code{Eggs}.
 #' \describe{
-#'   \item{DFemale}{An ID number.}
-#'   \item{Treatment}{The treatment level.}
-#'   \item{Species}{Species.}
-#'   \item{MateType}{Mating type: intraspecies or interspecies mating.}
-#'   \item{Eggs}{The number of eggs.}
+#'   \item{DFemale}{Factor. Unique identifier for each female subject in the experiment.}
+#'   \item{Treatment}{Factor. Experimental treatment group assigned to each female.}
+#'   \item{Species}{Factor. Species designation for each female in the study.}
+#'   \item{MateType}{Factor. Type of mate provided for each female ("Inter" for interspecific or "Intra" for intraspecific, as relevant).}
+#'   \item{Eggs}{Integer. Number of eggs laid by each female during the observation period.}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 #' @examples
@@ -68,8 +67,8 @@
 #'
 #' @format A data frame with 5 variables: \code{DSample}, \code{Size}, \code{Weight}, \code{Time}, \code{C}.
 #' \describe{
-#'   \item{DSample}{Integer. Experimental unit identifier, representing the replicate number.}
-#'   \item{Size}{Character. Sieve size used for processing soil samples ("Small" or "Large").}
+#'   \item{DSample}{Factor. Experimental unit identifier, representing the replicate number.}
+#'   \item{Size}{Factor. Sieve size used for processing soil samples ("Small" or "Large").}
 #'   \item{Weight}{Integer. Sample weight used in the protocol.}
 #'   \item{Time}{Integer. Duration in minutes of shaking during sample processing.}
 #'   \item{C}{Integer. Microbial biomass carbon in soil, measured as mg C per kg soil.}
@@ -90,11 +89,11 @@
 #'
 #' @format A data frame with 9 variables: \code{ID}, \code{Rep}, \code{Tray}, \code{Species}, \code{Isolate}, \code{TypeA}, \code{TypeB}, \code{Seedlings}, \code{Resistant}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each observation (row) in the dataset.}
-#'   \item{Rep}{Integer. Replicate/run number in the experiment (1–3), representing separate experimental runs across time.}
-#'   \item{Tray}{Integer. Tray identifier for the batch of seedlings tested in each replicate (13 levels).}
-#'   \item{Species}{Character. Brassica species from which the fungal isolate was collected ("A" or "B").}
-#'   \item{Isolate}{Integer. Identifier for the fungal isolate tested (nine levels across groups; unique within each Species).}
+#'   \item{ID}{Factor. Unique identifier for each observation (row) in the dataset.}
+#'   \item{Rep}{Factor. Replicate/run number in the experiment (1–3), representing separate experimental runs across time.}
+#'   \item{Tray}{Factor. Tray identifier for the batch of seedlings tested in each replicate (13 levels).}
+#'   \item{Species}{Factor. Brassica species from which the fungal isolate was collected ("A" or "B").}
+#'   \item{Isolate}{Factor. Identifier for the fungal isolate tested (nine levels across groups; unique within each Species).}
 #'   \item{TypeA}{Integer. Isolate identifier re-coded for group A isolates (repeats the "Isolate" value for group A, NA or other coding for group B).}
 #'   \item{TypeB}{Integer. Isolate identifier re-coded for group B isolates (repeats the "Isolate" value for group B, NA or other coding for group A).}
 #'   \item{Seedlings}{Integer. Number of seedlings tested per tray (22 or 23).}
@@ -103,10 +102,7 @@
 #' @examples
 #' fit <- aov(log(P / (100 - P)) ~ Species / Isolate + Error(Rep / Tray),
 #'            data = brassica |>
-#'              transform(P = 100 * (Resistant + 1) / (Seedlings + 2),
-#'                        Isolate = factor(Isolate),
-#'                        Rep = factor(Rep),
-#'                        Tray = factor(Tray)))
+#'              transform(P = 100 * (Resistant + 1) / (Seedlings + 2)))
 #' summary(fit)
 #'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -119,8 +115,8 @@
 #' @format A data frame with 3 variables: \code{Pot}, \code{Calcium}, \code{Length}.
 #' #' @format A data frame with the following variables:
 #' \describe{
-#'   \item{Pot}{Integer. Unique identifier for each pot/experimental unit.}
-#'   \item{Calcium}{Character. Treatment group indicating the relative concentration of calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" = 20).}
+#'   \item{Pot}{Factor. Unique identifier for each pot/experimental unit.}
+#'   \item{Calcium}{Factor. Treatment group indicating the relative concentration of calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" = 20).}
 #'   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
 #' }
 #' @examples
@@ -135,8 +131,8 @@
 #'
 #' @format A data frame with 7 variables: \code{Pot}, \code{Calcium}, \code{Length}, \code{d1}, \code{d2}, \code{d3}, \code{d4}.
 #' \describe{
-#'   \item{Pot}{Integer. Unique identifier for each pot (experimental unit).}
-#'   \item{Calcium}{Character. Calcium treatment group for each pot, with levels "A" = 1, "B" = 5, "C" = 10, "D" = 20.}
+#'   \item{Pot}{Factor. Unique identifier for each pot (experimental unit).}
+#'   \item{Calcium}{Factor. Calcium treatment group for each pot, with levels "A" = 1, "B" = 5, "C" = 10, "D" = 20.}
 #'   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
 #'   \item{d1}{Integer. Dummy variable indicating membership in calcium level "A" (1 if Calcium = "A", 0 otherwise).}
 #'   \item{d2}{Integer. Dummy variable indicating membership in calcium level "B" (1 if Calcium = "B", 0 otherwise).}
@@ -155,17 +151,15 @@
 #'
 #' @format A data frame with 4 variables: \code{Unit}, \code{Prep}, \code{Conc}, \code{Absorbance}.
 #' \describe{
-#'   \item{Unit}{Integer. Unique identifier for each observation or experimental unit.}
-#'   \item{Prep}{Integer. Preparation method applied to the sample.}
-#'   \item{Conc}{Integer. Initial concentration applied to the sample.}
+#'   \item{Unit}{Factor. Unique identifier for each observation or experimental unit.}
+#'   \item{Prep}{Factor. Preparation method applied to the sample.}
+#'   \item{Conc}{Factor. Initial concentration applied to the sample.}
 #'   \item{Absorbance}{Numeric. Measured absorbance value for each sample unit (may contain missing values for invalid readings).}
 #' }
 #' @examples
 #' fit <- lm(log(Absorbance) ~ Prep * Conc,
 #'           data = calibrate |>
-#'              subset(!is.na(Absorbance)) |>
-#'              transform(Prep = factor(Prep),
-#'                        Conc = factor(Conc)))
+#'              subset(!is.na(Absorbance)))
 #' anova(fit)
 #'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -177,20 +171,17 @@
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Block}, \code{WholePlot}, \code{Subplot}, \code{Irrigation}, \code{Species}, \code{Grain}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each subplot (observation).}
-#'   \item{Block}{Integer. Block number in the experiment (four blocks in total).}
-#'   \item{WholePlot}{Integer. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).}
-#'   \item{Subplot}{Integer. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).}
-#'   \item{Irrigation}{Character. Irrigation treatment applied to the whole plot ("yes" or "no").}
-#'   \item{Species}{Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
+#'   \item{ID}{Factor. Unique identifier for each subplot (observation).}
+#'   \item{Block}{Factor. Block number in the experiment (four blocks in total).}
+#'   \item{WholePlot}{Factor. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).}
+#'   \item{Subplot}{Factor. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).}
+#'   \item{Irrigation}{Factor. Irrigation treatment applied to the whole plot ("yes" or "no").}
+#'   \item{Species}{Factor. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
 #'   \item{Grain}{Numeric. Grain yield (in appropriate units) measured for each subplot of winter wheat.}
 #' }
 #' @examples
 #' fit <- aov(Grain ~ Irrigation * Species + Error(Block/WholePlot/Subplot),
-#'            data = competition |>
-#'              transform(Block = factor(Block),
-#'                        WholePlot = factor(WholePlot),
-#'                        Subplot = factor(Subplot)))
+#'            data = competition)
 #' summary(fit)
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "competition"
@@ -201,10 +192,10 @@
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Run}, \code{DUnit}, \code{Source}, \code{Time}, \code{Period}, \code{Conidia}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each observation.}
-#'   \item{Run}{Integer. Experimental run indicator (each time period and source combination is repeated in two separate runs).}
-#'   \item{DUnit}{Integer. Identifier for each experimental unit within a run.}
-#'   \item{Source}{Character. Source of sporulating cadaver ("Clone" or "Standard") providing the fungal conidia.}
+#'   \item{ID}{Factor. Unique identifier for each observation.}
+#'   \item{Run}{Factor. Experimental run indicator (each time period and source combination is repeated in two separate runs).}
+#'   \item{DUnit}{Factor. Identifier for each experimental unit within a run.}
+#'   \item{Source}{Factor. Source of sporulating cadaver ("Clone" or "Standard") providing the fungal conidia.}
 #'   \item{Time}{Integer. Duration of exposure (in minutes) to the conidia shower (excluding zero-time controls).}
 #'   \item{Period}{Integer. Index for the time period (e.g., 1 for the first non-zero time, 2 for the second, etc.).}
 #'   \item{Conidia}{Integer. Number of conidia (spores) counted on slides for the corresponding experimental unit.}
@@ -224,7 +215,7 @@
 #'
 #' @format A data frame with 4 variables: \code{ID}, \code{H}, \code{I}, \code{Weight}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each container or experimental unit.}
+#'   \item{ID}{Factor. Unique identifier for each container or experimental unit.}
 #'   \item{H}{Numeric. Herbicide dose applied (lb/acre; one of 0.0, 0.5, 1.0, 1.5, 2.0).}
 #'   \item{I}{Integer. Insecticide dose applied (lb/acre; one of 0, 20, 40, 60, 80).}
 #'   \item{Weight}{Numeric. Dry root biomass of cotton plants (grams per plant) measured after three weeks.}
@@ -241,9 +232,9 @@
 #'
 #' @format A data frame with 4 variables: \code{Seed}, \code{Female}, \code{Male}, \code{Root}.
 #' \describe{
-#'   \item{Seed}{Integer. Unique identifier for each individual seed/planted observation.}
-#'   \item{Female}{Character. Code for the female parent in the cross (levels: "F1" to "F5").}
-#'   \item{Male}{Character. Code for the male parent in the cross (levels: "M1", "M2").}
+#'   \item{Seed}{Factor. Unique identifier for each individual seed/planted observation.}
+#'   \item{Female}{Factor. Code for the female parent in the cross (levels: "F1" to "F5").}
+#'   \item{Male}{Factor. Code for the male parent in the cross (levels: "M1", "M2").}
 #'   \item{Root}{Integer. Maximum root length (in millimeters) measured for each seedling three weeks after planting.}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -256,10 +247,10 @@
 #' @format A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Type}, \code{Size}, \code{Yield}.
 #' \describe{
 #'   \item{ID}{Integer. Unique identifier for each plot/observation.}
-#'   \item{Block}{Integer. Block number in the randomized complete block design.}
-#'   \item{Plot}{Integer. Plot number within each block.}
-#'   \item{Type}{Character. Cutting type (A, B, C, D, E) planted in each plot.}
-#'   \item{Size}{Character. Cutting size category: S (small), M (medium), or L (large).}
+#'   \item{Block}{Factor. Block number in the randomized complete block design.}
+#'   \item{Plot}{Factor. Plot number within each block.}
+#'   \item{Type}{Factor. Cutting type (A, B, C, D, E) planted in each plot.}
+#'   \item{Size}{Factor. Cutting size category: S (small), M (medium), or L (large).}
 #'   \item{Yield}{Numeric. Willow yield measured at the end of the first year (units as recorded, e.g., g/plot or kg/plot).}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -271,7 +262,7 @@
 #'
 #' @format A data frame with 4 variables: \code{DTray}, \code{Dose}, \code{Total}, \code{Normal}.
 #' \describe{
-#'   \item{DTray}{Integer. Unique identifier for each tray in the experiment.}
+#'   \item{DTray}{Factor. Unique identifier for each tray in the experiment.}
 #'   \item{Dose}{Numeric. Dose of demethylation agent applied to the seeds (including zero for controls).}
 #'   \item{Total}{Integer. Total number of plants in each tray.}
 #'   \item{Normal}{Integer. Number of plants in each tray exhibiting a normal phenotype.}
@@ -285,7 +276,7 @@
 #'
 #' @format A data frame with 3 variables: \code{DUnit}, \code{Concentration}, \code{Absorbance}.
 #' \describe{
-#'   \item{DUnit}{Integer. Unique identifier for each ELISA reading.}
+#'   \item{DUnit}{Factor. Unique identifier for each ELISA reading.}
 #'   \item{Concentration}{Numeric. Substrate concentration used for each reading.}
 #'   \item{Absorbance}{Numeric. ELISA absorbance value measured at the given substrate concentration.}
 #' }
@@ -298,7 +289,7 @@
 #'
 #' @format A data frame with 23 variables: \code{Trap}, \code{JDay}, \code{Latitude}, \code{Longitude}, \code{Altitude}, \code{OctRain}, \code{NovRain}, \code{DecRain}, \code{JanRain}, \code{FebRain}, \code{MarRain}, \code{AprRain}, \code{MayRain}, \code{C30Day}, \code{F60Day}, \code{ConForest}, \code{DecForest}, \code{MixForest}, \code{Grassland}, \code{Arable}, \code{InlandWater}, \code{Sea}, \code{Urban}.
 #' \describe{
-#'   \item{Trap}{Integer. Unique identifier for each suction trap location.}
+#'   \item{Trap}{Factor. Unique identifier for each suction trap location.}
 #'   \item{JDay}{Integer. Julian day of first catch of \emph{Myzus persicae} at the site in 1995.}
 #'   \item{Latitude}{Numeric. Latitude (in decimal degrees) of the trap site.}
 #'   \item{Longitude}{Numeric. Longitude (in decimal degrees) of the trap site.}
@@ -325,11 +316,18 @@
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "examine"
 
-#' Forage
+#' Forage maize yields
 #'
-#' Description.
+#' An experiment conducted at Rothamsted Research in 1996 examined how varying rates of nitrogen fertilizer affect the yield of forage maize. The study used a randomized complete block design with three blocks, each containing four plots randomly assigned one of four nitrogen application rates: 0, 70, 140, or 210 kg N/ha. For each plot, whole crop forage yield (measured at 100 percent dry matter, in tonnes per hectare) was recorded. The resulting dataset enables analysis of the relationship between nitrogen fertilizer input and maize yield, with blocking incorporated to account for field heterogeneity.
 #'
 #' @format A data frame with 5 variables: \code{ID}, \code{Block}, \code{Plot}, \code{N}, \code{Yield}.
+#' \describe{
+#'   \item{ID}{Factor. Unique identifier for each observation/plot.}
+#'   \item{Block}{Factor. Block number in the randomized complete block design (three levels).}
+#'   \item{Plot}{Factor. Plot number within each block (four levels per block).}
+#'   \item{N}{Integer. Rate of nitrogen fertilizer applied to the plot (in kg N/ha; values: 0, 70, 140, 210).}
+#'   \item{Yield}{Numeric. Whole crop forage yield measured at 100 percent dry matter (in tonnes per hectare, t/ha).}
+#' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "forage"
 
@@ -339,8 +337,8 @@
 #'
 #' @format A data frame with 4 variables: \code{DPlot}, \code{Type}, \code{SD}, \code{QD}.
 #' \describe{
-#'   \item{DPlot}{Integer. Unique identifier for each forest plot.}
-#'   \item{Type}{Character. Forest stand type classified by dominant Nothofagus species in the plot: "Coigue", "Rauli", or "Roble".}
+#'   \item{DPlot}{Factor. Unique identifier for each forest plot.}
+#'   \item{Type}{Factor. Forest stand type classified by dominant Nothofagus species in the plot: "Coigue", "Rauli", or "Roble".}
 #'   \item{SD}{Integer. Stand density, recorded as the number of trees per hectare in each plot.}
 #'   \item{QD}{Numeric. Mean quadratic diameter (in centimeters) of trees in the plot.}
 #' }
@@ -354,8 +352,8 @@
 #'
 #' @format A data frame with 7 variables: \code{DPlot}, \code{Type}, \code{SD}, \code{QD}, \code{d1}, \code{d2}, \code{d3}.
 #' \describe{
-#'   \item{DPlot}{Integer. Unique identifier for each forest plot.}
-#'   \item{Type}{Character. Forest stand type classified by the dominant Nothofagus species: "Coigue", "Rauli", or "Roble".}
+#'   \item{DPlot}{Factor. Unique identifier for each forest plot.}
+#'   \item{Type}{Factor. Forest stand type classified by the dominant Nothofagus species: "Coigue", "Rauli", or "Roble".}
 #'   \item{SD}{Integer. Stand density, as the number of trees per hectare in each plot.}
 #'   \item{QD}{Numeric. Mean quadratic diameter (in centimeters) of trees in the plot.}
 #'   \item{d1}{Integer. Dummy variable for stand type Coigue (1 if Type is "Coigue", 0 otherwise).}
@@ -371,9 +369,9 @@
 #'
 #' @format A data frame with 5 variables: \code{Pot}, \code{Row}, \code{Column}, \code{Dose}, \code{Height}.
 #' \describe{
-#'   \item{Pot}{Integer. Unique identifier for each pot (experimental unit).}
-#'   \item{Row}{Integer. Row position of the pot in the grid layout on the bench.}
-#'   \item{Column}{Integer. Column position of the pot in the grid layout on the bench.}
+#'   \item{Pot}{Factor. Unique identifier for each pot (experimental unit).}
+#'   \item{Row}{Factor. Row position of the pot in the grid layout on the bench.}
+#'   \item{Column}{Factor. Column position of the pot in the grid layout on the bench.}
 #'   \item{Dose}{Integer. Applied dose of the growth regulator.}
 #'   \item{Height}{Numeric. Plant height (in centimeters) measured six weeks after treatment.}
 #' }
@@ -386,12 +384,12 @@
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Rep}, \code{DPot}, \code{Population}, \code{Type}, \code{Herbicide}, \code{Fwt}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each pot (experimental unit).}
-#'   \item{Rep}{Integer. Block number in the randomized complete block design corresponding to replicate (1–5).}
+#'   \item{ID}{Factor. Unique identifier for each pot (experimental unit).}
+#'   \item{Rep}{Factor. Block number in the randomized complete block design corresponding to replicate (1–5).}
 #'   \item{DPot}{Integer. Dummy variable indicating the pot number within each block.}
-#'   \item{Population}{Character. Identifier for the black-grass population (e.g., "P1"–"P9").}
-#'   \item{Type}{Integer. Chemical group of the applied herbicide (1: group for Herbicides A and C, 2: group for Herbicide B).}
-#'   \item{Herbicide}{Character. Applied herbicide treatment ("A", "B", or "C").}
+#'   \item{Population}{Factor. Identifier for the black-grass population (e.g., "P1"–"P9").}
+#'   \item{Type}{Factor. Chemical group of the applied herbicide (1: group for Herbicides A and C, 2: group for Herbicide B).}
+#'   \item{Herbicide}{Factor. Applied herbicide treatment ("A", "B", or "C").}
 #'   \item{Fwt}{Numeric. Total fresh weight (in grams) of six black-grass plants grown in the pot.}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -404,11 +402,11 @@
 #'
 #' @format A data frame with 8 variables: \code{ID}, \code{Run}, \code{DPlant}, \code{Host}, \code{Ladybird}, \code{Cadaver}, \code{Live}, \code{Infected}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each experimental container (observation).}
-#'   \item{Run}{Integer. Experimental run (1 or 2), indicating replicate.}
-#'   \item{DPlant}{Integer. Unique identifier for each experimental plant within a run (1–36).}
-#'   \item{Host}{Character. Type of host plant in the container ("beans" or "trefoil").}
-#'   \item{Ladybird}{Character. Indicator for presence ("+") or absence ("-") of ladybird foraging in the container.}
+#'   \item{ID}{Factor. Unique identifier for each experimental container (observation).}
+#'   \item{Run}{Factor. Experimental run (1 or 2), indicating replicate.}
+#'   \item{DPlant}{Factor. Unique identifier for each experimental plant within a run (1–36).}
+#'   \item{Host}{Factor. Type of host plant in the container ("beans" or "trefoil").}
+#'   \item{Ladybird}{Factor. Indicator for presence ("+") or absence ("-") of ladybird foraging in the container.}
 #'   \item{Cadaver}{Integer. Number of sporulating aphid cadavers distributed on each plant (5, 10, or 20).}
 #'   \item{Live}{Integer. Number of live aphids remaining in the container after seven days.}
 #'   \item{Infected}{Integer. Number of live aphids found to be infected after seven days.}
@@ -422,10 +420,10 @@
 #'
 #' @format A data frame with 4 variables: \code{Field}, \code{Row}, \code{Column}, \code{Treatment}.
 #' \describe{
-#'   \item{Field}{Integer. Identifier for each experimental field, corresponding to replicates of the Latin Square design.}
-#'   \item{Row}{Integer. Row position within the Latin Square in each field.}
-#'   \item{Column}{Integer. Column position within the Latin Square in each field.}
-#'   \item{Treatment}{Integer. Shade of petal colour assigned to the plot (five levels in total, coded as 1–5).}
+#'   \item{Field}{Factor. Identifier for each experimental field, corresponding to replicates of the Latin Square design.}
+#'   \item{Row}{Factor. Row position within the Latin Square in each field.}
+#'   \item{Column}{Factor. Column position within the Latin Square in each field.}
+#'   \item{Treatment}{Factor. Shade of petal colour assigned to the plot (five levels in total, coded as 1–5).}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "latinsquare1"
@@ -436,10 +434,10 @@
 #'
 #' @format A data frame with 4 variables: \code{Rep}, \code{Stack}, \code{Position}, \code{Treatment}.
 #' \describe{
-#'   \item{Rep}{Integer. Replicate indicator for each Latin Square (two replicates in total).}
-#'   \item{Stack}{Integer. Stack identifier (1–5), indicating the location of each vertical stack on the shelf within each replicate.}
-#'   \item{Position}{Integer. Position of the dish within the stack (1–5, from bottom to top or as defined in the experiment).}
-#'   \item{Treatment}{Integer. Fungus strain assigned to the dish (coded as 1–5, corresponding to the five fungal strains).}
+#'   \item{Rep}{Factor. Replicate indicator for each Latin Square (two replicates in total).}
+#'   \item{Stack}{Factor. Stack identifier (1–5), indicating the location of each vertical stack on the shelf within each replicate.}
+#'   \item{Position}{Factor. Position of the dish within the stack (1–5, from bottom to top or as defined in the experiment).}
+#'   \item{Treatment}{Factor. Fungus strain assigned to the dish (coded as 1–5, corresponding to the five fungal strains).}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "latinsquare2"
@@ -450,12 +448,12 @@
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Row}, \code{Column}, \code{Treatment}, \code{Water}, \code{Soil}, \code{Height}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each pot (experimental unit).}
-#'   \item{Row}{Integer. Row position of the pot in the Latin Square grid.}
-#'   \item{Column}{Integer. Column position of the pot in the Latin Square grid.}
-#'   \item{Treatment}{Character. Combined treatment label for soil type and water supply (e.g., "CH", "CL", "SH", "SL").}
-#'   \item{Water}{Character. Water supply level applied to the pot: "L" (low) or "H" (high).}
-#'   \item{Soil}{Character. Soil type: "C" (clay) or "S" (sand).}
+#'   \item{ID}{Factor. Unique identifier for each pot (experimental unit).}
+#'   \item{Row}{Factor. Row position of the pot in the Latin Square grid.}
+#'   \item{Column}{Factor. Column position of the pot in the Latin Square grid.}
+#'   \item{Treatment}{Factor. Combined treatment label for soil type and water supply (e.g., "CH", "CL", "SH", "SL").}
+#'   \item{Water}{Factor. Water supply level applied to the pot: "L" (low) or "H" (high).}
+#'   \item{Soil}{Factor. Soil type: "C" (clay) or "S" (sand).}
 #'   \item{Height}{Numeric. Height (in centimeters) of the lupin plant at the end of the experiment.}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -468,10 +466,10 @@
 #'
 #' @format A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Line}, \code{NPlant}, \code{OilYield}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each plot (observation).}
-#'   \item{Block}{Integer. Block number in the randomized complete block design.}
-#'   \item{Plot}{Integer. Plot number within each block.}
-#'   \item{Line}{Character. Identity code of the lupin breeding line (e.g., "DTN84", "CH304-73").}
+#'   \item{ID}{Factor. Unique identifier for each plot (observation).}
+#'   \item{Block}{Factor. Block number in the randomized complete block design.}
+#'   \item{Plot}{Factor. Plot number within each block.}
+#'   \item{Line}{Factor. Identity code of the lupin breeding line (e.g., "DTN84", "CH304-73").}
 #'   \item{NPlant}{Numeric. Average number of plants per square metre in the plot.}
 #'   \item{OilYield}{Numeric. Oil yield from the plot, measured in tonnes per hectare (t/ha).}
 #' }
@@ -484,7 +482,7 @@
 #'
 #' @format A data frame with 3 variables: \code{DPlot}, \code{OlsenP}, \code{Yield}.
 #' \describe{
-#'   \item{DPlot}{Integer. Unique identifier for each field plot.}
+#'   \item{DPlot}{Factor. Unique identifier for each field plot.}
 #'   \item{OlsenP}{Numeric. Available soil phosphorus content measured as Olsen P (mg/kg or ppm).}
 #'   \item{Yield}{Numeric. Yield of spring barley from each plot (typically in tonnes per hectare, t/ha).}
 #' }
@@ -497,11 +495,11 @@
 #'
 #' @format A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Type}, \code{Fungicide}, \code{Yield}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each plot (experimental unit).}
-#'   \item{Block}{Integer. Block number in the randomized complete block design.}
-#'   \item{Plot}{Integer. Plot number within each block (1–5).}
-#'   \item{Type}{Character. Indicates if the plot is a "Control" or "Treated" (with fungicide).}
-#'   \item{Fungicide}{Character. Fungicide treatment applied in the plot ("Control", "F1", "F2", "F3", or "F4").}
+#'   \item{ID}{Factor. Unique identifier for each plot (experimental unit).}
+#'   \item{Block}{Factor. Block number in the randomized complete block design.}
+#'   \item{Plot}{Factor. Plot number within each block (1–5).}
+#'   \item{Type}{Factor. Indicates if the plot is a "Control" or "Treated" (with fungicide).}
+#'   \item{Fungicide}{Factor. Fungicide treatment applied in the plot ("Control", "F1", "F2", "F3", or "F4").}
 #'   \item{Yield}{Integer. Potato yield for the plot (units as recorded, e.g., kg/plot).}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -513,11 +511,11 @@
 #'
 #' @format A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Row}, \code{Fungicide}, \code{RowYield}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each row yield observation.}
-#'   \item{Block}{Integer. Block number in the randomized complete block design with four levels.}
-#'   \item{Plot}{Integer. Plot number within each block (1–5).}
-#'   \item{Row}{Integer. Row number within each plot, corresponding to individual row yields.}
-#'   \item{Fungicide}{Character. Fungicide treatment applied to the plot ("Control", "F1", "F2", "F3", or "F4").}
+#'   \item{ID}{Factor. Unique identifier for each row yield observation.}
+#'   \item{Block}{Factor. Block number in the randomized complete block design with four levels.}
+#'   \item{Plot}{Factor. Plot number within each block (1–5).}
+#'   \item{Row}{Factor. Row number within each plot, corresponding to individual row yields.}
+#'   \item{Fungicide}{Factor. Fungicide treatment applied to the plot ("Control", "F1", "F2", "F3", or "F4").}
 #'   \item{RowYield}{Integer. Potato yield measured for the individual row (units as recorded, e.g., grams or kilograms).}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -529,11 +527,11 @@
 #'
 #' @format A data frame with 7 variables: \code{ID}, \code{Row}, \code{Dish}, \code{Sex}, \code{Prey}, \code{Eaten}, \code{Total}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each observation (Petri dish).}
-#'   \item{Row}{Integer. Block or replicate identifier (1 to 15), combining experimental occasions and spatial replicates.}
-#'   \item{Dish}{Integer. Dish number within each row/block (1 to 4, one for each treatment combination).}
-#'   \item{Sex}{Character. Sex of the Harlequin ladybird ("Female" or "Male") in the dish.}
-#'   \item{Prey}{Character. Prey type offered: "Aphid" or "Lacewing".}
+#'   \item{ID}{Factor. Unique identifier for each observation (Petri dish).}
+#'   \item{Row}{Factor. Block or replicate identifier (1 to 15), combining experimental occasions and spatial replicates.}
+#'   \item{Dish}{Factor. Dish number within each row/block (1 to 4, one for each treatment combination).}
+#'   \item{Sex}{Factor. Sex of the Harlequin ladybird ("Female" or "Male") in the dish.}
+#'   \item{Prey}{Factor. Prey type offered: "Aphid" or "Lacewing".}
 #'   \item{Eaten}{Integer. Number of prey consumed by the ladybird in 60 minutes.}
 #'   \item{Total}{Integer. Total number of prey items offered in the dish (always 6).}
 #' }
@@ -546,12 +544,12 @@
 #'
 #' @format A data frame with 8 variables: \code{ID}, \code{Farm}, \code{Field}, \code{DHalf}, \code{Year}, \code{Treatment}, \code{Weeds}, \code{Seedbank}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each half-field observation.}
-#'   \item{Farm}{Integer. Identifier for each farm (37 farms in total).}
-#'   \item{Field}{Integer. Field number within each farm (usually 1–3, since different fields were used across years within farms).}
-#'   \item{DHalf}{Integer. Half-field number within each field (1 or 2), corresponding to experimental treatment allocation.}
+#'   \item{ID}{Factor. Unique identifier for each half-field observation.}
+#'   \item{Farm}{Factor. Identifier for each farm (37 farms in total).}
+#'   \item{Field}{Factor. Field number within each farm (usually 1–3, since different fields were used across years within farms).}
+#'   \item{DHalf}{Factor. Half-field number within each field (1 or 2), corresponding to experimental treatment allocation.}
 #'   \item{Year}{Integer. Year of the trial, coded chronologically as 1 (2000), 2 (2001), or 3 (2002).}
-#'   \item{Treatment}{Character. Management regime applied to the half-field: "C" (conventional) or "GM" (genetically modified herbicide-resistant crop).}
+#'   \item{Treatment}{Factor. Management regime applied to the half-field: "C" (conventional) or "GM" (genetically modified herbicide-resistant crop).}
 #'   \item{Weeds}{Integer. Total weed abundance recorded in the half-field after the last GM herbicide application.}
 #'   \item{Seedbank}{Integer. Seedbank density (initial seed count) measured in the half-field before sowing.}
 #' }
@@ -564,7 +562,7 @@
 #'
 #' @format A data frame with 3 variables: \code{MonthName}, \code{Month}, \code{Temperature}.
 #' \describe{
-#'   \item{MonthName}{Character. Name of the month (e.g., "January", "February").}
+#'   \item{MonthName}{Factor. Name of the month (e.g., "January", "February").}
 #'   \item{Month}{Integer. Numeric code for the month (1 = January, ..., 12 = December).}
 #'   \item{Temperature}{Numeric. Mean temperature for the month (in degrees Celsius).}
 #' }
@@ -577,10 +575,10 @@
 #'
 #' @format A data frame with 6 variables: \code{Plot}, \code{GR}, \code{Variety}, \code{Trt}, \code{Damage}, \code{TGW}.
 #' \describe{
-#'   \item{Plot}{Integer. Unique identifier for each experimental plot.}
-#'   \item{GR}{Character. Growth regulator application: "+" (with growth regulator) or "-" (without growth regulator).}
-#'   \item{Variety}{Character. Oilseed rape variety: "B" or "N".}
-#'   \item{Trt}{Character. Treatment combination label indicating both growth regulator and variety (one of "+B", "+N", "-B", "-N").}
+#'   \item{Plot}{Factor. Unique identifier for each experimental plot.}
+#'   \item{GR}{Factor. Growth regulator application: "+" (with growth regulator) or "-" (without growth regulator).}
+#'   \item{Variety}{Factor. Oilseed rape variety: "B" or "N".}
+#'   \item{Trt}{Factor. Treatment combination label indicating both growth regulator and variety (one of "+B", "+N", "-B", "-N").}
 #'   \item{Damage}{Integer. Percentage of plot area grazed by pigeons, recorded to the nearest 10 percent.}
 #'   \item{TGW}{Numeric. Thousand grain weight (TGW) response, measuring the average weight (in grams) of 1000 seeds from each plot.}
 #' }
@@ -593,9 +591,9 @@
 #'
 #' @format A data frame with 4 variables: \code{DPlant}, \code{Distance}, \code{fDist}, \code{Count}.
 #' \describe{
-#'   \item{DPlant}{Integer. Unique identifier for each sampled plant.}
+#'   \item{DPlant}{Factor. Unique identifier for each sampled plant.}
 #'   \item{Distance}{Integer. Distance (in meters) from the edge of the field along the transect where the plant was sampled.}
-#'   \item{fDist}{Integer. Factor-level code for distance group along the transect (e.g., 1 for edge, 2 for 2 m, etc.).}
+#'   \item{fDist}{Factor. Factor-level code for distance group along the transect.}
 #'   \item{Count}{Integer. Number of beetles counted on the sampled plant.}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -607,7 +605,7 @@
 #'
 #' @format A data frame with 6 variables: \code{DSeed}, \code{Weight}, \code{Length}, \code{Diameter}, \code{Moisture}, \code{Hardness}.
 #' \describe{
-#'   \item{DSeed}{Integer. Unique identifier for each seed.}
+#'   \item{DSeed}{Factor. Unique identifier for each seed.}
 #'   \item{Weight}{Numeric. Weight of the seed (in milligrams, mg).}
 #'   \item{Length}{Numeric. Length of the seed (in millimeters, mm).}
 #'   \item{Diameter}{Numeric. Diameter of the seed (in millimeters, mm).}
@@ -623,9 +621,9 @@
 #'
 #' @format A data frame with 5 variables: \code{ID}, \code{Rep}, \code{DUnit}, \code{Voltage}, \code{Km}.
 #' \describe{
-#'   \item{ID}{Integer. Unique identifier for each observation.}
-#'   \item{Rep}{Integer. Block number, corresponding to the experimental occasion (replicate).}
-#'   \item{DUnit}{Integer. Measurement unit within each replicate (used in place of actual plot or plant randomization).}
+#'   \item{ID}{Factor. Unique identifier for each observation.}
+#'   \item{Rep}{Factor. Block number, corresponding to the experimental occasion (replicate).}
+#'   \item{DUnit}{Factor. Measurement unit within each replicate (used in place of actual plot or plant randomization).}
 #'   \item{Voltage}{Integer. Membrane voltage applied (in millivolts, mV; values range from -160 to 0).}
 #'   \item{Km}{Numeric. Measured electric current for the respective voltage (unit appropriate to current, e.g., microamperes).}
 #' }
@@ -638,8 +636,8 @@
 #'
 #' @format A data frame with 5 variables: \code{Sample}, \code{Site}, \code{HLength}, \code{Spikelets}, \code{TotalSeed}.
 #' \describe{
-#'   \item{Sample}{Integer. Unique identifier for each sample point.}
-#'   \item{Site}{Character. Study site where the sample was collected (levels: "C", "L", "P", "W").}
+#'   \item{Sample}{Factor. Unique identifier for each sample point.}
+#'   \item{Site}{Factor. Study site where the sample was collected (levels: "C", "L", "P", "W").}
 #'   \item{HLength}{Numeric. Average head length of rye-grass plants at the sampling point (in millimeters, mm).}
 #'   \item{Spikelets}{Numeric. Average number of spikelets per head at the sampling point.}
 #'   \item{TotalSeed}{Integer. Total number of seeds per square meter at the sampling point.}
@@ -653,8 +651,8 @@
 #'
 #' @format A data frame with 3 variables: \code{DPlot}, \code{Variety}, \code{Yield}.
 #' \describe{
-#'   \item{DPlot}{Integer. Unique identifier for each plot in the field trial.}
-#'   \item{Variety}{Character. Wheat variety grown in each plot ("Commercial" or "Improved").}
+#'   \item{DPlot}{Factor. Unique identifier for each plot in the field trial.}
+#'   \item{Variety}{Factor. Wheat variety grown in each plot ("Commercial" or "Improved").}
 #'   \item{Yield}{Numeric. Grain yield from the plot, measured in tonnes per hectare (t/ha).}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
@@ -666,7 +664,7 @@
 #'
 #' @format A data frame with 3 variables: \code{DBeetle}, \code{Length}, \code{Width}.
 #' \describe{
-#'   \item{DBeetle}{Integer. Unique identifier for each beetle in the sample.}
+#'   \item{DBeetle}{Factor. Unique identifier for each beetle in the sample.}
 #'   \item{Length}{Numeric. Total body length of the beetle (in millimeters, mm).}
 #'   \item{Width}{Numeric. Maximum body width of the beetle (in millimeters, mm).}
 #' }

@@ -7,11 +7,11 @@
 \format{
 A data frame with 8 variables: \code{ID}, \code{Run}, \code{DPlant}, \code{Host}, \code{Ladybird}, \code{Cadaver}, \code{Live}, \code{Infected}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each experimental container (observation).}
-  \item{Run}{Integer. Experimental run (1 or 2), indicating replicate.}
-  \item{DPlant}{Integer. Unique identifier for each experimental plant within a run (1–36).}
-  \item{Host}{Character. Type of host plant in the container ("beans" or "trefoil").}
-  \item{Ladybird}{Character. Indicator for presence ("+") or absence ("-") of ladybird foraging in the container.}
+  \item{ID}{Factor. Unique identifier for each experimental container (observation).}
+  \item{Run}{Factor. Experimental run (1 or 2), indicating replicate.}
+  \item{DPlant}{Factor. Unique identifier for each experimental plant within a run (1–36).}
+  \item{Host}{Factor. Type of host plant in the container ("beans" or "trefoil").}
+  \item{Ladybird}{Factor. Indicator for presence ("+") or absence ("-") of ladybird foraging in the container.}
   \item{Cadaver}{Integer. Number of sporulating aphid cadavers distributed on each plant (5, 10, or 20).}
   \item{Live}{Integer. Number of live aphids remaining in the container after seven days.}
   \item{Infected}{Integer. Number of live aphids found to be infected after seven days.}

@@ -7,10 +7,10 @@
 \format{
 A data frame with 6 variables: \code{Plot}, \code{GR}, \code{Variety}, \code{Trt}, \code{Damage}, \code{TGW}.
 \describe{
-  \item{Plot}{Integer. Unique identifier for each experimental plot.}
-  \item{GR}{Character. Growth regulator application: "+" (with growth regulator) or "-" (without growth regulator).}
-  \item{Variety}{Character. Oilseed rape variety: "B" or "N".}
-  \item{Trt}{Character. Treatment combination label indicating both growth regulator and variety (one of "+B", "+N", "-B", "-N").}
+  \item{Plot}{Factor. Unique identifier for each experimental plot.}
+  \item{GR}{Factor. Growth regulator application: "+" (with growth regulator) or "-" (without growth regulator).}
+  \item{Variety}{Factor. Oilseed rape variety: "B" or "N".}
+  \item{Trt}{Factor. Treatment combination label indicating both growth regulator and variety (one of "+B", "+N", "-B", "-N").}
   \item{Damage}{Integer. Percentage of plot area grazed by pigeons, recorded to the nearest 10 percent.}
   \item{TGW}{Numeric. Thousand grain weight (TGW) response, measuring the average weight (in grams) of 1000 seeds from each plot.}
 }

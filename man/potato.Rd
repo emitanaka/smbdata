@@ -7,11 +7,11 @@
 \format{
 A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Type}, \code{Fungicide}, \code{Yield}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each plot (experimental unit).}
-  \item{Block}{Integer. Block number in the randomized complete block design.}
-  \item{Plot}{Integer. Plot number within each block (1–5).}
-  \item{Type}{Character. Indicates if the plot is a "Control" or "Treated" (with fungicide).}
-  \item{Fungicide}{Character. Fungicide treatment applied in the plot ("Control", "F1", "F2", "F3", or "F4").}
+  \item{ID}{Factor. Unique identifier for each plot (experimental unit).}
+  \item{Block}{Factor. Block number in the randomized complete block design.}
+  \item{Plot}{Factor. Plot number within each block (1–5).}
+  \item{Type}{Factor. Indicates if the plot is a "Control" or "Treated" (with fungicide).}
+  \item{Fungicide}{Factor. Fungicide treatment applied in the plot ("Control", "F1", "F2", "F3", or "F4").}
   \item{Yield}{Integer. Potato yield for the plot (units as recorded, e.g., kg/plot).}
 }
 }

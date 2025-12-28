@@ -7,8 +7,8 @@
 \format{
 A data frame with 3 variables: \code{DPlot}, \code{Variety}, \code{Yield}.
 \describe{
-  \item{DPlot}{Integer. Unique identifier for each plot in the field trial.}
-  \item{Variety}{Character. Wheat variety grown in each plot ("Commercial" or "Improved").}
+  \item{DPlot}{Factor. Unique identifier for each plot in the field trial.}
+  \item{Variety}{Factor. Wheat variety grown in each plot ("Commercial" or "Improved").}
   \item{Yield}{Numeric. Grain yield from the plot, measured in tonnes per hectare (t/ha).}
 }
 }

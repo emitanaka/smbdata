@@ -7,10 +7,10 @@
 \format{
 A data frame with 4 variables: \code{Field}, \code{Row}, \code{Column}, \code{Treatment}.
 \describe{
-  \item{Field}{Integer. Identifier for each experimental field, corresponding to replicates of the Latin Square design.}
-  \item{Row}{Integer. Row position within the Latin Square in each field.}
-  \item{Column}{Integer. Column position within the Latin Square in each field.}
-  \item{Treatment}{Integer. Shade of petal colour assigned to the plot (five levels in total, coded as 1–5).}
+  \item{Field}{Factor. Identifier for each experimental field, corresponding to replicates of the Latin Square design.}
+  \item{Row}{Factor. Row position within the Latin Square in each field.}
+  \item{Column}{Factor. Column position within the Latin Square in each field.}
+  \item{Treatment}{Factor. Shade of petal colour assigned to the plot (five levels in total, coded as 1–5).}
 }
 }
 \source{

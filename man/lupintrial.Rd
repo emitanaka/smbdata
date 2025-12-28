@@ -7,10 +7,10 @@
 \format{
 A data frame with 6 variables: \code{ID}, \code{Block}, \code{Plot}, \code{Line}, \code{NPlant}, \code{OilYield}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each plot (observation).}
-  \item{Block}{Integer. Block number in the randomized complete block design.}
-  \item{Plot}{Integer. Plot number within each block.}
-  \item{Line}{Character. Identity code of the lupin breeding line (e.g., "DTN84", "CH304-73").}
+  \item{ID}{Factor. Unique identifier for each plot (observation).}
+  \item{Block}{Factor. Block number in the randomized complete block design.}
+  \item{Plot}{Factor. Plot number within each block.}
+  \item{Line}{Factor. Identity code of the lupin breeding line (e.g., "DTN84", "CH304-73").}
   \item{NPlant}{Numeric. Average number of plants per square metre in the plot.}
   \item{OilYield}{Numeric. Oil yield from the plot, measured in tonnes per hectare (t/ha).}
 }

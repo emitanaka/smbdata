@@ -7,8 +7,8 @@
 \format{
 A data frame with 7 variables: \code{DPlot}, \code{Type}, \code{SD}, \code{QD}, \code{d1}, \code{d2}, \code{d3}.
 \describe{
-  \item{DPlot}{Integer. Unique identifier for each forest plot.}
-  \item{Type}{Character. Forest stand type classified by the dominant Nothofagus species: "Coigue", "Rauli", or "Roble".}
+  \item{DPlot}{Factor. Unique identifier for each forest plot.}
+  \item{Type}{Factor. Forest stand type classified by the dominant Nothofagus species: "Coigue", "Rauli", or "Roble".}
   \item{SD}{Integer. Stand density, as the number of trees per hectare in each plot.}
   \item{QD}{Numeric. Mean quadratic diameter (in centimeters) of trees in the plot.}
   \item{d1}{Integer. Dummy variable for stand type Coigue (1 if Type is "Coigue", 0 otherwise).}

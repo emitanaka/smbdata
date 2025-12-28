@@ -7,11 +7,11 @@
 \format{
 A data frame with 5 variables: \code{DFemale}, \code{Treatment}, \code{Species}, \code{MateType}, \code{Eggs}.
 \describe{
-  \item{DFemale}{An ID number.}
-  \item{Treatment}{The treatment level.}
-  \item{Species}{Species.}
-  \item{MateType}{Mating type: intraspecies or interspecies mating.}
-  \item{Eggs}{The number of eggs.}
+  \item{DFemale}{Factor. Unique identifier for each female subject in the experiment.}
+  \item{Treatment}{Factor. Experimental treatment group assigned to each female.}
+  \item{Species}{Factor. Species designation for each female in the study.}
+  \item{MateType}{Factor. Type of mate provided for each female ("Inter" for interspecific or "Intra" for intraspecific, as relevant).}
+  \item{Eggs}{Integer. Number of eggs laid by each female during the observation period.}
 }
 }
 \source{

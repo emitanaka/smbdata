@@ -7,9 +7,9 @@
 \format{
 A data frame with 5 variables: \code{ID}, \code{Rep}, \code{DUnit}, \code{Voltage}, \code{Km}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each observation.}
-  \item{Rep}{Integer. Block number, corresponding to the experimental occasion (replicate).}
-  \item{DUnit}{Integer. Measurement unit within each replicate (used in place of actual plot or plant randomization).}
+  \item{ID}{Factor. Unique identifier for each observation.}
+  \item{Rep}{Factor. Block number, corresponding to the experimental occasion (replicate).}
+  \item{DUnit}{Factor. Measurement unit within each replicate (used in place of actual plot or plant randomization).}
   \item{Voltage}{Integer. Membrane voltage applied (in millivolts, mV; values range from -160 to 0).}
   \item{Km}{Numeric. Measured electric current for the respective voltage (unit appropriate to current, e.g., microamperes).}
 }

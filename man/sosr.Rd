@@ -7,12 +7,12 @@
 \format{
 A data frame with 8 variables: \code{ID}, \code{Farm}, \code{Field}, \code{DHalf}, \code{Year}, \code{Treatment}, \code{Weeds}, \code{Seedbank}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each half-field observation.}
-  \item{Farm}{Integer. Identifier for each farm (37 farms in total).}
-  \item{Field}{Integer. Field number within each farm (usually 1–3, since different fields were used across years within farms).}
-  \item{DHalf}{Integer. Half-field number within each field (1 or 2), corresponding to experimental treatment allocation.}
+  \item{ID}{Factor. Unique identifier for each half-field observation.}
+  \item{Farm}{Factor. Identifier for each farm (37 farms in total).}
+  \item{Field}{Factor. Field number within each farm (usually 1–3, since different fields were used across years within farms).}
+  \item{DHalf}{Factor. Half-field number within each field (1 or 2), corresponding to experimental treatment allocation.}
   \item{Year}{Integer. Year of the trial, coded chronologically as 1 (2000), 2 (2001), or 3 (2002).}
-  \item{Treatment}{Character. Management regime applied to the half-field: "C" (conventional) or "GM" (genetically modified herbicide-resistant crop).}
+  \item{Treatment}{Factor. Management regime applied to the half-field: "C" (conventional) or "GM" (genetically modified herbicide-resistant crop).}
   \item{Weeds}{Integer. Total weed abundance recorded in the half-field after the last GM herbicide application.}
   \item{Seedbank}{Integer. Seedbank density (initial seed count) measured in the half-field before sowing.}
 }

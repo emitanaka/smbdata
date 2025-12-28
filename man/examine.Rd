@@ -7,7 +7,7 @@
 \format{
 A data frame with 23 variables: \code{Trap}, \code{JDay}, \code{Latitude}, \code{Longitude}, \code{Altitude}, \code{OctRain}, \code{NovRain}, \code{DecRain}, \code{JanRain}, \code{FebRain}, \code{MarRain}, \code{AprRain}, \code{MayRain}, \code{C30Day}, \code{F60Day}, \code{ConForest}, \code{DecForest}, \code{MixForest}, \code{Grassland}, \code{Arable}, \code{InlandWater}, \code{Sea}, \code{Urban}.
 \describe{
-  \item{Trap}{Integer. Unique identifier for each suction trap location.}
+  \item{Trap}{Factor. Unique identifier for each suction trap location.}
   \item{JDay}{Integer. Julian day of first catch of \emph{Myzus persicae} at the site in 1995.}
   \item{Latitude}{Numeric. Latitude (in decimal degrees) of the trap site.}
   \item{Longitude}{Numeric. Longitude (in decimal degrees) of the trap site.}

@@ -7,9 +7,9 @@
 \format{
 A data frame with 4 variables: \code{Seed}, \code{Female}, \code{Male}, \code{Root}.
 \describe{
-  \item{Seed}{Integer. Unique identifier for each individual seed/planted observation.}
-  \item{Female}{Character. Code for the female parent in the cross (levels: "F1" to "F5").}
-  \item{Male}{Character. Code for the male parent in the cross (levels: "M1", "M2").}
+  \item{Seed}{Factor. Unique identifier for each individual seed/planted observation.}
+  \item{Female}{Factor. Code for the female parent in the cross (levels: "F1" to "F5").}
+  \item{Male}{Factor. Code for the male parent in the cross (levels: "M1", "M2").}
   \item{Root}{Integer. Maximum root length (in millimeters) measured for each seedling three weeks after planting.}
 }
 }

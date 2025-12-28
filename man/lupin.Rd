@@ -7,12 +7,12 @@
 \format{
 A data frame with 7 variables: \code{ID}, \code{Row}, \code{Column}, \code{Treatment}, \code{Water}, \code{Soil}, \code{Height}.
 \describe{
-  \item{ID}{Integer. Unique identifier for each pot (experimental unit).}
-  \item{Row}{Integer. Row position of the pot in the Latin Square grid.}
-  \item{Column}{Integer. Column position of the pot in the Latin Square grid.}
-  \item{Treatment}{Character. Combined treatment label for soil type and water supply (e.g., "CH", "CL", "SH", "SL").}
-  \item{Water}{Character. Water supply level applied to the pot: "L" (low) or "H" (high).}
-  \item{Soil}{Character. Soil type: "C" (clay) or "S" (sand).}
+  \item{ID}{Factor. Unique identifier for each pot (experimental unit).}
+  \item{Row}{Factor. Row position of the pot in the Latin Square grid.}
+  \item{Column}{Factor. Column position of the pot in the Latin Square grid.}
+  \item{Treatment}{Factor. Combined treatment label for soil type and water supply (e.g., "CH", "CL", "SH", "SL").}
+  \item{Water}{Factor. Water supply level applied to the pot: "L" (low) or "H" (high).}
+  \item{Soil}{Factor. Soil type: "C" (clay) or "S" (sand).}
   \item{Height}{Numeric. Height (in centimeters) of the lupin plant at the end of the experiment.}
 }
 }

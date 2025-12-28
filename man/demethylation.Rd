@@ -7,7 +7,7 @@
 \format{
 A data frame with 4 variables: \code{DTray}, \code{Dose}, \code{Total}, \code{Normal}.
 \describe{
-  \item{DTray}{Integer. Unique identifier for each tray in the experiment.}
+  \item{DTray}{Factor. Unique identifier for each tray in the experiment.}
   \item{Dose}{Numeric. Dose of demethylation agent applied to the seeds (including zero for controls).}
   \item{Total}{Integer. Total number of plants in each tray.}
   \item{Normal}{Integer. Number of plants in each tray exhibiting a normal phenotype.}
