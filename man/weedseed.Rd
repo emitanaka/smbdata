@@ -23,4 +23,8 @@ weedseed
 \description{
 An observational study was conducted to explore the relationship between seed production and plant characteristics in rye-grass. Between 17 and 24 samples were collected at each of four study sites (Site: C, L, P, and W). For each sample point, the total number of seeds per square meter (TotalSeed), the average head length in millimeters (HLength), and the average number of spikelets per head (Spikelets) were measured. This dataset facilitates analysis of how head length and spikelet count may influence seed yield across multiple field sites.
 }
+\examples{
+anova(lm(log10(TotalSeed) ~ Site * (HLength + Spikelets) , data = weedseed))
+
+}
 \keyword{datasets}

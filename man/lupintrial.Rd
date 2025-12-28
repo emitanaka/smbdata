@@ -24,4 +24,8 @@ lupintrial
 \description{
 A field trial was conducted to compare the performance of fourteen lupin breeding lines, including twelve dwarf (DTN) lines and two non-dwarf (CH-304) lines, with the candidate variety DTN20. The trial followed a randomized complete block design with three blocks, each containing fourteen plots. Among the multiple assessed traits, this dataset focuses on oil yield (t/ha; variate OilYield) measured in each plot. Each experimental unit is identified by its block and plot number (Block and Plot), and the line identity (Line). The data enable analysis of oil yield variation among breeding lines, with comparisons made to the candidate variety under controlled field conditions.
 }
+\examples{
+aov(OilYield ~ Line + Error(Block/Plot), data = lupintrial)
+
+}
 \keyword{datasets}

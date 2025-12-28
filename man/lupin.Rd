@@ -27,4 +27,8 @@ lupin
 \description{
 An experiment was conducted to examine the effects of soil type and water availability on the growth of lupin plants grown individually in pots. To control for possible gradients due to temperature and light, the pots were arranged in a square grid and a Latin square design was used, treating rows and columnsas crossed blocking factors. Treatments followed a 2 × 2 factorial structure, combining two soil types (Soil: clay [C] or sand [S]) and two water supply levels (Water: low [L] or high [H]). Each treatment combination was applied to a group of pots. Plant height (cm) was recorded for each pot at the end of the experiment, allowing assessment of both main and interaction effects of soil type and water availability on lupin growth.
 }
+\examples{
+anova(lm(Height ~ Row + Column + Treatment, data = lupin))
+
+}
 \keyword{datasets}

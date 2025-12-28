@@ -24,4 +24,8 @@ forest
 \description{
 A survey was conducted on 41 plots of pure or mixed Nothofagus forest located at the foot of the Andes. Each plot was classified into one of three stand types based on the dominant tree species: Coigue (type 1, 13 plots), Rauli (type 2, 9 plots), or Roble (type 3, 19 plots). For each plot, stand density (number of trees per hectare, SD) and mean quadratic diameter (in cm, QD) were recorded. The primary aim of the study was to model how stand density relates to quadratic diameter and to compare this relationship across the three forest stand types.
 }
+\examples{
+lm(log(SD) ~ log(QD) * Type, data = forest)
+
+}
 \keyword{datasets}

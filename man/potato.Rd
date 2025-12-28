@@ -24,4 +24,8 @@ potato
 \description{
 A field experiment was conducted using a randomized complete block design to evaluate the effects of four different fungicides (F1–F4) on potato yield, compared with untreated control plots. The trial consisted of four blocks, each containing five plots, resulting in a total of 20 experimental units. Treatments (control and four fungicides) were randomly assigned to plots within each block. For each plot, yield was measured and recorded. The dataset includes the blocking factors Block (four levels) and Plot (five levels within each block), the treatment factor Fungicide (five levels: control, F1, F2, F3, F4), and the response variable Yield, allowing for the comparison of fungicide efficacy under controlled field conditions.
 }
+\examples{
+lm(Yield ~ Block + Fungicide, data = potato)
+
+}
 \keyword{datasets}

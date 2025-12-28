@@ -21,4 +21,8 @@ wheat
 \description{
 In this field trial, the yields of a standard commercial wheat variety and a new ‘improved’ variety were compared to assess differences in average performance. Seven small plots were planted with each variety, resulting in yield measurements from a total of 14 plots. Yields were determined for each plot and standardized to tonnes per hectare (t/ha). The primary objective of the study was to evaluate whether the new variety offers a significant advantage in yield over the standard commercial type.
 }
+\examples{
+lm(Yield ~ Variety, data = wheat)
+
+}
 \keyword{datasets}

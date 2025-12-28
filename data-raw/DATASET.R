@@ -54,6 +54,10 @@ for(afile in dat_files) {
   #devtools::use_data(get(fn), overwrite = TRUE)
 }
 
+heights <- heights |>
+  mutate(Dose = as.factor(Dose))
+usethis::use_data(heights, overwrite = TRUE)
+
 calibrate <- calibrate |>
   mutate(Absorbance = as.numeric(Absorbance),
          Prep = as.factor(Prep),

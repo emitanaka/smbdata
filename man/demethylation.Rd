@@ -22,4 +22,14 @@ demethylation
 \description{
 This pilot study aimed to calibrate a scientific protocol by assessing the effect of a demethylation agent on plant phenotype. Seeds were treated with six different doses of the agent, including a zero-dose control, and then sown in trays, with each tray containing seeds treated at the same dose. Each dose was replicated across four trays: two containing 60 plants and two containing 100 plants. The experiment was arranged in a completely randomized design. For each tray, the number of plants exhibiting a normal phenotype (Normal) and the total number of plants (Total) were recorded, with each tray identified by a unique index (DTray). The dataset allows investigation of the relationship between agent dose and the binomially distributed probability of plants showing a normal phenotype.
 }
+\examples{
+glm(cbind(Normal, Total - Normal) ~ Dose,
+    family = binomial(),
+    data = demethylation)
+
+glm(cbind(Normal, Total - Normal) ~ log(Dose + 0.1),
+    family = binomial(),
+    data = demethylation)
+
+}
 \keyword{datasets}

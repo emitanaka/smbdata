@@ -24,4 +24,8 @@ triticum
 \description{
 A dataset was collected to investigate morphological characteristics associated with seed weight in a line of diploid wheat (Triticum monococcum). Measurements were taken on 190 randomly selected seeds, recording five traits for each seed: weight (mg), diameter (mm), length (mm), moisture content (percentage), and endosperm hardness (index value from a single-kernel characterization system). Each seed is uniquely identified by the variable DSeed. The primary aim of the study is to identify which variables, particularly seed length, contribute to variation in seed weight. This dataset enables the analysis of relationships among seed traits within a genetically uniform wheat line.
 }
+\examples{
+lm(Weight ~ Length, data = triticum)
+
+}
 \keyword{datasets}

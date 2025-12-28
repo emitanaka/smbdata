@@ -26,4 +26,11 @@ ladybird
 \description{
 An experiment was conducted to study the transmission of fungus from ladybirds to aphids on two host plant types (beans or birdsfoot trefoil). The study used containers, each holding one plant with 20 aphids, and varied the fungal load by distributing 5, 10, or 20 sporulating aphid cadavers per plant. For each host plant and fungal load combination, half of the containers were exposed to ladybird foraging for four hours, and half were not, creating a three-way factorial structure: Host (two levels), Cadaver (three levels), and Ladybird presence (two levels). This setup was blocked in two runs (Run), with six replicates per treatment combination per run, resulting in a total of 72 experimental units. Each unit (DPlant) was randomly assigned treatments, and after seven days, the numbers of live (Live) and infected (Infected) aphids were counted. Due to aphid predation by ladybirds, the number of live aphids varied, so the percentage of infected aphids was used to quantify transmission rates. This dataset enables analysis of the main and interactive effects of host plant, fungal load, and ladybird presence on aphid infection rates.
 }
+\examples{
+summary(aov(log(P / (100 - P)) ~ Host * Cadaver * Ladybird + Error(Run/DPlant),
+            data = ladybird |>
+              transform(P = 100 * (Infected + 1) / (Live + 2), C
+              adaver = factor(Cadaver))))
+
+}
 \keyword{datasets}

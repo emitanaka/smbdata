@@ -26,4 +26,9 @@ sosr
 \description{
 This dataset comes from the UK-wide Farm Scale Evaluations (FSEs) conducted between 2000 and 2003 to assess the ecological effects of genetically modified (GM) herbicide-resistant versus conventional crop management in spring oilseed rape. Each field was divided into two half-fields that received either the GM or conventional treatment (Treatment), with a total of 62 fields sampled over three years (Year) on 37 different farms (Farm). Each field within a farm was uniquely numbered (Field), and half-fields were labelled (DHalf) according to their treatment allocation. For each half-field, the total abundance of weeds (variate Weeds) was recorded after the last GM herbicide application (“post-herbicide”), and baseline seedbank density (variate Seedbank) was measured before sowing. After excluding fields with missing or suspect seedbank data, the dataset comprises 118 half-field observations from 59 fields. This structure enables analysis of how GM and conventional management regimes impact weed abundance, controlling for initial differences in seedbank densities across a spatially and temporally replicated field trial.
 }
+\examples{
+summary(aov(log10(Weeds) ~ Year * Treatment + Error(Farm/Field/DHalf),
+            data = sosr |>
+               transform(Year = factor(Year))))
+}
 \keyword{datasets}

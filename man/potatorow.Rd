@@ -24,4 +24,8 @@ potatorow
 \description{
 This dataset presents individual row yields from a field experiment designed as a randomized complete block design to evaluate the effects of four different fungicides (F1, F2, F3, and F4) compared with untreated control plots on potato yield. The trial was arranged as four blocks, each containing five plots, for a total of 20 units. For this analysis, yield measurements are broken down to the level of individual rows within each plot. The dataset includes classifying factors for Block, Plot, and Row, enabling detailed investigation of within-plot and within-block variation, as well as the overall impact of fungicide treatments on potato yield.
 }
+\examples{
+summary(aov(RowYield ~ Fungicide + Error(Block/Plot/Row), data = potatorow))
+
+}
 \keyword{datasets}

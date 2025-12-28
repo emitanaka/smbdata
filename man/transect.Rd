@@ -22,4 +22,8 @@ transect
 \description{
 A pilot study was carried out to examine the entry pattern of an insect pest (beetles) into a susceptible crop. Researchers hypothesized that beetles infiltrate the crop from the field edge, advancing toward the centre. Following initial detection of beetles in the field, a transect was established running from the field edge toward the centre, with beetle sampling conducted at 2-meter intervals. At each sampling point, beetles were counted on four randomly selected plants to provide replicate measurements for each distance. The resulting data consist of the distance from the crop edge (variate Distance) and the corresponding beetle count (variate Count) for each sampled plant. This structure allows for analysis of spatial trends in beetle infestation across the field transect.
 }
+\examples{
+anova(lm(log10(Count) ~ Distance + fDist, data = transect))
+
+}
 \keyword{datasets}

@@ -25,4 +25,8 @@ forest2
 \description{
 A survey of 41 plots in natural stands of pure or mixed Nothofagus forest at the foot of the Andes was conducted to investigate variation in stand structure. Each plot was classified by the dominant tree species into one of three stand types: Coigue (13 plots), Rauli (9 plots), or Roble (19 plots). For each plot, stand density (number of trees per hectare, SD) and mean quadratic diameter (in cm, QD) were recorded. To facilitate analysis, three dummy variables (d1, d2, d3) were created to represent the stand type factor. The main aim of the study was to model stand density as a function of quadratic diameter and to compare this relationship among the three types of Nothofagus stands.
 }
+\examples{
+anova(lm(log(SD) ~ log(QD) * (d2 + d3), data = forest2))
+
+}
 \keyword{datasets}

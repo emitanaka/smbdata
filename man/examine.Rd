@@ -41,4 +41,8 @@ examine
 \description{
 The EXAMINE project collected data from 50 suction trap locations across Europe to explore environmental and landscape factors affecting aphid flight timing and abundance. This dataset specifically focuses on the Julian day of the first capture of the aphid species \emph{Myzus persicae} at each site in 1995. Explanatory variables include geographical information (latitude, longitude, altitude), ten meteorologicalvariables (monthly rainfall from October 1994 to May 1995, mean temperature for the coldest 30-day period, and mean temperature for the subsequent 60-day period), and eight land-use variables representing the proportion of land within a 75 km radius used for different purposes (such as forest types, agricultural land, urban areas, and water bodies). These factors were selected for their potential influence on aphid migration patterns, with earlier flight dates expected in warmer and drier regions. The dataset enables analysis of how geography, climate, and landscape usage affect the seasonal timing of aphid arrival across Europe.
 }
+\examples{
+step(lm(JDay ~ . - Trap, data = examine), direction = "backward")
+
+}
 \keyword{datasets}

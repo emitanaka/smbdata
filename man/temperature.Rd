@@ -21,4 +21,9 @@ temperature
 \description{
 This dataset contains the monthly mean temperatures recorded at Rothamsted Experimental Station from 1891 to 1990. Each observation represents the mean temperature (variate Temperature) for a specific month and year within this 100-year period. The data are suitable for time series analysis and are expected to exhibit an annual cyclic pattern, making them appropriate for modeling using trigonometric regression methods.
 }
+\examples{
+lm(Temperature ~ sin(2 * pi * Month / 12) + cos(2 * pi * Month / 12),
+   data = temperature)
+
+}
 \keyword{datasets}

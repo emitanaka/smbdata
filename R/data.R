@@ -253,6 +253,8 @@
 #'   \item{Size}{Factor. Cutting size category: S (small), M (medium), or L (large).}
 #'   \item{Yield}{Numeric. Willow yield measured at the end of the first year (units as recorded, e.g., g/plot or kg/plot).}
 #' }
+#' @examples
+#' anova(lm(Yield ~ Block + Size * Type, data = cuttings))
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "cuttings"
 
@@ -267,6 +269,15 @@
 #'   \item{Total}{Integer. Total number of plants in each tray.}
 #'   \item{Normal}{Integer. Number of plants in each tray exhibiting a normal phenotype.}
 #' }
+#' @examples
+#' glm(cbind(Normal, Total - Normal) ~ Dose,
+#'     family = binomial(),
+#'     data = demethylation)
+#'
+#' glm(cbind(Normal, Total - Normal) ~ log(Dose + 0.1),
+#'     family = binomial(),
+#'     data = demethylation)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "demethylation"
 
@@ -280,6 +291,9 @@
 #'   \item{Concentration}{Numeric. Substrate concentration used for each reading.}
 #'   \item{Absorbance}{Numeric. ELISA absorbance value measured at the given substrate concentration.}
 #' }
+#' @examples
+#' summary(lm(Absorbance ~ log10(Concentration + 1), data = elisa))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "elisa"
 
@@ -313,6 +327,9 @@
 #'   \item{Sea}{Numeric. Proportion of area (within 75 km radius) that is sea.}
 #'   \item{Urban}{Numeric. Proportion of land (within 75 km radius) classified as urban area.}
 #' }
+#' @examples
+#' step(lm(JDay ~ . - Trap, data = examine), direction = "backward")
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "examine"
 
@@ -328,6 +345,9 @@
 #'   \item{N}{Integer. Rate of nitrogen fertilizer applied to the plot (in kg N/ha; values: 0, 70, 140, 210).}
 #'   \item{Yield}{Numeric. Whole crop forage yield measured at 100 percent dry matter (in tonnes per hectare, t/ha).}
 #' }
+#' @examples
+#' summary(aov(Yield ~ factor(N) + Error(Block/Plot), data = forage))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "forage"
 
@@ -342,6 +362,9 @@
 #'   \item{SD}{Integer. Stand density, recorded as the number of trees per hectare in each plot.}
 #'   \item{QD}{Numeric. Mean quadratic diameter (in centimeters) of trees in the plot.}
 #' }
+#' @examples
+#' lm(log(SD) ~ log(QD) * Type, data = forest)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 #' @source Dra. Alicia Ortega Z., Universidad Austral de Chile
 "forest"
@@ -360,6 +383,9 @@
 #'   \item{d2}{Integer. Dummy variable for stand type Rauli (1 if Type is "Rauli", 0 otherwise).}
 #'   \item{d3}{Integer. Dummy variable for stand type Roble (1 if Type is "Roble", 0 otherwise).}
 #' }
+#' @examples
+#' anova(lm(log(SD) ~ log(QD) * (d2 + d3), data = forest2))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "forest2"
 
@@ -372,9 +398,12 @@
 #'   \item{Pot}{Factor. Unique identifier for each pot (experimental unit).}
 #'   \item{Row}{Factor. Row position of the pot in the grid layout on the bench.}
 #'   \item{Column}{Factor. Column position of the pot in the grid layout on the bench.}
-#'   \item{Dose}{Integer. Applied dose of the growth regulator.}
+#'   \item{Dose}{Factor. Applied dose of the growth regulator.}
 #'   \item{Height}{Numeric. Plant height (in centimeters) measured six weeks after treatment.}
 #' }
+#' @examples
+#' anova(lm(Height ~ Column + Dose, data = heights))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "heights"
 
@@ -386,12 +415,15 @@
 #' \describe{
 #'   \item{ID}{Factor. Unique identifier for each pot (experimental unit).}
 #'   \item{Rep}{Factor. Block number in the randomized complete block design corresponding to replicate (1–5).}
-#'   \item{DPot}{Integer. Dummy variable indicating the pot number within each block.}
+#'   \item{DPot}{Factor. Dummy variable indicating the pot number within each block.}
 #'   \item{Population}{Factor. Identifier for the black-grass population (e.g., "P1"–"P9").}
 #'   \item{Type}{Factor. Chemical group of the applied herbicide (1: group for Herbicides A and C, 2: group for Herbicide B).}
 #'   \item{Herbicide}{Factor. Applied herbicide treatment ("A", "B", or "C").}
 #'   \item{Fwt}{Numeric. Total fresh weight (in grams) of six black-grass plants grown in the pot.}
 #' }
+#' @examples
+#' aov(sqrt(Fwt) ~ Herbicide * Population + Error(Rep/DPot), data = herbicide)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 #' @source R. Hull, Rothamsted Research.
 "herbicide"
@@ -411,6 +443,12 @@
 #'   \item{Live}{Integer. Number of live aphids remaining in the container after seven days.}
 #'   \item{Infected}{Integer. Number of live aphids found to be infected after seven days.}
 #' }
+#' @examples
+#' summary(aov(log(P / (100 - P)) ~ Host * Cadaver * Ladybird + Error(Run/DPlant),
+#'             data = ladybird |>
+#'               transform(P = 100 * (Infected + 1) / (Live + 2), C
+#'               adaver = factor(Cadaver))))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "ladybird"
 
@@ -456,6 +494,9 @@
 #'   \item{Soil}{Factor. Soil type: "C" (clay) or "S" (sand).}
 #'   \item{Height}{Numeric. Height (in centimeters) of the lupin plant at the end of the experiment.}
 #' }
+#' @examples
+#' anova(lm(Height ~ Row + Column + Treatment, data = lupin))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 #' @source I. Shield, Rothamsted Research.
 "lupin"
@@ -473,6 +514,9 @@
 #'   \item{NPlant}{Numeric. Average number of plants per square metre in the plot.}
 #'   \item{OilYield}{Numeric. Oil yield from the plot, measured in tonnes per hectare (t/ha).}
 #' }
+#' @examples
+#' aov(OilYield ~ Line + Error(Block/Plot), data = lupintrial)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "lupintrial"
 
@@ -486,6 +530,9 @@
 #'   \item{OlsenP}{Numeric. Available soil phosphorus content measured as Olsen P (mg/kg or ppm).}
 #'   \item{Yield}{Numeric. Yield of spring barley from each plot (typically in tonnes per hectare, t/ha).}
 #' }
+#' @examples
+#' lm(Yield ~ log10(OlsenP), data = phosphorus)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "phosphorus"
 
@@ -502,6 +549,9 @@
 #'   \item{Fungicide}{Factor. Fungicide treatment applied in the plot ("Control", "F1", "F2", "F3", or "F4").}
 #'   \item{Yield}{Integer. Potato yield for the plot (units as recorded, e.g., kg/plot).}
 #' }
+#' @examples
+#' lm(Yield ~ Block + Fungicide, data = potato)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "potato"
 
@@ -518,6 +568,9 @@
 #'   \item{Fungicide}{Factor. Fungicide treatment applied to the plot ("Control", "F1", "F2", "F3", or "F4").}
 #'   \item{RowYield}{Integer. Potato yield measured for the individual row (units as recorded, e.g., grams or kilograms).}
 #' }
+#' @examples
+#' summary(aov(RowYield ~ Fungicide + Error(Block/Plot/Row), data = potatorow))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "potatorow"
 
@@ -535,6 +588,9 @@
 #'   \item{Eaten}{Integer. Number of prey consumed by the ladybird in 60 minutes.}
 #'   \item{Total}{Integer. Total number of prey items offered in the dish (always 6).}
 #' }
+#' @examples
+#' glm(cbind(Eaten, Total) ~ Row + Sex * Prey, family = binomial(), data = prey)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "prey"
 
@@ -553,6 +609,10 @@
 #'   \item{Weeds}{Integer. Total weed abundance recorded in the half-field after the last GM herbicide application.}
 #'   \item{Seedbank}{Integer. Seedbank density (initial seed count) measured in the half-field before sowing.}
 #' }
+#' @examples
+#' summary(aov(log10(Weeds) ~ Year * Treatment + Error(Farm/Field/DHalf),
+#'             data = sosr |>
+#'                transform(Year = factor(Year))))
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "sosr"
 
@@ -566,6 +626,10 @@
 #'   \item{Month}{Integer. Numeric code for the month (1 = January, ..., 12 = December).}
 #'   \item{Temperature}{Numeric. Mean temperature for the month (in degrees Celsius).}
 #' }
+#' @examples
+#' lm(Temperature ~ sin(2 * pi * Month / 12) + cos(2 * pi * Month / 12),
+#'    data = temperature)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "temperature"
 
@@ -582,6 +646,10 @@
 #'   \item{Damage}{Integer. Percentage of plot area grazed by pigeons, recorded to the nearest 10 percent.}
 #'   \item{TGW}{Numeric. Thousand grain weight (TGW) response, measuring the average weight (in grams) of 1000 seeds from each plot.}
 #' }
+#' @examples
+#' lm(Damage ~ Trt, data = tgw)
+#' lm(TGW ~ Damage * Trt, data = tgw)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "tgw"
 
@@ -596,6 +664,9 @@
 #'   \item{fDist}{Factor. Factor-level code for distance group along the transect.}
 #'   \item{Count}{Integer. Number of beetles counted on the sampled plant.}
 #' }
+#' @examples
+#' anova(lm(log10(Count) ~ Distance + fDist, data = transect))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "transect"
 
@@ -612,6 +683,9 @@
 #'   \item{Moisture}{Numeric. Moisture content of the seed (as a percentage).}
 #'   \item{Hardness}{Numeric. Endosperm hardness, measured as a single-kernel characterization system index value.}
 #' }
+#' @examples
+#' lm(Weight ~ Length, data = triticum)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "triticum"
 
@@ -627,6 +701,9 @@
 #'   \item{Voltage}{Integer. Membrane voltage applied (in millivolts, mV; values range from -160 to 0).}
 #'   \item{Km}{Numeric. Measured electric current for the respective voltage (unit appropriate to current, e.g., microamperes).}
 #' }
+#' @examples
+#' lm(log(Km) ~ Rep + Voltage, data = voltage)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "voltage"
 
@@ -642,6 +719,9 @@
 #'   \item{Spikelets}{Numeric. Average number of spikelets per head at the sampling point.}
 #'   \item{TotalSeed}{Integer. Total number of seeds per square meter at the sampling point.}
 #' }
+#' @examples
+#' anova(lm(log10(TotalSeed) ~ Site * (HLength + Spikelets) , data = weedseed))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "weedseed"
 
@@ -655,6 +735,9 @@
 #'   \item{Variety}{Factor. Wheat variety grown in each plot ("Commercial" or "Improved").}
 #'   \item{Yield}{Numeric. Grain yield from the plot, measured in tonnes per hectare (t/ha).}
 #' }
+#' @examples
+#' lm(Yield ~ Variety, data = wheat)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "wheat"
 

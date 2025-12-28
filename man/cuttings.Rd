@@ -24,4 +24,7 @@ cuttings
 \description{
 This field experiment was conducted to assess whether the type of cutting planted influences the growth and yield of willows, while also considering the effect of initial cutting size. Five different cutting types (Type: A–E) and three cutting sizes (Size: S, M, L) were included, though not all type × size combinations were available. The study employed a randomized complete block design with five blocks (Block) based on cutting type, and the 25 plots were arranged to balance cutting sizes as much as possible across blocks and types. The yield (Yield) measured at the end of the first year served as the response variable, enabling analysis of both main and combined effects of cutting type and size on willow growth.
 }
+\examples{
+anova(lm(Yield ~ Block + Size * Type, data = cuttings))
+}
 \keyword{datasets}

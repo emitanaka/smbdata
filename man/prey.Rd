@@ -25,4 +25,8 @@ prey
 \description{
 This dataset comes from an experiment investigating factors affecting predation by the Harlequin ladybird. Individual ladybirds of known sex (Sex: Female, Male) were introduced into Petri dishes, each containing six prey items—either pea aphids or lacewing larvae (Prey: Aphid, Lacewing). The experiment followed a randomized complete block design with four treatment combinations arranged across 15 rows (blocks), resulting in 60 observations. On each occasion, one ladybird was observed for the number of prey (Eaten) consumed in 60 minutes. Rows 1–15 combine replicates from both multiple occasions and multiple blocks, enabling the analysis of treatment effects while accounting for replicate variation. The data allow for examination of the influence of ladybird sex and prey type on short-term predation rates, with the outcome variable assumed to follow a Binomial distribution.
 }
+\examples{
+glm(cbind(Eaten, Total) ~ Row + Sex * Prey, family = binomial(), data = prey)
+
+}
 \keyword{datasets}

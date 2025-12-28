@@ -21,4 +21,8 @@ elisa
 \description{
 A dataset was collected consisting of eight ELISA absorbance readings, each corresponding to a different, increasing concentration of a substrate. The primary focus of the analysis is to characterize the relationship between substrate concentration and measured absorbance, facilitating calibration or interpretation of ELISA response as a function of substrate level.
 }
+\examples{
+summary(lm(Absorbance ~ log10(Concentration + 1), data = elisa))
+
+}
 \keyword{datasets}
