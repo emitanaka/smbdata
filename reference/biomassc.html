@@ -66,6 +66,30 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">C</span> <span class="op">~</span> <span class="va">Size</span> <span class="op">*</span> <span class="va">Weight</span> <span class="op">*</span> <span class="va">Time</span>,</span></span>
+<span class="r-in"><span>          data <span class="op">=</span> <span class="va">biomassc</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>             <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span>Weight <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Weight</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       Time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Time</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Analysis of Variance Table</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Response: C</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Size              1  80524   80524 17.1140 0.0002018 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Weight            2  12061    6030  1.2816 0.2899424    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Time              1 179585  179585 38.1678 4.022e-07 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Size:Weight       2  10543    5272  1.1204 0.3372606    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Size:Time         1     65      65  0.0139 0.9068521    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Weight:Time       2   8855    4428  0.9410 0.3996224    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Size:Weight:Time  2   5745    2872  0.6105 0.5486241    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals        36 169386    4705                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

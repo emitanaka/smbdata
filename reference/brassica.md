@@ -73,3 +73,27 @@ A data frame with 9 variables: `ID`, `Rep`, `Tray`, `Species`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+fit <- aov(log(P / (100 - P)) ~ Species / Isolate + Error(Rep / Tray),
+           data = brassica |>
+             transform(P = 100 * (Resistant + 1) / (Seedlings + 2),
+                       Isolate = factor(Isolate),
+                       Rep = factor(Rep),
+                       Tray = factor(Tray)))
+summary(fit)
+#> 
+#> Error: Rep
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Residuals  2  1.866  0.9332               
+#> 
+#> Error: Rep:Tray
+#>                 Df Sum Sq Mean Sq F value   Pr(>F)    
+#> Species          1   4.29   4.290   29.84 1.29e-05 ***
+#> Species:Isolate 11  24.07   2.188   15.22 2.97e-08 ***
+#> Residuals       24   3.45   0.144                     
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

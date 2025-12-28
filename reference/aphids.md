@@ -41,3 +41,11 @@ A data frame with 45 rows and 4 variables: `ID`, `Field`, `Sample`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+fit <- glm(AphidCount ~ Field, family = poisson(),
+           data = aphids |>
+             transform(Field = factor(Field)))
+```

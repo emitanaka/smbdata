@@ -50,3 +50,27 @@ A data frame with 5 variables: `DSample`, `Size`, `Weight`, `Time`, `C`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+fit <- lm(C ~ Size * Weight * Time,
+          data = biomassc |>
+             transform(Weight = factor(Weight),
+                       Time = factor(Time)))
+anova(fit)
+#> Analysis of Variance Table
+#> 
+#> Response: C
+#>                  Df Sum Sq Mean Sq F value    Pr(>F)    
+#> Size              1  80524   80524 17.1140 0.0002018 ***
+#> Weight            2  12061    6030  1.2816 0.2899424    
+#> Time              1 179585  179585 38.1678 4.022e-07 ***
+#> Size:Weight       2  10543    5272  1.1204 0.3372606    
+#> Size:Time         1     65      65  0.0139 0.9068521    
+#> Weight:Time       2   8855    4428  0.9410 0.3996224    
+#> Size:Weight:Time  2   5745    2872  0.6105 0.5486241    
+#> Residuals        36 169386    4705                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

@@ -78,6 +78,30 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">P</span> <span class="op">/</span> <span class="op">(</span><span class="fl">100</span> <span class="op">-</span> <span class="va">P</span><span class="op">)</span><span class="op">)</span> <span class="op">~</span> <span class="va">Species</span> <span class="op">/</span> <span class="va">Isolate</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">Rep</span> <span class="op">/</span> <span class="va">Tray</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>           data <span class="op">=</span> <span class="va">brassica</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>             <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span>P <span class="op">=</span> <span class="fl">100</span> <span class="op">*</span> <span class="op">(</span><span class="va">Resistant</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="va">Seedlings</span> <span class="op">+</span> <span class="fl">2</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       Isolate <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Isolate</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       Rep <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Rep</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       Tray <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Tray</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Rep</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value Pr(&gt;F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals  2  1.866  0.9332               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Rep:Tray</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Species          1   4.29   4.290   29.84 1.29e-05 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Species:Isolate 11  24.07   2.188   15.22 2.97e-08 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals       24   3.45   0.144                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

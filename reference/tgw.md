@@ -10,7 +10,7 @@ development. The percentage of each plot's area affected by bird grazing
 allow for adjustment in the analysis. The main response variable was
 thousand grain weight (TGW), and treatment combinations reflect all four
 factorial combinations of growth regulator presence/absence and variety,
-coded as a single factor (Trt: +B, +N, −B, −N). The dataset enables
+coded as a single factor (Trt: +B, +N, -B, -N). The dataset enables
 investigation of the effects of variety and growth regulator on seed
 weight, while controlling for the confounding influence of bird grazing
 damage.
@@ -33,7 +33,7 @@ A data frame with 6 variables: `Plot`, `GR`, `Variety`, `Trt`, `Damage`,
 - GR:
 
   Character. Growth regulator application: "+" (with growth regulator)
-  or "−" (without growth regulator).
+  or "-" (without growth regulator).
 
 - Variety:
 
@@ -42,7 +42,7 @@ A data frame with 6 variables: `Plot`, `GR`, `Variety`, `Trt`, `Damage`,
 - Trt:
 
   Character. Treatment combination label indicating both growth
-  regulator and variety (one of "+B", "+N", "−B", "−N").
+  regulator and variety (one of "+B", "+N", "-B", "-N").
 
 - Damage:
 

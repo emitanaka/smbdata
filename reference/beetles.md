@@ -52,3 +52,20 @@ J. & Karp, A. (2004). *A comparative study of interspecies mating of
 Phratora vulgatissima and P. vitellinae using behavioural tests and
 molecular markers*. Entomologia Experimentalis et Applicata, 110(3),
 231–241.
+
+## Examples
+
+``` r
+fit <- lm(log10(Eggs) ~ Species * MateType, data = beetles)
+anova(fit)
+#> Analysis of Variance Table
+#> 
+#> Response: log10(Eggs)
+#>                  Df  Sum Sq Mean Sq F value    Pr(>F)    
+#> Species           1 0.90307 0.90307 37.9324 4.264e-07 ***
+#> MateType          1 0.38073 0.38073 15.9919 0.0003024 ***
+#> Species:MateType  1 0.09135 0.09135  3.8369 0.0579165 .  
+#> Residuals        36 0.85707 0.02381                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
