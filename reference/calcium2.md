@@ -60,3 +60,19 @@ A data frame with 7 variables: `Pot`, `Calcium`, `Length`, `d1`, `d2`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+anova(lm(Length ~ 1 + d2 + d3 + d4, data = calcium2))
+#> Analysis of Variance Table
+#> 
+#> Response: Length
+#>           Df  Sum Sq Mean Sq F value   Pr(>F)   
+#> d2         1 1066.82 1066.82 13.9727 0.001793 **
+#> d3         1  512.53  512.53  6.7129 0.019700 * 
+#> d4         1  883.60  883.60 11.5730 0.003645 **
+#> Residuals 16 1221.60   76.35                    
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

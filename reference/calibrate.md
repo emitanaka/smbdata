@@ -43,3 +43,24 @@ A data frame with 4 variables: `Unit`, `Prep`, `Conc`, `Absorbance`.
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+fit <- lm(log(Absorbance) ~ Prep * Conc,
+          data = calibrate |>
+             subset(!is.na(Absorbance)) |>
+             transform(Prep = factor(Prep),
+                       Conc = factor(Conc)))
+anova(fit)
+#> Analysis of Variance Table
+#> 
+#> Response: log(Absorbance)
+#>           Df  Sum Sq Mean Sq  F value   Pr(>F)    
+#> Prep       2  0.1586  0.0793   7.2053 0.010002 *  
+#> Conc       3 23.5064  7.8355 711.7446 7.13e-13 ***
+#> Prep:Conc  6  0.5829  0.0971   8.8245 0.001112 ** 
+#> Residuals 11  0.1211  0.0110                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

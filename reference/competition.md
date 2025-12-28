@@ -62,3 +62,33 @@ A data frame with 7 variables: `ID`, `Block`, `WholePlot`, `Subplot`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+fit <- aov(Grain ~ Irrigation * Species + Error(Block/WholePlot/Subplot),
+           data = competition |>
+             transform(Block = factor(Block),
+                       WholePlot = factor(WholePlot),
+                       Subplot = factor(Subplot)))
+summary(fit)
+#> 
+#> Error: Block
+#>           Df Sum Sq Mean Sq F value Pr(>F)
+#> Residuals  3  6.647   2.216               
+#> 
+#> Error: Block:WholePlot
+#>            Df Sum Sq Mean Sq F value Pr(>F)  
+#> Irrigation  1 14.231  14.231    9.48 0.0542 .
+#> Residuals   3  4.504   1.501                 
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#> 
+#> Error: Block:WholePlot:Subplot
+#>                    Df Sum Sq Mean Sq F value   Pr(>F)    
+#> Species             3  85.93  28.642 109.726 9.31e-12 ***
+#> Irrigation:Species  3   4.37   1.457   5.582  0.00691 ** 
+#> Residuals          18   4.70   0.261                     
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

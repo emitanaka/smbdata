@@ -65,3 +65,33 @@ A data frame with 7 variables: `ID`, `Run`, `DUnit`, `Source`, `Time`,
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+glm(Conidia ~ Run + (log(Time) + Period) * Source,
+    data = conidia |>
+      transform(Period = factor(Period)),
+    family = poisson())
+#> 
+#> Call:  glm(formula = Conidia ~ Run + (log(Time) + Period) * Source, 
+#>     family = poisson(), data = transform(conidia, Period = factor(Period)))
+#> 
+#> Coefficients:
+#>              (Intercept)                       Run                 log(Time)  
+#>                -0.006713                  0.167781                  1.869984  
+#>                  Period2                   Period3                   Period4  
+#>                 0.698003                  0.300644                  0.936272  
+#>                  Period5                   Period6                   Period7  
+#>                 0.600775                 -0.224961                        NA  
+#>           SourceStandard  log(Time):SourceStandard    Period2:SourceStandard  
+#>                 0.718655                 -0.202613                 -0.513962  
+#>   Period3:SourceStandard    Period4:SourceStandard    Period5:SourceStandard  
+#>                -0.108057                 -0.011355                 -0.036753  
+#>   Period6:SourceStandard    Period7:SourceStandard  
+#>                 0.209190                        NA  
+#> 
+#> Degrees of Freedom: 27 Total (i.e. Null);  13 Residual
+#> Null Deviance:       39670 
+#> Residual Deviance: 2006  AIC: 2257
+```

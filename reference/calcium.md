@@ -43,3 +43,17 @@ data frame with the following variables:
 Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 *Statistical Methods in Biology: Design and analysis of experiments and
 regression*
+
+## Examples
+
+``` r
+anova(lm(Length ~ Calcium, data = calcium))
+#> Analysis of Variance Table
+#> 
+#> Response: Length
+#>           Df Sum Sq Mean Sq F value    Pr(>F)    
+#> Calcium    3 2462.9  820.98  10.753 0.0004092 ***
+#> Residuals 16 1221.6   76.35                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

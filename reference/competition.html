@@ -72,6 +72,35 @@
     <p>Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) <em>Statistical Methods in Biology: Design and analysis of experiments and regression</em></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">Grain</span> <span class="op">~</span> <span class="va">Irrigation</span> <span class="op">*</span> <span class="va">Species</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">Block</span><span class="op">/</span><span class="va">WholePlot</span><span class="op">/</span><span class="va">Subplot</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>           data <span class="op">=</span> <span class="va">competition</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>             <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span>Block <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Block</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       WholePlot <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">WholePlot</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                       Subplot <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Subplot</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Block</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value Pr(&gt;F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals  3  6.647   2.216               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Block:WholePlot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            Df Sum Sq Mean Sq F value Pr(&gt;F)  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Irrigation  1 14.231  14.231    9.48 0.0542 .</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals   3  4.504   1.501                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Block:WholePlot:Subplot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Species             3  85.93  28.642 109.726 9.31e-12 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Irrigation:Species  3   4.37   1.457   5.582  0.00691 ** </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals          18   4.70   0.261                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

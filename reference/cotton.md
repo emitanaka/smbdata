@@ -47,3 +47,19 @@ regression*
 Kuehl, R.O. 2000. Design of Experiments: Statistical Principles of
 Research Design and Analysis (2nd edition). Thomson Learning (Duxbury
 Press), Pacific Grove, California. 666 pp.
+
+## Examples
+
+``` r
+anova(lm(Weight ~ H * I, data = cotton))
+#> Analysis of Variance Table
+#> 
+#> Response: Weight
+#>           Df Sum Sq Mean Sq F value    Pr(>F)    
+#> H          1  572.9  572.91  3.6516 0.0697616 .  
+#> I          1    5.0    4.96  0.0316 0.8605637    
+#> H:I        1 3102.5 3102.49 19.7747 0.0002232 ***
+#> Residuals 21 3294.7  156.89                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
