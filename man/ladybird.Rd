@@ -29,8 +29,8 @@ An experiment was conducted to study the transmission of fungus from ladybirds t
 \examples{
 summary(aov(log(P / (100 - P)) ~ Host * Cadaver * Ladybird + Error(Run/DPlant),
             data = ladybird |>
-              transform(P = 100 * (Infected + 1) / (Live + 2), C
-              adaver = factor(Cadaver))))
+              transform(P = 100 * (Infected + 1) / (Live + 2),
+                        Cadaver = factor(Cadaver))))
 
 }
 \keyword{datasets}

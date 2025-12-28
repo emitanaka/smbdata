@@ -446,8 +446,8 @@
 #' @examples
 #' summary(aov(log(P / (100 - P)) ~ Host * Cadaver * Ladybird + Error(Run/DPlant),
 #'             data = ladybird |>
-#'               transform(P = 100 * (Infected + 1) / (Live + 2), C
-#'               adaver = factor(Cadaver))))
+#'               transform(P = 100 * (Infected + 1) / (Live + 2),
+#'                         Cadaver = factor(Cadaver))))
 #'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "ladybird"
