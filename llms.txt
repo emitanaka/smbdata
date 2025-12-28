@@ -56,8 +56,6 @@ remotes::install_github("emitanaka/smbdata")
   density of mixed nothofagus forest plots alternative representation
 - [`heights`](http://emitanaka.org/smbdata/reference/heights.md) : Plant
   heights in glasshouse
-- [`hello()`](http://emitanaka.org/smbdata/reference/hello.md) : Hello,
-  World!
 - [`herbicide`](http://emitanaka.org/smbdata/reference/herbicide.md) :
   Herbicide efficacy
 - [`ladybird`](http://emitanaka.org/smbdata/reference/ladybird.md) :

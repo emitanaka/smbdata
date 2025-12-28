@@ -5,7 +5,7 @@
 - **Emi Tanaka**. Author, maintainer.
   [](https://orcid.org/0000-0002-1455-259X)
 
-- **Sue Welham**. Contributor.
+- **Sue Welham**. Contributor, copyright holder.
 
 - **Salvador Gezan**. Contributor.
 
