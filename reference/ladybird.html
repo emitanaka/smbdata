@@ -77,7 +77,29 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">P</span> <span class="op">/</span> <span class="op">(</span><span class="fl">100</span> <span class="op">-</span> <span class="va">P</span><span class="op">)</span><span class="op">)</span> <span class="op">~</span> <span class="va">Host</span> <span class="op">*</span> <span class="va">Cadaver</span> <span class="op">*</span> <span class="va">Ladybird</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">Run</span><span class="op">/</span><span class="va">DPlant</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>            data <span class="op">=</span> <span class="va">ladybird</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>              <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span>P <span class="op">=</span> <span class="fl">100</span> <span class="op">*</span> <span class="op">(</span><span class="va">Infected</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="va">Live</span> <span class="op">+</span> <span class="fl">2</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                        Cadaver <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Cadaver</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Run</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Df  Sum Sq Mean Sq F value Pr(&gt;F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals  1 0.06766 0.06766               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Run:DPlant</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Host                   1 13.599  13.599  59.172 1.82e-10 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cadaver                2 17.027   8.514  37.044 3.78e-11 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ladybird               1 11.091  11.091  48.257 3.33e-09 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Host:Cadaver           2  0.308   0.154   0.670   0.5158    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Host:Ladybird          1  0.228   0.228   0.992   0.3234    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Cadaver:Ladybird       2  1.735   0.867   3.774   0.0287 *  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Host:Cadaver:Ladybird  2  0.200   0.100   0.435   0.6493    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals             59 13.560   0.230                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

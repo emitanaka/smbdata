@@ -73,3 +73,27 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015)
 regression*
 
 ## Examples
+
+``` r
+summary(aov(log(P / (100 - P)) ~ Host * Cadaver * Ladybird + Error(Run/DPlant),
+            data = ladybird |>
+              transform(P = 100 * (Infected + 1) / (Live + 2),
+                        Cadaver = factor(Cadaver))))
+#> 
+#> Error: Run
+#>           Df  Sum Sq Mean Sq F value Pr(>F)
+#> Residuals  1 0.06766 0.06766               
+#> 
+#> Error: Run:DPlant
+#>                       Df Sum Sq Mean Sq F value   Pr(>F)    
+#> Host                   1 13.599  13.599  59.172 1.82e-10 ***
+#> Cadaver                2 17.027   8.514  37.044 3.78e-11 ***
+#> Ladybird               1 11.091  11.091  48.257 3.33e-09 ***
+#> Host:Cadaver           2  0.308   0.154   0.670   0.5158    
+#> Host:Ladybird          1  0.228   0.228   0.992   0.3234    
+#> Cadaver:Ladybird       2  1.735   0.867   3.774   0.0287 *  
+#> Host:Cadaver:Ladybird  2  0.200   0.100   0.435   0.6493    
+#> Residuals             59 13.560   0.230                     
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
