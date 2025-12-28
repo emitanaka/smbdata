@@ -25,24 +25,24 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Type`,
 
 - ID:
 
-  Integer. Unique identifier for each plot (experimental unit).
+  Factor. Unique identifier for each plot (experimental unit).
 
 - Block:
 
-  Integer. Block number in the randomized complete block design.
+  Factor. Block number in the randomized complete block design.
 
 - Plot:
 
-  Integer. Plot number within each block (1–5).
+  Factor. Plot number within each block (1–5).
 
 - Type:
 
-  Character. Indicates if the plot is a "Control" or "Treated" (with
+  Factor. Indicates if the plot is a "Control" or "Treated" (with
   fungicide).
 
 - Fungicide:
 
-  Character. Fungicide treatment applied in the plot ("Control", "F1",
+  Factor. Fungicide treatment applied in the plot ("Control", "F1",
   "F2", "F3", or "F4").
 
 - Yield:

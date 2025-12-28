@@ -21,12 +21,12 @@ A data frame with 4 variables: `DPlot`, `Type`, `SD`, `QD`.
 
 - DPlot:
 
-  Integer. Unique identifier for each forest plot.
+  Factor. Unique identifier for each forest plot.
 
 - Type:
 
-  Character. Forest stand type classified by dominant Nothofagus species
-  in the plot: "Coigue", "Rauli", or "Roble".
+  Factor. Forest stand type classified by dominant Nothofagus species in
+  the plot: "Coigue", "Rauli", or "Roble".
 
 - SD:
 

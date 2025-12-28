@@ -24,12 +24,12 @@ A data frame with 5 variables: `DSample`, `Size`, `Weight`, `Time`, `C`.
 
 - DSample:
 
-  Integer. Experimental unit identifier, representing the replicate
+  Factor. Experimental unit identifier, representing the replicate
   number.
 
 - Size:
 
-  Character. Sieve size used for processing soil samples ("Small" or
+  Factor. Sieve size used for processing soil samples ("Small" or
   "Large").
 
 - Weight:

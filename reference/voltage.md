@@ -24,16 +24,16 @@ A data frame with 5 variables: `ID`, `Rep`, `DUnit`, `Voltage`, `Km`.
 
 - ID:
 
-  Integer. Unique identifier for each observation.
+  Factor. Unique identifier for each observation.
 
 - Rep:
 
-  Integer. Block number, corresponding to the experimental occasion
+  Factor. Block number, corresponding to the experimental occasion
   (replicate).
 
 - DUnit:
 
-  Integer. Measurement unit within each replicate (used in place of
+  Factor. Measurement unit within each replicate (used in place of
   actual plot or plant randomization).
 
 - Voltage:

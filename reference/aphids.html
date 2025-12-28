@@ -45,16 +45,16 @@
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
     <p>A data frame with 45 rows and 4 variables: <code>ID</code>, <code>Field</code>, <code>Sample</code>, <code>AphidCount</code>.</p><dl><dt>ID</dt>
-<dd><p>An ID number.</p></dd>
+<dd><p>Factor. Unique identifier for each observation.</p></dd>
 
   <dt>Field</dt>
-<dd><p>The field number.</p></dd>
+<dd><p>Factor. Identifier for the field in which the sample was collected.</p></dd>
 
   <dt>Sample</dt>
-<dd><p>The sample number.</p></dd>
+<dd><p>Factor. Sample point number within each field.</p></dd>
 
   <dt>AphidCount</dt>
-<dd><p>The count of aphids.</p></dd>
+<dd><p>Integer. Number of aphids counted in the sample.</p></dd>
 
 
 </dl></div>
@@ -65,9 +65,7 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm</a></span><span class="op">(</span><span class="va">AphidCount</span> <span class="op">~</span> <span class="va">Field</span>, family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html" class="external-link">poisson</a></span><span class="op">(</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>           data <span class="op">=</span> <span class="va">aphids</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span>             <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span>Field <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Field</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm</a></span><span class="op">(</span><span class="va">AphidCount</span> <span class="op">~</span> <span class="va">Field</span>, family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html" class="external-link">poisson</a></span><span class="op">(</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">aphids</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

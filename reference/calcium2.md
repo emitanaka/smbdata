@@ -23,12 +23,12 @@ A data frame with 7 variables: `Pot`, `Calcium`, `Length`, `d1`, `d2`,
 
 - Pot:
 
-  Integer. Unique identifier for each pot (experimental unit).
+  Factor. Unique identifier for each pot (experimental unit).
 
 - Calcium:
 
-  Character. Calcium treatment group for each pot, with levels "A" = 1,
-  "B" = 5, "C" = 10, "D" = 20.
+  Factor. Calcium treatment group for each pot, with levels "A" = 1, "B"
+  = 5, "C" = 10, "D" = 20.
 
 - Length:
 

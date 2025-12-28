@@ -19,7 +19,7 @@ A data frame with 3 variables: `DUnit`, `Concentration`, `Absorbance`.
 
 - DUnit:
 
-  Integer. Unique identifier for each ELISA reading.
+  Factor. Unique identifier for each ELISA reading.
 
 - Concentration:
 

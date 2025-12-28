@@ -22,12 +22,12 @@ A data frame with 5 variables: `Sample`, `Site`, `HLength`, `Spikelets`,
 
 - Sample:
 
-  Integer. Unique identifier for each sample point.
+  Factor. Unique identifier for each sample point.
 
 - Site:
 
-  Character. Study site where the sample was collected (levels: "C",
-  "L", "P", "W").
+  Factor. Study site where the sample was collected (levels: "C", "L",
+  "P", "W").
 
 - HLength:
 

@@ -19,7 +19,7 @@ A data frame with 3 variables: `DBeetle`, `Length`, `Width`.
 
 - DBeetle:
 
-  Integer. Unique identifier for each beetle in the sample.
+  Factor. Unique identifier for each beetle in the sample.
 
 - Length:
 

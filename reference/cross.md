@@ -24,17 +24,17 @@ A data frame with 4 variables: `Seed`, `Female`, `Male`, `Root`.
 
 - Seed:
 
-  Integer. Unique identifier for each individual seed/planted
+  Factor. Unique identifier for each individual seed/planted
   observation.
 
 - Female:
 
-  Character. Code for the female parent in the cross (levels: "F1" to
+  Factor. Code for the female parent in the cross (levels: "F1" to
   "F5").
 
 - Male:
 
-  Character. Code for the male parent in the cross (levels: "M1", "M2").
+  Factor. Code for the male parent in the cross (levels: "M1", "M2").
 
 - Root:
 

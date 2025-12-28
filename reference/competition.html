@@ -45,22 +45,22 @@
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
     <p>A data frame with 7 variables: <code>ID</code>, <code>Block</code>, <code>WholePlot</code>, <code>Subplot</code>, <code>Irrigation</code>, <code>Species</code>, <code>Grain</code>.</p><dl><dt>ID</dt>
-<dd><p>Integer. Unique identifier for each subplot (observation).</p></dd>
+<dd><p>Factor. Unique identifier for each subplot (observation).</p></dd>
 
   <dt>Block</dt>
-<dd><p>Integer. Block number in the experiment (four blocks in total).</p></dd>
+<dd><p>Factor. Block number in the experiment (four blocks in total).</p></dd>
 
   <dt>WholePlot</dt>
-<dd><p>Integer. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).</p></dd>
+<dd><p>Factor. Identifier for each whole plot within a block (two per block, corresponding to irrigation treatments).</p></dd>
 
   <dt>Subplot</dt>
-<dd><p>Integer. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).</p></dd>
+<dd><p>Factor. Identifier for each subplot within a whole plot (four per whole plot,  corresponding to weed species treatments).</p></dd>
 
   <dt>Irrigation</dt>
-<dd><p>Character. Irrigation treatment applied to the whole plot ("yes" or "no").</p></dd>
+<dd><p>Factor. Irrigation treatment applied to the whole plot ("yes" or "no").</p></dd>
 
   <dt>Species</dt>
-<dd><p>Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).</p></dd>
+<dd><p>Factor. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).</p></dd>
 
   <dt>Grain</dt>
 <dd><p>Numeric. Grain yield (in appropriate units) measured for each subplot of winter wheat.</p></dd>
@@ -75,10 +75,7 @@
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">Grain</span> <span class="op">~</span> <span class="va">Irrigation</span> <span class="op">*</span> <span class="va">Species</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">Block</span><span class="op">/</span><span class="va">WholePlot</span><span class="op">/</span><span class="va">Subplot</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>           data <span class="op">=</span> <span class="va">competition</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span>             <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span>Block <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Block</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                       WholePlot <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">WholePlot</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                       Subplot <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">Subplot</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>           data <span class="op">=</span> <span class="va">competition</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Error: Block</span>

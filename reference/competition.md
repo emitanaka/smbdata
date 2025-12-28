@@ -26,31 +26,31 @@ A data frame with 7 variables: `ID`, `Block`, `WholePlot`, `Subplot`,
 
 - ID:
 
-  Integer. Unique identifier for each subplot (observation).
+  Factor. Unique identifier for each subplot (observation).
 
 - Block:
 
-  Integer. Block number in the experiment (four blocks in total).
+  Factor. Block number in the experiment (four blocks in total).
 
 - WholePlot:
 
-  Integer. Identifier for each whole plot within a block (two per block,
+  Factor. Identifier for each whole plot within a block (two per block,
   corresponding to irrigation treatments).
 
 - Subplot:
 
-  Integer. Identifier for each subplot within a whole plot (four per
+  Factor. Identifier for each subplot within a whole plot (four per
   whole plot, corresponding to weed species treatments).
 
 - Irrigation:
 
-  Character. Irrigation treatment applied to the whole plot ("yes" or
+  Factor. Irrigation treatment applied to the whole plot ("yes" or
   "no").
 
 - Species:
 
-  Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm";
-  "-" denotes no weeds).
+  Factor. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-"
+  denotes no weeds).
 
 - Grain:
 
@@ -67,10 +67,7 @@ regression*
 
 ``` r
 fit <- aov(Grain ~ Irrigation * Species + Error(Block/WholePlot/Subplot),
-           data = competition |>
-             transform(Block = factor(Block),
-                       WholePlot = factor(WholePlot),
-                       Subplot = factor(Subplot)))
+           data = competition)
 summary(fit)
 #> 
 #> Error: Block

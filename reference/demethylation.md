@@ -25,7 +25,7 @@ A data frame with 4 variables: `DTray`, `Dose`, `Total`, `Normal`.
 
 - DTray:
 
-  Integer. Unique identifier for each tray in the experiment.
+  Factor. Unique identifier for each tray in the experiment.
 
 - Dose:
 

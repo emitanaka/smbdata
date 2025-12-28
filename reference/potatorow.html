@@ -45,19 +45,19 @@
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
     <p>A data frame with 6 variables: <code>ID</code>, <code>Block</code>, <code>Plot</code>, <code>Row</code>, <code>Fungicide</code>, <code>RowYield</code>.</p><dl><dt>ID</dt>
-<dd><p>Integer. Unique identifier for each row yield observation.</p></dd>
+<dd><p>Factor. Unique identifier for each row yield observation.</p></dd>
 
   <dt>Block</dt>
-<dd><p>Integer. Block number in the randomized complete block design with four levels.</p></dd>
+<dd><p>Factor. Block number in the randomized complete block design with four levels.</p></dd>
 
   <dt>Plot</dt>
-<dd><p>Integer. Plot number within each block (1–5).</p></dd>
+<dd><p>Factor. Plot number within each block (1–5).</p></dd>
 
   <dt>Row</dt>
-<dd><p>Integer. Row number within each plot, corresponding to individual row yields.</p></dd>
+<dd><p>Factor. Row number within each plot, corresponding to individual row yields.</p></dd>
 
   <dt>Fungicide</dt>
-<dd><p>Character. Fungicide treatment applied to the plot ("Control", "F1", "F2", "F3", or "F4").</p></dd>
+<dd><p>Factor. Fungicide treatment applied to the plot ("Control", "F1", "F2", "F3", or "F4").</p></dd>
 
   <dt>RowYield</dt>
 <dd><p>Integer. Potato yield measured for the individual row (units as recorded, e.g., grams or kilograms).</p></dd>

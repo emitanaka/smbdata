@@ -24,25 +24,25 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Row`,
 
 - ID:
 
-  Integer. Unique identifier for each row yield observation.
+  Factor. Unique identifier for each row yield observation.
 
 - Block:
 
-  Integer. Block number in the randomized complete block design with
-  four levels.
+  Factor. Block number in the randomized complete block design with four
+  levels.
 
 - Plot:
 
-  Integer. Plot number within each block (1–5).
+  Factor. Plot number within each block (1–5).
 
 - Row:
 
-  Integer. Row number within each plot, corresponding to individual row
+  Factor. Row number within each plot, corresponding to individual row
   yields.
 
 - Fungicide:
 
-  Character. Fungicide treatment applied to the plot ("Control", "F1",
+  Factor. Fungicide treatment applied to the plot ("Control", "F1",
   "F2", "F3", or "F4").
 
 - RowYield:

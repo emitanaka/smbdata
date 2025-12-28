@@ -21,12 +21,11 @@ A data frame with 3 variables: `DPlot`, `Variety`, `Yield`.
 
 - DPlot:
 
-  Integer. Unique identifier for each plot in the field trial.
+  Factor. Unique identifier for each plot in the field trial.
 
 - Variety:
 
-  Character. Wheat variety grown in each plot ("Commercial" or
-  "Improved").
+  Factor. Wheat variety grown in each plot ("Commercial" or "Improved").
 
 - Yield:
 

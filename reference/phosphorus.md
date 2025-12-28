@@ -21,7 +21,7 @@ A data frame with 3 variables: `DPlot`, `OlsenP`, `Yield`.
 
 - DPlot:
 
-  Integer. Unique identifier for each field plot.
+  Factor. Unique identifier for each field plot.
 
 - OlsenP:
 

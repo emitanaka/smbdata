@@ -27,26 +27,26 @@ A data frame with 9 variables: `ID`, `Rep`, `Tray`, `Species`,
 
 - ID:
 
-  Integer. Unique identifier for each observation (row) in the dataset.
+  Factor. Unique identifier for each observation (row) in the dataset.
 
 - Rep:
 
-  Integer. Replicate/run number in the experiment (1–3), representing
+  Factor. Replicate/run number in the experiment (1–3), representing
   separate experimental runs across time.
 
 - Tray:
 
-  Integer. Tray identifier for the batch of seedlings tested in each
+  Factor. Tray identifier for the batch of seedlings tested in each
   replicate (13 levels).
 
 - Species:
 
-  Character. Brassica species from which the fungal isolate was
-  collected ("A" or "B").
+  Factor. Brassica species from which the fungal isolate was collected
+  ("A" or "B").
 
 - Isolate:
 
-  Integer. Identifier for the fungal isolate tested (nine levels across
+  Factor. Identifier for the fungal isolate tested (nine levels across
   groups; unique within each Species).
 
 - TypeA:
@@ -79,10 +79,7 @@ regression*
 ``` r
 fit <- aov(log(P / (100 - P)) ~ Species / Isolate + Error(Rep / Tray),
            data = brassica |>
-             transform(P = 100 * (Resistant + 1) / (Seedlings + 2),
-                       Isolate = factor(Isolate),
-                       Rep = factor(Rep),
-                       Tray = factor(Tray)))
+             transform(P = 100 * (Resistant + 1) / (Seedlings + 2)))
 summary(fit)
 #> 
 #> Error: Rep

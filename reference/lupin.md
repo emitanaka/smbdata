@@ -25,29 +25,29 @@ A data frame with 7 variables: `ID`, `Row`, `Column`, `Treatment`,
 
 - ID:
 
-  Integer. Unique identifier for each pot (experimental unit).
+  Factor. Unique identifier for each pot (experimental unit).
 
 - Row:
 
-  Integer. Row position of the pot in the Latin Square grid.
+  Factor. Row position of the pot in the Latin Square grid.
 
 - Column:
 
-  Integer. Column position of the pot in the Latin Square grid.
+  Factor. Column position of the pot in the Latin Square grid.
 
 - Treatment:
 
-  Character. Combined treatment label for soil type and water supply
-  (e.g., "CH", "CL", "SH", "SL").
+  Factor. Combined treatment label for soil type and water supply (e.g.,
+  "CH", "CL", "SH", "SL").
 
 - Water:
 
-  Character. Water supply level applied to the pot: "L" (low) or "H"
+  Factor. Water supply level applied to the pot: "L" (low) or "H"
   (high).
 
 - Soil:
 
-  Character. Soil type: "C" (clay) or "S" (sand).
+  Factor. Soil type: "C" (clay) or "S" (sand).
 
 - Height:
 

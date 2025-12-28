@@ -24,19 +24,19 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Line`, `NPlant`,
 
 - ID:
 
-  Integer. Unique identifier for each plot (observation).
+  Factor. Unique identifier for each plot (observation).
 
 - Block:
 
-  Integer. Block number in the randomized complete block design.
+  Factor. Block number in the randomized complete block design.
 
 - Plot:
 
-  Integer. Plot number within each block.
+  Factor. Plot number within each block.
 
 - Line:
 
-  Character. Identity code of the lupin breeding line (e.g., "DTN84",
+  Factor. Identity code of the lupin breeding line (e.g., "DTN84",
   "CH304-73").
 
 - NPlant:

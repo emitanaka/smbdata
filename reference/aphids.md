@@ -22,19 +22,19 @@ A data frame with 45 rows and 4 variables: `ID`, `Field`, `Sample`,
 
 - ID:
 
-  An ID number.
+  Factor. Unique identifier for each observation.
 
 - Field:
 
-  The field number.
+  Factor. Identifier for the field in which the sample was collected.
 
 - Sample:
 
-  The sample number.
+  Factor. Sample point number within each field.
 
 - AphidCount:
 
-  The count of aphids.
+  Integer. Number of aphids counted in the sample.
 
 ## Source
 
@@ -45,7 +45,5 @@ regression*
 ## Examples
 
 ``` r
-fit <- glm(AphidCount ~ Field, family = poisson(),
-           data = aphids |>
-             transform(Field = factor(Field)))
+fit <- glm(AphidCount ~ Field, family = poisson(), data = aphids)
 ```

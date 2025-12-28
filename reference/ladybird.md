@@ -31,25 +31,25 @@ A data frame with 8 variables: `ID`, `Run`, `DPlant`, `Host`,
 
 - ID:
 
-  Integer. Unique identifier for each experimental container
+  Factor. Unique identifier for each experimental container
   (observation).
 
 - Run:
 
-  Integer. Experimental run (1 or 2), indicating replicate.
+  Factor. Experimental run (1 or 2), indicating replicate.
 
 - DPlant:
 
-  Integer. Unique identifier for each experimental plant within a run
+  Factor. Unique identifier for each experimental plant within a run
   (1–36).
 
 - Host:
 
-  Character. Type of host plant in the container ("beans" or "trefoil").
+  Factor. Type of host plant in the container ("beans" or "trefoil").
 
 - Ladybird:
 
-  Character. Indicator for presence ("+") or absence ("-") of ladybird
+  Factor. Indicator for presence ("+") or absence ("-") of ladybird
   foraging in the container.
 
 - Cadaver:

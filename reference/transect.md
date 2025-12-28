@@ -25,7 +25,7 @@ A data frame with 4 variables: `DPlant`, `Distance`, `fDist`, `Count`.
 
 - DPlant:
 
-  Integer. Unique identifier for each sampled plant.
+  Factor. Unique identifier for each sampled plant.
 
 - Distance:
 
@@ -34,8 +34,7 @@ A data frame with 4 variables: `DPlant`, `Distance`, `fDist`, `Count`.
 
 - fDist:
 
-  Integer. Factor-level code for distance group along the transect
-  (e.g., 1 for edge, 2 for 2 m, etc.).
+  Factor. Factor-level code for distance group along the transect.
 
 - Count:
 

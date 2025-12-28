@@ -24,7 +24,7 @@ A data frame with 6 variables: `DSeed`, `Weight`, `Length`, `Diameter`,
 
 - DSeed:
 
-  Integer. Unique identifier for each seed.
+  Factor. Unique identifier for each seed.
 
 - Weight:
 

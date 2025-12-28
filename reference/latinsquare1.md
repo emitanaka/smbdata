@@ -23,20 +23,20 @@ A data frame with 4 variables: `Field`, `Row`, `Column`, `Treatment`.
 
 - Field:
 
-  Integer. Identifier for each experimental field, corresponding to
+  Factor. Identifier for each experimental field, corresponding to
   replicates of the Latin Square design.
 
 - Row:
 
-  Integer. Row position within the Latin Square in each field.
+  Factor. Row position within the Latin Square in each field.
 
 - Column:
 
-  Integer. Column position within the Latin Square in each field.
+  Factor. Column position within the Latin Square in each field.
 
 - Treatment:
 
-  Integer. Shade of petal colour assigned to the plot (five levels in
+  Factor. Shade of petal colour assigned to the plot (five levels in
   total, coded as 1–5).
 
 ## Source

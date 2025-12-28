@@ -27,26 +27,26 @@ A data frame with 7 variables: `ID`, `Row`, `Dish`, `Sex`, `Prey`,
 
 - ID:
 
-  Integer. Unique identifier for each observation (Petri dish).
+  Factor. Unique identifier for each observation (Petri dish).
 
 - Row:
 
-  Integer. Block or replicate identifier (1 to 15), combining
+  Factor. Block or replicate identifier (1 to 15), combining
   experimental occasions and spatial replicates.
 
 - Dish:
 
-  Integer. Dish number within each row/block (1 to 4, one for each
+  Factor. Dish number within each row/block (1 to 4, one for each
   treatment combination).
 
 - Sex:
 
-  Character. Sex of the Harlequin ladybird ("Female" or "Male") in the
+  Factor. Sex of the Harlequin ladybird ("Female" or "Male") in the
   dish.
 
 - Prey:
 
-  Character. Prey type offered: "Aphid" or "Lacewing".
+  Factor. Prey type offered: "Aphid" or "Lacewing".
 
 - Eaten:
 

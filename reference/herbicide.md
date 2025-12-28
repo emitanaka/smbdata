@@ -25,11 +25,11 @@ A data frame with 7 variables: `ID`, `Rep`, `DPot`, `Population`,
 
 - ID:
 
-  Integer. Unique identifier for each pot (experimental unit).
+  Factor. Unique identifier for each pot (experimental unit).
 
 - Rep:
 
-  Integer. Block number in the randomized complete block design
+  Factor. Block number in the randomized complete block design
   corresponding to replicate (1–5).
 
 - DPot:
@@ -38,17 +38,16 @@ A data frame with 7 variables: `ID`, `Rep`, `DPot`, `Population`,
 
 - Population:
 
-  Character. Identifier for the black-grass population (e.g.,
-  "P1"–"P9").
+  Factor. Identifier for the black-grass population (e.g., "P1"–"P9").
 
 - Type:
 
-  Integer. Chemical group of the applied herbicide (1: group for
+  Factor. Chemical group of the applied herbicide (1: group for
   Herbicides A and C, 2: group for Herbicide B).
 
 - Herbicide:
 
-  Character. Applied herbicide treatment ("A", "B", or "C").
+  Factor. Applied herbicide treatment ("A", "B", or "C").
 
 - Fwt:
 

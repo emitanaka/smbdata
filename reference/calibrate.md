@@ -23,15 +23,15 @@ A data frame with 4 variables: `Unit`, `Prep`, `Conc`, `Absorbance`.
 
 - Unit:
 
-  Integer. Unique identifier for each observation or experimental unit.
+  Factor. Unique identifier for each observation or experimental unit.
 
 - Prep:
 
-  Integer. Preparation method applied to the sample.
+  Factor. Preparation method applied to the sample.
 
 - Conc:
 
-  Integer. Initial concentration applied to the sample.
+  Factor. Initial concentration applied to the sample.
 
 - Absorbance:
 
@@ -49,18 +49,16 @@ regression*
 ``` r
 fit <- lm(log(Absorbance) ~ Prep * Conc,
           data = calibrate |>
-             subset(!is.na(Absorbance)) |>
-             transform(Prep = factor(Prep),
-                       Conc = factor(Conc)))
+             subset(!is.na(Absorbance)))
 anova(fit)
 #> Analysis of Variance Table
 #> 
 #> Response: log(Absorbance)
-#>           Df  Sum Sq Mean Sq  F value   Pr(>F)    
-#> Prep       2  0.1586  0.0793   7.2053 0.010002 *  
-#> Conc       3 23.5064  7.8355 711.7446 7.13e-13 ***
-#> Prep:Conc  6  0.5829  0.0971   8.8245 0.001112 ** 
-#> Residuals 11  0.1211  0.0110                      
+#>           Df Sum Sq Mean Sq F value    Pr(>F)    
+#> Prep       2 0.5684  0.2842  1.2132 0.3312300    
+#> Conc       3 9.9835  3.3278 14.2063 0.0002971 ***
+#> Prep:Conc  6 2.4999  0.4167  1.7787 0.1863825    
+#> Residuals 12 2.8110  0.2343                      
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```

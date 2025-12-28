@@ -35,6 +35,7 @@
 - [`examine`](http://emitanaka.org/smbdata/reference/examine.md) : Aphid
   catch
 - [`forage`](http://emitanaka.org/smbdata/reference/forage.md) : Forage
+  maize yields
 - [`forest`](http://emitanaka.org/smbdata/reference/forest.md) : Stand
   density of mixed nothofagus forest plots
 - [`forest2`](http://emitanaka.org/smbdata/reference/forest2.md) : Stand

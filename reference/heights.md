@@ -22,15 +22,15 @@ A data frame with 5 variables: `Pot`, `Row`, `Column`, `Dose`, `Height`.
 
 - Pot:
 
-  Integer. Unique identifier for each pot (experimental unit).
+  Factor. Unique identifier for each pot (experimental unit).
 
 - Row:
 
-  Integer. Row position of the pot in the grid layout on the bench.
+  Factor. Row position of the pot in the grid layout on the bench.
 
 - Column:
 
-  Integer. Column position of the pot in the grid layout on the bench.
+  Factor. Column position of the pot in the grid layout on the bench.
 
 - Dose:
 

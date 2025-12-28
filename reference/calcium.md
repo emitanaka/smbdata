@@ -25,11 +25,11 @@ data frame with the following variables:
 
 - Pot:
 
-  Integer. Unique identifier for each pot/experimental unit.
+  Factor. Unique identifier for each pot/experimental unit.
 
 - Calcium:
 
-  Character. Treatment group indicating the relative concentration of
+  Factor. Treatment group indicating the relative concentration of
   calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" =
   20).
 

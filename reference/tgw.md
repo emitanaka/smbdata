@@ -28,21 +28,21 @@ A data frame with 6 variables: `Plot`, `GR`, `Variety`, `Trt`, `Damage`,
 
 - Plot:
 
-  Integer. Unique identifier for each experimental plot.
+  Factor. Unique identifier for each experimental plot.
 
 - GR:
 
-  Character. Growth regulator application: "+" (with growth regulator)
-  or "-" (without growth regulator).
+  Factor. Growth regulator application: "+" (with growth regulator) or
+  "-" (without growth regulator).
 
 - Variety:
 
-  Character. Oilseed rape variety: "B" or "N".
+  Factor. Oilseed rape variety: "B" or "N".
 
 - Trt:
 
-  Character. Treatment combination label indicating both growth
-  regulator and variety (one of "+B", "+N", "-B", "-N").
+  Factor. Treatment combination label indicating both growth regulator
+  and variety (one of "+B", "+N", "-B", "-N").
 
 - Damage:
 

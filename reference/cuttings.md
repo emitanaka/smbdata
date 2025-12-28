@@ -29,19 +29,19 @@ A data frame with 6 variables: `ID`, `Block`, `Plot`, `Type`, `Size`,
 
 - Block:
 
-  Integer. Block number in the randomized complete block design.
+  Factor. Block number in the randomized complete block design.
 
 - Plot:
 
-  Integer. Plot number within each block.
+  Factor. Plot number within each block.
 
 - Type:
 
-  Character. Cutting type (A, B, C, D, E) planted in each plot.
+  Factor. Cutting type (A, B, C, D, E) planted in each plot.
 
 - Size:
 
-  Character. Cutting size category: S (small), M (medium), or L (large).
+  Factor. Cutting size category: S (small), M (medium), or L (large).
 
 - Yield:
 

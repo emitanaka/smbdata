@@ -22,22 +22,22 @@ A data frame with 4 variables: `Rep`, `Stack`, `Position`, `Treatment`.
 
 - Rep:
 
-  Integer. Replicate indicator for each Latin Square (two replicates in
+  Factor. Replicate indicator for each Latin Square (two replicates in
   total).
 
 - Stack:
 
-  Integer. Stack identifier (1–5), indicating the location of each
+  Factor. Stack identifier (1–5), indicating the location of each
   vertical stack on the shelf within each replicate.
 
 - Position:
 
-  Integer. Position of the dish within the stack (1–5, from bottom to
-  top or as defined in the experiment).
+  Factor. Position of the dish within the stack (1–5, from bottom to top
+  or as defined in the experiment).
 
 - Treatment:
 
-  Integer. Fungus strain assigned to the dish (coded as 1–5,
+  Factor. Fungus strain assigned to the dish (coded as 1–5,
   corresponding to the five fungal strains).
 
 ## Source

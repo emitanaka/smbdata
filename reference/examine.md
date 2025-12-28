@@ -33,7 +33,7 @@ A data frame with 23 variables: `Trap`, `JDay`, `Latitude`, `Longitude`,
 
 - Trap:
 
-  Integer. Unique identifier for each suction trap location.
+  Factor. Unique identifier for each suction trap location.
 
 - JDay:
 

@@ -23,23 +23,25 @@ A data frame with 5 variables: `DFemale`, `Treatment`, `Species`,
 
 - DFemale:
 
-  An ID number.
+  Factor. Unique identifier for each female subject in the experiment.
 
 - Treatment:
 
-  The treatment level.
+  Factor. Experimental treatment group assigned to each female.
 
 - Species:
 
-  Species.
+  Factor. Species designation for each female in the study.
 
 - MateType:
 
-  Mating type: intraspecies or interspecies mating.
+  Factor. Type of mate provided for each female ("Inter" for
+  interspecific or "Intra" for intraspecific, as relevant).
 
 - Eggs:
 
-  The number of eggs.
+  Integer. Number of eggs laid by each female during the observation
+  period.
 
 ## Source
 

@@ -22,7 +22,7 @@ A data frame with 4 variables: `ID`, `H`, `I`, `Weight`.
 
 - ID:
 
-  Integer. Unique identifier for each container or experimental unit.
+  Factor. Unique identifier for each container or experimental unit.
 
 - H:
 

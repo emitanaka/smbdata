@@ -20,7 +20,7 @@ A data frame with 3 variables: `MonthName`, `Month`, `Temperature`.
 
 - MonthName:
 
-  Character. Name of the month (e.g., "January", "February").
+  Factor. Name of the month (e.g., "January", "February").
 
 - Month:
 

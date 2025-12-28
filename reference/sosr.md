@@ -31,21 +31,21 @@ A data frame with 8 variables: `ID`, `Farm`, `Field`, `DHalf`, `Year`,
 
 - ID:
 
-  Integer. Unique identifier for each half-field observation.
+  Factor. Unique identifier for each half-field observation.
 
 - Farm:
 
-  Integer. Identifier for each farm (37 farms in total).
+  Factor. Identifier for each farm (37 farms in total).
 
 - Field:
 
-  Integer. Field number within each farm (usually 1–3, since different
+  Factor. Field number within each farm (usually 1–3, since different
   fields were used across years within farms).
 
 - DHalf:
 
-  Integer. Half-field number within each field (1 or 2), corresponding
-  to experimental treatment allocation.
+  Factor. Half-field number within each field (1 or 2), corresponding to
+  experimental treatment allocation.
 
 - Year:
 
@@ -54,7 +54,7 @@ A data frame with 8 variables: `ID`, `Farm`, `Field`, `DHalf`, `Year`,
 
 - Treatment:
 
-  Character. Management regime applied to the half-field: "C"
+  Factor. Management regime applied to the half-field: "C"
   (conventional) or "GM" (genetically modified herbicide-resistant
   crop).
 

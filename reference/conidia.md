@@ -29,20 +29,20 @@ A data frame with 7 variables: `ID`, `Run`, `DUnit`, `Source`, `Time`,
 
 - ID:
 
-  Integer. Unique identifier for each observation.
+  Factor. Unique identifier for each observation.
 
 - Run:
 
-  Integer. Experimental run indicator (each time period and source
+  Factor. Experimental run indicator (each time period and source
   combination is repeated in two separate runs).
 
 - DUnit:
 
-  Integer. Identifier for each experimental unit within a run.
+  Factor. Identifier for each experimental unit within a run.
 
 - Source:
 
-  Character. Source of sporulating cadaver ("Clone" or "Standard")
+  Factor. Source of sporulating cadaver ("Clone" or "Standard")
   providing the fungal conidia.
 
 - Time:
@@ -78,18 +78,18 @@ glm(Conidia ~ Run + (log(Time) + Period) * Source,
 #>     family = poisson(), data = transform(conidia, Period = factor(Period)))
 #> 
 #> Coefficients:
-#>              (Intercept)                       Run                 log(Time)  
-#>                -0.006713                  0.167781                  1.869984  
+#>              (Intercept)                      Run2                 log(Time)  
+#>                  0.16107                   0.16778                   1.86998  
 #>                  Period2                   Period3                   Period4  
-#>                 0.698003                  0.300644                  0.936272  
+#>                  0.69800                   0.30064                   0.93627  
 #>                  Period5                   Period6                   Period7  
-#>                 0.600775                 -0.224961                        NA  
+#>                  0.60078                  -0.22496                        NA  
 #>           SourceStandard  log(Time):SourceStandard    Period2:SourceStandard  
-#>                 0.718655                 -0.202613                 -0.513962  
+#>                  0.71865                  -0.20261                  -0.51396  
 #>   Period3:SourceStandard    Period4:SourceStandard    Period5:SourceStandard  
-#>                -0.108057                 -0.011355                 -0.036753  
+#>                 -0.10806                  -0.01136                  -0.03675  
 #>   Period6:SourceStandard    Period7:SourceStandard  
-#>                 0.209190                        NA  
+#>                  0.20919                        NA  
 #> 
 #> Degrees of Freedom: 27 Total (i.e. Null);  13 Residual
 #> Null Deviance:       39670 
