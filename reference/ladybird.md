@@ -1,6 +1,22 @@
-# Ladybird
+# Ladybird transmission of fungus
 
-Description.
+An experiment was conducted to study the transmission of fungus from
+ladybirds to aphids on two host plant types (beans or birdsfoot
+trefoil). The study used containers, each holding one plant with 20
+aphids, and varied the fungal load by distributing 5, 10, or 20
+sporulating aphid cadavers per plant. For each host plant and fungal
+load combination, half of the containers were exposed to ladybird
+foraging for four hours, and half were not, creating a three-way
+factorial structure: Host (two levels), Cadaver (three levels), and
+Ladybird presence (two levels). This setup was blocked in two runs
+(Run), with six replicates per treatment combination per run, resulting
+in a total of 72 experimental units. Each unit (DPlant) was randomly
+assigned treatments, and after seven days, the numbers of live (Live)
+and infected (Infected) aphids were counted. Due to aphid predation by
+ladybirds, the number of live aphids varied, so the percentage of
+infected aphids was used to quantify transmission rates. This dataset
+enables analysis of the main and interactive effects of host plant,
+fungal load, and ladybird presence on aphid infection rates.
 
 ## Usage
 
@@ -12,6 +28,43 @@ ladybird
 
 A data frame with 8 variables: `ID`, `Run`, `DPlant`, `Host`,
 `Ladybird`, `Cadaver`, `Live`, `Infected`.
+
+- ID:
+
+  Integer. Unique identifier for each experimental container
+  (observation).
+
+- Run:
+
+  Integer. Experimental run (1 or 2), indicating replicate.
+
+- DPlant:
+
+  Integer. Unique identifier for each experimental plant within a run
+  (1–36).
+
+- Host:
+
+  Character. Type of host plant in the container ("beans" or "trefoil").
+
+- Ladybird:
+
+  Character. Indicator for presence ("+") or absence ("-") of ladybird
+  foraging in the container.
+
+- Cadaver:
+
+  Integer. Number of sporulating aphid cadavers distributed on each
+  plant (5, 10, or 20).
+
+- Live:
+
+  Integer. Number of live aphids remaining in the container after seven
+  days.
+
+- Infected:
+
+  Integer. Number of live aphids found to be infected after seven days.
 
 ## Source
 

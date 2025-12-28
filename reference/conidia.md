@@ -2,19 +2,19 @@
 
 This experiment was designed to measure aphid infection rates in
 response to varying fungal conidia doses, as delivered by sporulating
-cadavers of two different sources: a clone or a standard source (factor
-Source). Inoculation chambers containing aphids were exposed to conidial
-showers for one of eight time periods, ranging from 0 to 80 minutes
-(variate Time). The actual conidial dose received in each treatment was
-estimated by counting spores deposited on slides (variate Conidia)
-placed in the chambers. Each combination of time period and source was
-replicated across two experimental runs (factor Run), with separate
-sources used for each replicate. The time zero category served as a
-negative control and, as no conidia should be present at this time,
-resulting zero counts confirm the absence of slide contamination; this
-category is excluded from analysis. The resulting dataset supports
-investigation of the relationship between exposure time, conidial dose,
-and source type under replicated experimental conditions.
+cadavers of two different sources: a clone or a standard source
+(Source). Inoculation chambers containing aphids were exposed to
+conidial showers for one of eight time periods, ranging from 0 to 80
+minutes (Time). The actual conidial dose received in each treatment was
+estimated by counting spores deposited on slides (Conidia) placed in the
+chambers. Each combination of time period and source was replicated
+across two experimental runs (Run), with separate sources used for each
+replicate. The time zero category served as a negative control and, as
+no conidia should be present at this time, resulting zero counts confirm
+the absence of slide contamination; this category is excluded from
+analysis. The resulting dataset supports investigation of the
+relationship between exposure time, conidial dose, and source type under
+replicated experimental conditions.
 
 ## Usage
 

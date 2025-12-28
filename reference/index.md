@@ -31,45 +31,53 @@
 - [`demethylation`](http://emitanaka.org/smbdata/reference/demethylation.md)
   : Demethylation experiment
 - [`elisa`](http://emitanaka.org/smbdata/reference/elisa.md) : Elisa
-- [`examine`](http://emitanaka.org/smbdata/reference/examine.md) :
-  Examine
+  absorbance readings
+- [`examine`](http://emitanaka.org/smbdata/reference/examine.md) : Aphid
+  catch
 - [`forage`](http://emitanaka.org/smbdata/reference/forage.md) : Forage
-- [`forest`](http://emitanaka.org/smbdata/reference/forest.md) : Forest
-- [`forest2`](http://emitanaka.org/smbdata/reference/forest2.md) :
-  Forest 2
-- [`heights`](http://emitanaka.org/smbdata/reference/heights.md) :
-  Heights
+- [`forest`](http://emitanaka.org/smbdata/reference/forest.md) : Stand
+  density of mixed nothofagus forest plots
+- [`forest2`](http://emitanaka.org/smbdata/reference/forest2.md) : Stand
+  density of mixed nothofagus forest plots alternative representation
+- [`heights`](http://emitanaka.org/smbdata/reference/heights.md) : Plant
+  heights in glasshouse
 - [`hello()`](http://emitanaka.org/smbdata/reference/hello.md) : Hello,
   World!
 - [`herbicide`](http://emitanaka.org/smbdata/reference/herbicide.md) :
-  Herbicide
+  Herbicide efficacy
 - [`ladybird`](http://emitanaka.org/smbdata/reference/ladybird.md) :
-  Ladybird
+  Ladybird transmission of fungus
 - [`latinsquare1`](http://emitanaka.org/smbdata/reference/latinsquare1.md)
-  : Latinsquare 1
+  : Independent Latin squares
 - [`latinsquare2`](http://emitanaka.org/smbdata/reference/latinsquare2.md)
-  : Latinsquare 2
+  : Linked Latin squares
 - [`lupin`](http://emitanaka.org/smbdata/reference/lupin.md) : Lupin
+  trial
 - [`lupintrial`](http://emitanaka.org/smbdata/reference/lupintrial.md) :
-  Lupin Trial
+  Lupin variety trial
 - [`phosphorus`](http://emitanaka.org/smbdata/reference/phosphorus.md) :
-  Phosphorus
+  Olsen Phosphorus
 - [`potato`](http://emitanaka.org/smbdata/reference/potato.md) : Potato
+  yields
 - [`potatorow`](http://emitanaka.org/smbdata/reference/potatorow.md) :
-  Potato Row
-- [`prey`](http://emitanaka.org/smbdata/reference/prey.md) : Prey
-- [`sosr`](http://emitanaka.org/smbdata/reference/sosr.md) : Sosr
+  Potato yields with row data
+- [`prey`](http://emitanaka.org/smbdata/reference/prey.md) : Ladybird
+  predation
+- [`sosr`](http://emitanaka.org/smbdata/reference/sosr.md) : Weed
+  abundance
 - [`temperature`](http://emitanaka.org/smbdata/reference/temperature.md)
-  : Temperature
+  : Rothamsted monthly mean temperature
 - [`tgw`](http://emitanaka.org/smbdata/reference/tgw.md) : Thousand
-  Grains Weight
+  grain weights
 - [`transect`](http://emitanaka.org/smbdata/reference/transect.md) :
-  Transect
+  Crop transect beetle counts
 - [`triticum`](http://emitanaka.org/smbdata/reference/triticum.md) :
-  Triticum
+  Diploid wheat
 - [`voltage`](http://emitanaka.org/smbdata/reference/voltage.md) :
-  Voltage
+  Voltage response
 - [`weedseed`](http://emitanaka.org/smbdata/reference/weedseed.md) :
-  weedseed
+  Weed seed abundance
 - [`wheat`](http://emitanaka.org/smbdata/reference/wheat.md) : Wheat
+  yields
 - [`willow`](http://emitanaka.org/smbdata/reference/willow.md) : Willow
+  beetle measurements
