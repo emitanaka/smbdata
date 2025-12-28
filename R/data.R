@@ -9,6 +9,16 @@
 #'   \item{DayNo}{Day number.}
 #'   \item{Mercury, Thermistor}{Temperature (°C) measured by a standard glass mercury thermometer and new electronic thermometer.}
 #' }
+#' @examples
+#' # a simple linear regression
+#' fit_ab <- lm(Thermistor ~ Mercury, data = airtemp)
+#' # let intercept be 0
+#' fit_b <- lm(Thermistor ~ 0 + Mercury, data = airtemp)
+#' # test if intercept = 0
+#' anova(fit_b, fit_ab)
+#' # test if slope is equal to 1, given intercept = 0
+#' fit_1 <- lm(Thermistor ~ 0 + offset(Mercury), data = airtemp)
+#' anova(fit_1, fit_b)
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "airtemp"
 
@@ -24,6 +34,11 @@
 #'   \item{Sample}{The sample number.}
 #'   \item{AphidCount}{The count of aphids.}
 #' }
+#' @examples
+#' fit <- glm(AphidCount ~ Field, family = poisson(),
+#'            data = aphids |>
+#'              transform(Field = factor(Field)))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "aphids"
 
@@ -40,6 +55,10 @@
 #'   \item{Eggs}{The number of eggs.}
 #' }
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
+#' @examples
+#' fit <- lm(log10(Eggs) ~ Species * MateType, data = beetles)
+#' anova(fit)
+#'
 #' @source Peacock, L., Batley, J., Dungait, J. A. J., Barker, J. H. A., Powers, S. J. & Karp, A. (2004). \emph{A comparative study of interspecies mating of Phratora vulgatissima and P. vitellinae using behavioural tests and molecular markers}. Entomologia Experimentalis et Applicata, 110(3), 231–241.
 "beetles"
 
@@ -55,6 +74,13 @@
 #'   \item{Time}{Integer. Duration in minutes of shaking during sample processing.}
 #'   \item{C}{Integer. Microbial biomass carbon in soil, measured as mg C per kg soil.}
 #' }
+#' @examples
+#' fit <- lm(C ~ Size * Weight * Time,
+#'           data = biomassc |>
+#'              transform(Weight = factor(Weight),
+#'                        Time = factor(Time)))
+#' anova(fit)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "biomassc"
 
@@ -74,6 +100,15 @@
 #'   \item{Seedlings}{Integer. Number of seedlings tested per tray (22 or 23).}
 #'   \item{Resistant}{Integer. Number of seedlings in the tray showing no signs of infection (i.e., counted as resistant) five days after inoculation.}
 #' }
+#' @examples
+#' fit <- aov(log(P / (100 - P)) ~ Species / Isolate + Error(Rep / Tray),
+#'            data = brassica |>
+#'              transform(P = 100 * (Resistant + 1) / (Seedlings + 2),
+#'                        Isolate = factor(Isolate),
+#'                        Rep = factor(Rep),
+#'                        Tray = factor(Tray)))
+#' summary(fit)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "brassica"
 
@@ -509,14 +544,14 @@
 
 #' Thousand grain weights
 #'
-#' A field experiment was conducted using a completely randomized design to evaluate the effect of growth regulator application and oilseed rape variety (B or N) on seed production, with six replicates per treatment combination. During the trial, some plots were grazed by pigeons, raising concerns that this damage could influence plant growth and seed development. The percentage of each plot's area affected by bird grazing (variate Damage, recorded to the nearest 10 percent) was measured to allow for adjustment in the analysis. The main response variable was thousand grain weight (TGW), and treatment combinations reflect all four factorial combinations of growth regulator presence/absence and variety, coded as a single factor (Trt: +B, +N, −B, −N). The dataset enables investigation of the effects of variety and growth regulator on seed weight, while controlling for the confounding influence of bird grazing damage.
+#' A field experiment was conducted using a completely randomized design to evaluate the effect of growth regulator application and oilseed rape variety (B or N) on seed production, with six replicates per treatment combination. During the trial, some plots were grazed by pigeons, raising concerns that this damage could influence plant growth and seed development. The percentage of each plot's area affected by bird grazing (variate Damage, recorded to the nearest 10 percent) was measured to allow for adjustment in the analysis. The main response variable was thousand grain weight (TGW), and treatment combinations reflect all four factorial combinations of growth regulator presence/absence and variety, coded as a single factor (Trt: +B, +N, -B, -N). The dataset enables investigation of the effects of variety and growth regulator on seed weight, while controlling for the confounding influence of bird grazing damage.
 #'
 #' @format A data frame with 6 variables: \code{Plot}, \code{GR}, \code{Variety}, \code{Trt}, \code{Damage}, \code{TGW}.
 #' \describe{
 #'   \item{Plot}{Integer. Unique identifier for each experimental plot.}
-#'   \item{GR}{Character. Growth regulator application: "+" (with growth regulator) or "−" (without growth regulator).}
+#'   \item{GR}{Character. Growth regulator application: "+" (with growth regulator) or "-" (without growth regulator).}
 #'   \item{Variety}{Character. Oilseed rape variety: "B" or "N".}
-#'   \item{Trt}{Character. Treatment combination label indicating both growth regulator and variety (one of "+B", "+N", "−B", "−N").}
+#'   \item{Trt}{Character. Treatment combination label indicating both growth regulator and variety (one of "+B", "+N", "-B", "-N").}
 #'   \item{Damage}{Integer. Percentage of plot area grazed by pigeons, recorded to the nearest 10 percent.}
 #'   \item{TGW}{Numeric. Thousand grain weight (TGW) response, measuring the average weight (in grams) of 1000 seeds from each plot.}
 #' }
@@ -555,7 +590,7 @@
 
 #' Voltage response
 #'
-#' An experiment was carried out to assess the affinity of a sugar transporter protein in plant cells by measuring electric current (Km) in response to a range of substrate-associated voltages. Nine voltage levels, ranging from −160 to 0 mV, were tested (Voltage), and the experiment followed a randomized complete block design with two blocks corresponding to separate experimental occasions (Rep). For each combination, one observation was recorded per block (DUnit, reflecting individual measurement units within each replicate). This dataset enables analysis of how membrane voltage influences transporter activity, with blocking to account for any variation between experimental runs.
+#' An experiment was carried out to assess the affinity of a sugar transporter protein in plant cells by measuring electric current (Km) in response to a range of substrate-associated voltages. Nine voltage levels, ranging from -160 to 0 mV, were tested (Voltage), and the experiment followed a randomized complete block design with two blocks corresponding to separate experimental occasions (Rep). For each combination, one observation was recorded per block (DUnit, reflecting individual measurement units within each replicate). This dataset enables analysis of how membrane voltage influences transporter activity, with blocking to account for any variation between experimental runs.
 #'
 #' @format A data frame with 5 variables: \code{ID}, \code{Rep}, \code{DUnit}, \code{Voltage}, \code{Km}.
 #' \describe{

@@ -21,6 +21,6 @@ Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical
 voltage
 }
 \description{
-An experiment was carried out to assess the affinity of a sugar transporter protein in plant cells by measuring electric current (Km) in response to a range of substrate-associated voltages. Nine voltage levels, ranging from −160 to 0 mV, were tested (Voltage), and the experiment followed a randomized complete block design with two blocks corresponding to separate experimental occasions (Rep). For each combination, one observation was recorded per block (DUnit, reflecting individual measurement units within each replicate). This dataset enables analysis of how membrane voltage influences transporter activity, with blocking to account for any variation between experimental runs.
+An experiment was carried out to assess the affinity of a sugar transporter protein in plant cells by measuring electric current (Km) in response to a range of substrate-associated voltages. Nine voltage levels, ranging from -160 to 0 mV, were tested (Voltage), and the experiment followed a randomized complete block design with two blocks corresponding to separate experimental occasions (Rep). For each combination, one observation was recorded per block (DUnit, reflecting individual measurement units within each replicate). This dataset enables analysis of how membrane voltage influences transporter activity, with blocking to account for any variation between experimental runs.
 }
 \keyword{datasets}

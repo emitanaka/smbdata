@@ -21,4 +21,15 @@ airtemp
 \description{
 Air temperature measurements (°C) recorded at approximately 9 a.m. on 100 days during 2006 using two instruments: a standard glass mercury dry-bulb thermometer and a new electronic dry-bulb thermistor probe. For each day, the dataset includes the day number and paired temperature readings from both devices, enabling direct comparison between the established and new measurement methods.
 }
+\examples{
+# a simple linear regression
+fit_ab <- lm(Thermistor ~ Mercury, data = airtemp)
+# let intercept be 0
+fit_b <- lm(Thermistor ~ 0 + Mercury, data = airtemp)
+# test if intercept = 0
+anova(fit_b, fit_ab)
+# test if slope is equal to 1, given intercept = 0
+fit_1 <- lm(Thermistor ~ 0 + offset(Mercury), data = airtemp)
+anova(fit_1, fit_b)
+}
 \keyword{datasets}

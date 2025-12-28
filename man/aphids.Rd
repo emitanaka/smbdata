@@ -22,4 +22,10 @@ aphids
 \description{
 The dataset comes from an ecological survey of the pea aphid (Acyrthosiphon pisum). In three fields, 15 randomly selected triplets of adjacent bean plants were inspected, and the total number of pea aphids on each triplet was recorded. The dataset includes the explanatory factor Field (three levels), a Sample identifier for the 15 sampling locations within each field, and the response variable AphidCount, representing the total aphid count per sample, and is used to assess whether aphid infestation differs among fields.
 }
+\examples{
+fit <- glm(AphidCount ~ Field, family = poisson(),
+           data = aphids |>
+             transform(Field = factor(Field)))
+
+}
 \keyword{datasets}

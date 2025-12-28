@@ -25,4 +25,9 @@ beetles
 \description{
 The dataset comes from a completely randomized experiment investigating the viability of interspecies and intraspecies mating in two willow beetle species (Phratora vitellinae and Phratora vulgatissima). Females from each species were mated with males of either the same or the other species, giving four treatments with 10 replicates per treatment. The dataset includes the factor Treatment, identifying the mating combination, and the response variable Eggs, which records the number of eggs laid by each female, and is used to compare reproductive outcomes across mating types.
 }
+\examples{
+fit <- lm(log10(Eggs) ~ Species * MateType, data = beetles)
+anova(fit)
+
+}
 \keyword{datasets}

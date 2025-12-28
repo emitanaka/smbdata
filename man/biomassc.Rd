@@ -23,4 +23,12 @@ biomassc
 \description{
 An experiment was conducted to investigate the effects of procedural modifications on measurements of soil microbial biomass carbon, expressed as mg C per kg of soil. The study employed a 2 × 3 × 2 factorial design, testing two sieve sizes, three sample weights, and two shaking times, resulting in 12 distinct treatment combinations. Each combination was replicated four times in a completely randomized design. The response variable recorded was the amount of microbial carbon biomass (C). The purpose of the analysis is to quantify the main effects and possible interactions among sieve size, sample weight, and shaking time, as well as to determine whether any of the alternative procedures yield results within 10% (±110 mg C/kg) of the standard protocol mean of 1095.5 mg C/kg, thus assessing their practical equivalence to the standard method.
 }
+\examples{
+fit <- lm(C ~ Size * Weight * Time,
+          data = biomassc |>
+             transform(Weight = factor(Weight),
+                       Time = factor(Time)))
+anova(fit)
+
+}
 \keyword{datasets}

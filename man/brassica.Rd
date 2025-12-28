@@ -27,4 +27,14 @@ brassica
 \description{
 An experiment was conducted to assess the pathogenicity of various fungal isolates on oilseed rape seedlings. Fungal isolates were obtained from two Brassica species, labeled as A and B (Species), and included nine isolates from group A and four from group B (Isolate). The experimental design involved three replicate runs across time (Rep), with each replicate using trays of seedlings—either 22 or 23 seedlings per tray (Tray, with 13 levels; variate: Seedlings)—exposed toeach isolate. Five days after inoculation, the number of resistant seedlings showing no signs of infection (Resistant) was recorded for each tray, and the percentage of resistant seedlings was used as the response variable for analysis. This design allows for evaluation of differences in pathogenicity among isolates, considering variability due to species, replicates, and tray sizes.
 }
+\examples{
+fit <- aov(log(P / (100 - P)) ~ Species / Isolate + Error(Rep / Tray),
+           data = brassica |>
+             transform(P = 100 * (Resistant + 1) / (Seedlings + 2),
+                       Isolate = factor(Isolate),
+                       Rep = factor(Rep),
+                       Tray = factor(Tray)))
+summary(fit)
+
+}
 \keyword{datasets}
