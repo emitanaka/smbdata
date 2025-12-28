@@ -1,7 +1,7 @@
 Package: smbdata
 Type: Package
 Title: Data from "Statistical Methods in Biology"
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(person(
     "Emi", "Tanaka",
     role = c("aut", "cre"),
