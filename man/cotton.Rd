@@ -24,4 +24,7 @@ cotton
 \description{
 This experiment investigated the combined effects of five herbicide doses (0.0, 0.5, 1.0, 1.5, and 2.0 lb/acre) and five insecticide doses (0, 20, 40, 60, and 80 lb/acre) on the root growth of cotton plants grown in containers in a glasshouse. The study employed a completely randomized design with four replicates for each of the 25 possible treatment combinations. Three weeks after treatment, the dry root biomass (grams per plant) was measured for each container. The dataset allows for the assessment of the main and interactive effects of herbicide and insecticide doses on cotton root growth.
 }
+\examples{
+anova(lm(Weight ~ H * I, data = cotton))
+}
 \keyword{datasets}

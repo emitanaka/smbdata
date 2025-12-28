@@ -123,6 +123,9 @@
 #'   \item{Calcium}{Character. Treatment group indicating the relative concentration of calcium applied to each pot (levels: "A" = 1, "B" = 5, "C" = 10, "D" = 20).}
 #'   \item{Length}{Integer. Total root length (in centimeters) measured for each pot at the end of the experiment.}
 #' }
+#' @examples
+#' anova(lm(Length ~ Calcium, data = calcium))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calcium"
 
@@ -140,6 +143,9 @@
 #'   \item{d3}{Integer. Dummy variable indicating membership in calcium level "C" (1 if Calcium = "C", 0 otherwise).}
 #'   \item{d4}{Integer. Dummy variable indicating membership in calcium level "D" (1 if Calcium = "D", 0 otherwise).}
 #' }
+#' @examples
+#' anova(lm(Length ~ 1 + d2 + d3 + d4, data = calcium2))
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calcium2"
 
@@ -154,6 +160,14 @@
 #'   \item{Conc}{Integer. Initial concentration applied to the sample.}
 #'   \item{Absorbance}{Numeric. Measured absorbance value for each sample unit (may contain missing values for invalid readings).}
 #' }
+#' @examples
+#' fit <- lm(log(Absorbance) ~ Prep * Conc,
+#'           data = calibrate |>
+#'              subset(!is.na(Absorbance)) |>
+#'              transform(Prep = factor(Prep),
+#'                        Conc = factor(Conc)))
+#' anova(fit)
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "calibrate"
 
@@ -171,6 +185,13 @@
 #'   \item{Species}{Character. Weed species sown in each subplot ("-", "Am", "Ga", "Sm"; "-" denotes no weeds).}
 #'   \item{Grain}{Numeric. Grain yield (in appropriate units) measured for each subplot of winter wheat.}
 #' }
+#' @examples
+#' fit <- aov(Grain ~ Irrigation * Species + Error(Block/WholePlot/Subplot),
+#'            data = competition |>
+#'              transform(Block = factor(Block),
+#'                        WholePlot = factor(WholePlot),
+#'                        Subplot = factor(Subplot)))
+#' summary(fit)
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "competition"
 
@@ -188,6 +209,12 @@
 #'   \item{Period}{Integer. Index for the time period (e.g., 1 for the first non-zero time, 2 for the second, etc.).}
 #'   \item{Conidia}{Integer. Number of conidia (spores) counted on slides for the corresponding experimental unit.}
 #' }
+#' @examples
+#' glm(Conidia ~ Run + (log(Time) + Period) * Source,
+#'     data = conidia |>
+#'       transform(Period = factor(Period)),
+#'     family = poisson())
+#'
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 "conidia"
 
@@ -202,6 +229,8 @@
 #'   \item{I}{Integer. Insecticide dose applied (lb/acre; one of 0, 20, 40, 60, 80).}
 #'   \item{Weight}{Numeric. Dry root biomass of cotton plants (grams per plant) measured after three weeks.}
 #' }
+#' @examples
+#' anova(lm(Weight ~ H * I, data = cotton))
 #' @source Welham, S. J., Gezan, S. A., Clark, S. J., and Mead, A. (2015) \emph{Statistical Methods in Biology: Design and analysis of experiments and regression}
 #' @source Kuehl, R.O. 2000. Design of Experiments: Statistical Principles of Research Design and Analysis (2nd edition). Thomson Learning (Duxbury Press), Pacific Grove, California. 666 pp.
 "cotton"

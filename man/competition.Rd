@@ -25,4 +25,12 @@ competition
 \description{
 This dataset arises from a split-plot experiment designed to assess the competitive effects of different weed species and the impact of irrigation on the grain yield of winter wheat. The experimental design included four blocks (Block), with each block containing two whole plots assigned to either irrigation or no irrigation (Irrigation, WholePlot). Each whole plot was further divided into four subplots (Subplot), where different weed species treatments (none, Am, Ga, Sm; Species) were applied. The measured outcome was grain yield (Grain) in each subplot. The hierarchical, nested structure of the experiment (Block/WholePlot/Subplot) allows for analysis of main effects and interactions of weed species and irrigation, while accounting for variation between blocks and plots.
 }
+\examples{
+fit <- aov(Grain ~ Irrigation * Species + Error(Block/WholePlot/Subplot),
+           data = competition |>
+             transform(Block = factor(Block),
+                       WholePlot = factor(WholePlot),
+                       Subplot = factor(Subplot)))
+summary(fit)
+}
 \keyword{datasets}

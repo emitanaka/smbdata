@@ -25,4 +25,8 @@ calcium2
 \description{
 In this experiment, four relative concentrations of calcium (A = 1, B = 5, C = 10, D = 20) were each applied to five individual plants, with treatments assigned in a completely randomized design across 20 pots. After the experimental period, the total root length (in centimeters) of each plant was measured. The resulting dataset includes both the root length measurements and a set of dummy variables representing the levels of the Calcium treatment factor. This structure facilitates statistical analysis of the effects of different calcium concentrations on plant root growth.
 }
+\examples{
+anova(lm(Length ~ 1 + d2 + d3 + d4, data = calcium2))
+
+}
 \keyword{datasets}
