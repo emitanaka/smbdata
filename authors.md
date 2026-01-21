@@ -16,15 +16,15 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/emitanaka/smbdata/blob/v0.2.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/emitanaka/smbdata/blob/main/DESCRIPTION)
 
 Tanaka E (2026). *smbdata: Data from "Statistical Methods in Biology"*.
-R package version 0.2.0, <https://github.com/emitanaka/smbdata>.
+R package version 0.2.0.9000, <https://github.com/emitanaka/smbdata>.
 
     @Manual{,
       title = {smbdata: Data from "Statistical Methods in Biology"},
       author = {Emi Tanaka},
       year = {2026},
-      note = {R package version 0.2.0},
+      note = {R package version 0.2.0.9000},
       url = {https://github.com/emitanaka/smbdata},
     }
