@@ -16,7 +16,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/emitanaka/smbdata/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/emitanaka/smbdata/blob/v0.2.0/DESCRIPTION)
 
 Tanaka E (2026). *smbdata: Data from "Statistical Methods in Biology"*.
 R package version 0.2.0, <https://github.com/emitanaka/smbdata>.
